@@ -4,9 +4,9 @@
 
 #include <string.h>
 
-#include "realsense2_camera_msgs/msg/detail/imu_info__struct.h"
-#include "rosidl_typesupport_interface/macros.h"
 #include "realsense2_camera_msgs/msg/detail/imu_info__functions.h"
+#include "rosidl_typesupport_interface/macros.h"
+#include "realsense2_camera_msgs/msg/detail/imu_info__struct.h"
 #include "realsense2_camera_msgs/msg/detail/imu_info__type_support.h"
 
 #ifdef __cplusplus

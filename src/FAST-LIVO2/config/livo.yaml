@@ -17,7 +17,17 @@
 
     time_offset:
       imu_time_offset: 0.0
+
+      # Camera timestamp correction, unit: second.
+      #
+      # IMPORTANT:
+      # 当前 common.img_en = 0，系统运行在 LIO 模式，因此该参数当前不参与融合。
+      # 当后续设置 img_en = 1 启用 LIVO 时，必须针对实际 MID360 + D405
+      # 重新测量/验证相机与 LiDAR/IMU 的时间偏移。
+      #
+      # 当前 0.1 仅作为已有配置值保留，不应直接视为最终正确的实机时间外参。
       img_time_offset: 0.1
+
       exposure_time_init: 0.0
 
     preprocess:
@@ -27,10 +37,12 @@
 
     vio:
       max_iterations: 5
-      outlier_threshold: 1000
-      img_point_cov: 1000
+      outlier_threshold: 1000.0
+      img_point_cov: 1000.0
       patch_size: 8
       patch_pyrimid_level: 4
+      grid_size: 5
+      grid_n_height: 17
       normal_en: true
       raycast_en: false
       inverse_composition_en: false
@@ -39,6 +51,10 @@
 
     imu:
       imu_en: true
+      # Enable online gravity estimation.
+      gravity_est_en: true
+      # Enable accelerometer and gyroscope bias estimation.
+      ba_bg_est_en: true
       imu_int_frame: 30
       acc_cov: 0.1
       gyr_cov: 0.1
@@ -50,6 +66,7 @@
       dept_err: 0.02
       beam_err: 0.05
       min_eigen_value: 0.0025
+      sigma_num: 3.0
       voxel_size: 0.5
       max_layer: 2
       max_points_num: 50

@@ -78,7 +78,7 @@ void LIVMapper::readParameters(rclcpp::Node::SharedPtr &node)
   try_declare.template operator()<bool>("vio.normal_en", true);
   try_declare.template operator()<bool>("vio.inverse_composition_en", false);
   try_declare.template operator()<int>("vio.max_iterations", 5);
-  try_declare.template operator()<int>("vio.img_point_cov", 100);
+  try_declare.template operator()<double>("vio.img_point_cov", 1000.0);
   try_declare.template operator()<bool>("vio.raycast_en", false);
   try_declare.template operator()<bool>("vio.exposure_estimate_en", true);
   try_declare.template operator()<double>("vio.inv_expo_cov", 0.1);
@@ -86,7 +86,7 @@ void LIVMapper::readParameters(rclcpp::Node::SharedPtr &node)
   try_declare.template operator()<int>("vio.grid_n_height", 17);
   try_declare.template operator()<int>("vio.patch_pyrimid_level", 4);
   try_declare.template operator()<int>("vio.patch_size", 8);
-  try_declare.template operator()<int>("vio.outlier_threshold", 100);
+  try_declare.template operator()<double>("vio.outlier_threshold", 1000.0);
   try_declare.template operator()<double>("time_offset.exposure_time_init", 0.0);
   try_declare.template operator()<double>("time_offset.img_time_offset", 0.0);
   try_declare.template operator()<double>("time_offset.imu_time_offset", 0.0);

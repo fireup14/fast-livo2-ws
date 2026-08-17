@@ -61,8 +61,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-m9B4ct"
-      binary: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-m9B4ct"
+      source: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-T16Qe2"
+      binary: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-T16Qe2"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -71,13 +71,13 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-m9B4ct'
+        Change Dir: '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-T16Qe2'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_a6668/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_a6668.dir/build.make CMakeFiles/cmTC_a6668.dir/build
-        gmake[1]: Entering directory '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-m9B4ct'
-        Building C object CMakeFiles/cmTC_a6668.dir/CMakeCCompilerABI.c.o
-        /usr/bin/cc   -v -o CMakeFiles/cmTC_a6668.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_e7296/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_e7296.dir/build.make CMakeFiles/cmTC_e7296.dir/build
+        gmake[1]: Entering directory '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-T16Qe2'
+        Building C object CMakeFiles/cmTC_e7296.dir/CMakeCCompilerABI.c.o
+        /usr/bin/cc   -v -o CMakeFiles/cmTC_e7296.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c
         Using built-in specs.
         COLLECT_GCC=/usr/bin/cc
         OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
@@ -87,8 +87,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a6668.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_a6668.dir/'
-         /usr/libexec/gcc/x86_64-linux-gnu/13/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_a6668.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccWIqnpQ.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e7296.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e7296.dir/'
+         /usr/libexec/gcc/x86_64-linux-gnu/13/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_e7296.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccOLt5KI.s
         GNU C17 (Ubuntu 13.3.0-6ubuntu2~24.04.1) version 13.3.0 (x86_64-linux-gnu)
         	compiled by GNU C version 13.3.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.26-GMP
         
@@ -105,15 +105,15 @@ events:
          /usr/include
         End of search list.
         Compiler executable checksum: b220a7f1a1f69970d969d254ad9ec166
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a6668.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_a6668.dir/'
-         as -v --64 -o CMakeFiles/cmTC_a6668.dir/CMakeCCompilerABI.c.o /tmp/ccWIqnpQ.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e7296.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e7296.dir/'
+         as -v --64 -o CMakeFiles/cmTC_e7296.dir/CMakeCCompilerABI.c.o /tmp/ccOLt5KI.s
         GNU assembler version 2.42 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.42
         COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a6668.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_a6668.dir/CMakeCCompilerABI.c.'
-        Linking C executable cmTC_a6668
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a6668.dir/link.txt --verbose=1
-        /usr/bin/cc  -v CMakeFiles/cmTC_a6668.dir/CMakeCCompilerABI.c.o -o cmTC_a6668 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e7296.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e7296.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_e7296
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e7296.dir/link.txt --verbose=1
+        /usr/bin/cc  -v CMakeFiles/cmTC_e7296.dir/CMakeCCompilerABI.c.o -o cmTC_e7296 
         Using built-in specs.
         COLLECT_GCC=/usr/bin/cc
         COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper
@@ -126,10 +126,10 @@ events:
         gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 
         COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a6668' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_a6668.'
-         /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccFb6GUh.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_a6668 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_a6668.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a6668' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_a6668.'
-        gmake[1]: Leaving directory '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-m9B4ct'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e7296' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_e7296.'
+         /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccQJ56Gt.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_e7296 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_e7296.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e7296' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_e7296.'
+        gmake[1]: Leaving directory '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-T16Qe2'
         
       exitCode: 0
   -
@@ -163,13 +163,13 @@ events:
     message: |
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-m9B4ct']
+        ignore line: [Change Dir: '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-T16Qe2']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_a6668/fast]
-        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_a6668.dir/build.make CMakeFiles/cmTC_a6668.dir/build]
-        ignore line: [gmake[1]: Entering directory '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-m9B4ct']
-        ignore line: [Building C object CMakeFiles/cmTC_a6668.dir/CMakeCCompilerABI.c.o]
-        ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_a6668.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_e7296/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_e7296.dir/build.make CMakeFiles/cmTC_e7296.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-T16Qe2']
+        ignore line: [Building C object CMakeFiles/cmTC_e7296.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_e7296.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/cc]
         ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
@@ -179,8 +179,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04.1) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a6668.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_a6668.dir/']
-        ignore line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_a6668.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccWIqnpQ.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e7296.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e7296.dir/']
+        ignore line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_e7296.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccOLt5KI.s]
         ignore line: [GNU C17 (Ubuntu 13.3.0-6ubuntu2~24.04.1) version 13.3.0 (x86_64-linux-gnu)]
         ignore line: [	compiled by GNU C version 13.3.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version isl-0.26-GMP]
         ignore line: []
@@ -197,15 +197,15 @@ events:
         ignore line: [ /usr/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: b220a7f1a1f69970d969d254ad9ec166]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a6668.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_a6668.dir/']
-        ignore line: [ as -v --64 -o CMakeFiles/cmTC_a6668.dir/CMakeCCompilerABI.c.o /tmp/ccWIqnpQ.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e7296.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e7296.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_e7296.dir/CMakeCCompilerABI.c.o /tmp/ccOLt5KI.s]
         ignore line: [GNU assembler version 2.42 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.42]
         ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_a6668.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_a6668.dir/CMakeCCompilerABI.c.']
-        ignore line: [Linking C executable cmTC_a6668]
-        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a6668.dir/link.txt --verbose=1]
-        ignore line: [/usr/bin/cc  -v CMakeFiles/cmTC_a6668.dir/CMakeCCompilerABI.c.o -o cmTC_a6668 ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e7296.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e7296.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_e7296]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e7296.dir/link.txt --verbose=1]
+        ignore line: [/usr/bin/cc  -v CMakeFiles/cmTC_e7296.dir/CMakeCCompilerABI.c.o -o cmTC_e7296 ]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/cc]
         ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper]
@@ -218,13 +218,13 @@ events:
         ignore line: [gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04.1) ]
         ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a6668' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_a6668.']
-        link line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccFb6GUh.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_a6668 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_a6668.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e7296' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_e7296.']
+        link line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccQJ56Gt.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_e7296 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_e7296.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o]
           arg [/usr/libexec/gcc/x86_64-linux-gnu/13/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/ccFb6GUh.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccQJ56Gt.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -242,7 +242,7 @@ events:
           arg [-znow] ==> ignore
           arg [-zrelro] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_a6668] ==> ignore
+          arg [cmTC_e7296] ==> ignore
           arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o]
@@ -254,7 +254,7 @@ events:
           arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
           arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
           arg [-L/usr/lib/gcc/x86_64-linux-gnu/13/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../..]
-          arg [CMakeFiles/cmTC_a6668.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [CMakeFiles/cmTC_e7296.dir/CMakeCCompilerABI.c.o] ==> ignore
           arg [-lgcc] ==> lib [gcc]
           arg [--push-state] ==> ignore
           arg [--as-needed] ==> ignore
@@ -294,8 +294,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-YcZe34"
-      binary: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-YcZe34"
+      source: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-ICcXXi"
+      binary: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-ICcXXi"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -304,13 +304,13 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-YcZe34'
+        Change Dir: '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-ICcXXi'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_683ab/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_683ab.dir/build.make CMakeFiles/cmTC_683ab.dir/build
-        gmake[1]: Entering directory '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-YcZe34'
-        Building CXX object CMakeFiles/cmTC_683ab.dir/CMakeCXXCompilerABI.cpp.o
-        /usr/bin/c++   -v -o CMakeFiles/cmTC_683ab.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_29a37/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_29a37.dir/build.make CMakeFiles/cmTC_29a37.dir/build
+        gmake[1]: Entering directory '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-ICcXXi'
+        Building CXX object CMakeFiles/cmTC_29a37.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/c++   -v -o CMakeFiles/cmTC_29a37.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=/usr/bin/c++
         OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
@@ -320,8 +320,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_683ab.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_683ab.dir/'
-         /usr/libexec/gcc/x86_64-linux-gnu/13/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_683ab.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccNvS2Vh.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_29a37.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_29a37.dir/'
+         /usr/libexec/gcc/x86_64-linux-gnu/13/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_29a37.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccDp0C19.s
         GNU C++17 (Ubuntu 13.3.0-6ubuntu2~24.04.1) version 13.3.0 (x86_64-linux-gnu)
         	compiled by GNU C version 13.3.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.26-GMP
         
@@ -342,15 +342,15 @@ events:
          /usr/include
         End of search list.
         Compiler executable checksum: 7896445e4990772fdae9dc0659a99266
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_683ab.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_683ab.dir/'
-         as -v --64 -o CMakeFiles/cmTC_683ab.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccNvS2Vh.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_29a37.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_29a37.dir/'
+         as -v --64 -o CMakeFiles/cmTC_29a37.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccDp0C19.s
         GNU assembler version 2.42 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.42
         COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_683ab.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_683ab.dir/CMakeCXXCompilerABI.cpp.'
-        Linking CXX executable cmTC_683ab
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_683ab.dir/link.txt --verbose=1
-        /usr/bin/c++  -v CMakeFiles/cmTC_683ab.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_683ab 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_29a37.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_29a37.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_29a37
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_29a37.dir/link.txt --verbose=1
+        /usr/bin/c++  -v CMakeFiles/cmTC_29a37.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_29a37 
         Using built-in specs.
         COLLECT_GCC=/usr/bin/c++
         COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper
@@ -363,10 +363,10 @@ events:
         gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 
         COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_683ab' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_683ab.'
-         /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/cctnsQid.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_683ab /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_683ab.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_683ab' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_683ab.'
-        gmake[1]: Leaving directory '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-YcZe34'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_29a37' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_29a37.'
+         /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccME9SAp.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_29a37 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_29a37.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_29a37' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_29a37.'
+        gmake[1]: Leaving directory '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-ICcXXi'
         
       exitCode: 0
   -
@@ -406,13 +406,13 @@ events:
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-YcZe34']
+        ignore line: [Change Dir: '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-ICcXXi']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_683ab/fast]
-        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_683ab.dir/build.make CMakeFiles/cmTC_683ab.dir/build]
-        ignore line: [gmake[1]: Entering directory '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-YcZe34']
-        ignore line: [Building CXX object CMakeFiles/cmTC_683ab.dir/CMakeCXXCompilerABI.cpp.o]
-        ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_683ab.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_29a37/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_29a37.dir/build.make CMakeFiles/cmTC_29a37.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-ICcXXi']
+        ignore line: [Building CXX object CMakeFiles/cmTC_29a37.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_29a37.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/c++]
         ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
@@ -422,8 +422,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04.1) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_683ab.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_683ab.dir/']
-        ignore line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_683ab.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccNvS2Vh.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_29a37.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_29a37.dir/']
+        ignore line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_29a37.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccDp0C19.s]
         ignore line: [GNU C++17 (Ubuntu 13.3.0-6ubuntu2~24.04.1) version 13.3.0 (x86_64-linux-gnu)]
         ignore line: [	compiled by GNU C version 13.3.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version isl-0.26-GMP]
         ignore line: []
@@ -444,15 +444,15 @@ events:
         ignore line: [ /usr/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 7896445e4990772fdae9dc0659a99266]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_683ab.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_683ab.dir/']
-        ignore line: [ as -v --64 -o CMakeFiles/cmTC_683ab.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccNvS2Vh.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_29a37.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_29a37.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_29a37.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccDp0C19.s]
         ignore line: [GNU assembler version 2.42 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.42]
         ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_683ab.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_683ab.dir/CMakeCXXCompilerABI.cpp.']
-        ignore line: [Linking CXX executable cmTC_683ab]
-        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_683ab.dir/link.txt --verbose=1]
-        ignore line: [/usr/bin/c++  -v CMakeFiles/cmTC_683ab.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_683ab ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_29a37.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_29a37.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_29a37]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_29a37.dir/link.txt --verbose=1]
+        ignore line: [/usr/bin/c++  -v CMakeFiles/cmTC_29a37.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_29a37 ]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/c++]
         ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper]
@@ -465,13 +465,13 @@ events:
         ignore line: [gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04.1) ]
         ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_683ab' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_683ab.']
-        link line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/cctnsQid.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_683ab /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_683ab.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_29a37' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_29a37.']
+        link line: [ /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccME9SAp.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_29a37 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_29a37.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o]
           arg [/usr/libexec/gcc/x86_64-linux-gnu/13/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/cctnsQid.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccME9SAp.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -489,7 +489,7 @@ events:
           arg [-znow] ==> ignore
           arg [-zrelro] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_683ab] ==> ignore
+          arg [cmTC_29a37] ==> ignore
           arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o]
           arg [/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o]
@@ -501,7 +501,7 @@ events:
           arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
           arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
           arg [-L/usr/lib/gcc/x86_64-linux-gnu/13/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/13/../../..]
-          arg [CMakeFiles/cmTC_683ab.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_29a37.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lstdc++] ==> lib [stdc++]
           arg [-lm] ==> lib [m]
           arg [-lgcc_s] ==> lib [gcc_s]
@@ -553,11 +553,11 @@ events:
       stdout: |
         Change Dir: '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_bdd28/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_bdd28.dir/build.make CMakeFiles/cmTC_bdd28.dir/build
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_38348/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_38348.dir/build.make CMakeFiles/cmTC_38348.dir/build
         gmake[1]: 进入目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeTmp”
-        Building C object CMakeFiles/cmTC_bdd28.dir/OpenMPTryFlag.c.o
-        /usr/bin/cc   -fopenmp -v -std=gnu99 -o CMakeFiles/cmTC_bdd28.dir/OpenMPTryFlag.c.o -c /home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
+        Building C object CMakeFiles/cmTC_38348.dir/OpenMPTryFlag.c.o
+        /usr/bin/cc   -fopenmp -v -std=gnu99 -o CMakeFiles/cmTC_38348.dir/OpenMPTryFlag.c.o -c /home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/FindOpenMP/OpenMPTryFlag.c
         Using built-in specs.
         COLLECT_GCC=/usr/bin/cc
         OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
@@ -567,8 +567,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 
-        COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-std=gnu99' '-o' 'CMakeFiles/cmTC_bdd28.dir/OpenMPTryFlag.c.o' '-c' '-mtune=generic' '-march=x86-64' '-pthread' '-dumpdir' 'CMakeFiles/cmTC_bdd28.dir/'
-         /usr/libexec/gcc/x86_64-linux-gnu/13/cc1 -quiet -v -imultiarch x86_64-linux-gnu -D_REENTRANT /home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/FindOpenMP/OpenMPTryFlag.c -quiet -dumpdir CMakeFiles/cmTC_bdd28.dir/ -dumpbase OpenMPTryFlag.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -std=gnu99 -version -fopenmp -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccH0GiDp.s
+        COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-std=gnu99' '-o' 'CMakeFiles/cmTC_38348.dir/OpenMPTryFlag.c.o' '-c' '-mtune=generic' '-march=x86-64' '-pthread' '-dumpdir' 'CMakeFiles/cmTC_38348.dir/'
+         /usr/libexec/gcc/x86_64-linux-gnu/13/cc1 -quiet -v -imultiarch x86_64-linux-gnu -D_REENTRANT /home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/FindOpenMP/OpenMPTryFlag.c -quiet -dumpdir CMakeFiles/cmTC_38348.dir/ -dumpbase OpenMPTryFlag.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -std=gnu99 -version -fopenmp -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccsqh7tW.s
         GNU C99 (Ubuntu 13.3.0-6ubuntu2~24.04.1) version 13.3.0 (x86_64-linux-gnu)
         	compiled by GNU C version 13.3.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.26-GMP
         
@@ -585,15 +585,15 @@ events:
          /usr/include
         End of search list.
         Compiler executable checksum: b220a7f1a1f69970d969d254ad9ec166
-        COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-std=gnu99' '-o' 'CMakeFiles/cmTC_bdd28.dir/OpenMPTryFlag.c.o' '-c' '-mtune=generic' '-march=x86-64' '-pthread' '-dumpdir' 'CMakeFiles/cmTC_bdd28.dir/'
-         as -v --64 -o CMakeFiles/cmTC_bdd28.dir/OpenMPTryFlag.c.o /tmp/ccH0GiDp.s
+        COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-std=gnu99' '-o' 'CMakeFiles/cmTC_38348.dir/OpenMPTryFlag.c.o' '-c' '-mtune=generic' '-march=x86-64' '-pthread' '-dumpdir' 'CMakeFiles/cmTC_38348.dir/'
+         as -v --64 -o CMakeFiles/cmTC_38348.dir/OpenMPTryFlag.c.o /tmp/ccsqh7tW.s
         GNU汇编版本 2.42 (x86_64-linux-gnu) 使用BFD版本 (GNU Binutils for Ubuntu) 2.42
         COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-std=gnu99' '-o' 'CMakeFiles/cmTC_bdd28.dir/OpenMPTryFlag.c.o' '-c' '-mtune=generic' '-march=x86-64' '-pthread' '-dumpdir' 'CMakeFiles/cmTC_bdd28.dir/OpenMPTryFlag.c.'
-        Linking C executable cmTC_bdd28
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bdd28.dir/link.txt --verbose=1
-        /usr/bin/cc  -fopenmp -v CMakeFiles/cmTC_bdd28.dir/OpenMPTryFlag.c.o -o cmTC_bdd28  -v 
+        COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-std=gnu99' '-o' 'CMakeFiles/cmTC_38348.dir/OpenMPTryFlag.c.o' '-c' '-mtune=generic' '-march=x86-64' '-pthread' '-dumpdir' 'CMakeFiles/cmTC_38348.dir/OpenMPTryFlag.c.'
+        Linking C executable cmTC_38348
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_38348.dir/link.txt --verbose=1
+        /usr/bin/cc  -fopenmp -v CMakeFiles/cmTC_38348.dir/OpenMPTryFlag.c.o -o cmTC_38348  -v 
         Using built-in specs.
         COLLECT_GCC=/usr/bin/cc
         COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper
@@ -607,9 +607,9 @@ events:
         COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/
         Reading specs from /usr/lib/gcc/x86_64-linux-gnu/13/libgomp.spec
-        COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'cmTC_bdd28' '-v' '-mtune=generic' '-march=x86-64' '-pthread' '-dumpdir' 'cmTC_bdd28.'
-         /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccVdfhjd.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_bdd28 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o /usr/lib/gcc/x86_64-linux-gnu/13/crtoffloadbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_bdd28.dir/OpenMPTryFlag.c.o -lgomp -lgcc --push-state --as-needed -lgcc_s --pop-state -lpthread -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o /usr/lib/gcc/x86_64-linux-gnu/13/crtoffloadend.o
-        COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'cmTC_bdd28' '-v' '-mtune=generic' '-march=x86-64' '-pthread' '-dumpdir' 'cmTC_bdd28.'
+        COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'cmTC_38348' '-v' '-mtune=generic' '-march=x86-64' '-pthread' '-dumpdir' 'cmTC_38348.'
+         /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccNtkzqI.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_38348 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o /usr/lib/gcc/x86_64-linux-gnu/13/crtoffloadbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_38348.dir/OpenMPTryFlag.c.o -lgomp -lgcc --push-state --as-needed -lgcc_s --pop-state -lpthread -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o /usr/lib/gcc/x86_64-linux-gnu/13/crtoffloadend.o
+        COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'cmTC_38348' '-v' '-mtune=generic' '-march=x86-64' '-pthread' '-dumpdir' 'cmTC_38348.'
         gmake[1]: 离开目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeTmp”
         
       exitCode: 0
@@ -638,11 +638,11 @@ events:
       stdout: |
         Change Dir: '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_07a04/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_07a04.dir/build.make CMakeFiles/cmTC_07a04.dir/build
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_c16d8/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_c16d8.dir/build.make CMakeFiles/cmTC_c16d8.dir/build
         gmake[1]: 进入目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeTmp”
-        Building CXX object CMakeFiles/cmTC_07a04.dir/OpenMPTryFlag.cpp.o
-        /usr/bin/c++   -fopenmp -v -std=gnu++14 -o CMakeFiles/cmTC_07a04.dir/OpenMPTryFlag.cpp.o -c /home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+        Building CXX object CMakeFiles/cmTC_c16d8.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -fopenmp -v -std=gnu++14 -o CMakeFiles/cmTC_c16d8.dir/OpenMPTryFlag.cpp.o -c /home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
         Using built-in specs.
         COLLECT_GCC=/usr/bin/c++
         OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
@@ -652,8 +652,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 13.3.0 (Ubuntu 13.3.0-6ubuntu2~24.04.1) 
-        COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-std=gnu++14' '-o' 'CMakeFiles/cmTC_07a04.dir/OpenMPTryFlag.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-pthread' '-dumpdir' 'CMakeFiles/cmTC_07a04.dir/'
-         /usr/libexec/gcc/x86_64-linux-gnu/13/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE -D_REENTRANT /home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp -quiet -dumpdir CMakeFiles/cmTC_07a04.dir/ -dumpbase OpenMPTryFlag.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -std=gnu++14 -version -fopenmp -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/cc3saqrD.s
+        COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-std=gnu++14' '-o' 'CMakeFiles/cmTC_c16d8.dir/OpenMPTryFlag.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-pthread' '-dumpdir' 'CMakeFiles/cmTC_c16d8.dir/'
+         /usr/libexec/gcc/x86_64-linux-gnu/13/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE -D_REENTRANT /home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp -quiet -dumpdir CMakeFiles/cmTC_c16d8.dir/ -dumpbase OpenMPTryFlag.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -std=gnu++14 -version -fopenmp -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccXh7a0j.s
         GNU C++14 (Ubuntu 13.3.0-6ubuntu2~24.04.1) version 13.3.0 (x86_64-linux-gnu)
         	compiled by GNU C version 13.3.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.26-GMP
         
@@ -674,15 +674,15 @@ events:
          /usr/include
         End of search list.
         Compiler executable checksum: 7896445e4990772fdae9dc0659a99266
-        COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-std=gnu++14' '-o' 'CMakeFiles/cmTC_07a04.dir/OpenMPTryFlag.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-pthread' '-dumpdir' 'CMakeFiles/cmTC_07a04.dir/'
-         as -v --64 -o CMakeFiles/cmTC_07a04.dir/OpenMPTryFlag.cpp.o /tmp/cc3saqrD.s
+        COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-std=gnu++14' '-o' 'CMakeFiles/cmTC_c16d8.dir/OpenMPTryFlag.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-pthread' '-dumpdir' 'CMakeFiles/cmTC_c16d8.dir/'
+         as -v --64 -o CMakeFiles/cmTC_c16d8.dir/OpenMPTryFlag.cpp.o /tmp/ccXh7a0j.s
         GNU汇编版本 2.42 (x86_64-linux-gnu) 使用BFD版本 (GNU Binutils for Ubuntu) 2.42
         COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-std=gnu++14' '-o' 'CMakeFiles/cmTC_07a04.dir/OpenMPTryFlag.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-pthread' '-dumpdir' 'CMakeFiles/cmTC_07a04.dir/OpenMPTryFlag.cpp.'
-        Linking CXX executable cmTC_07a04
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_07a04.dir/link.txt --verbose=1
-        /usr/bin/c++  -fopenmp -v CMakeFiles/cmTC_07a04.dir/OpenMPTryFlag.cpp.o -o cmTC_07a04  -v 
+        COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-std=gnu++14' '-o' 'CMakeFiles/cmTC_c16d8.dir/OpenMPTryFlag.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-pthread' '-dumpdir' 'CMakeFiles/cmTC_c16d8.dir/OpenMPTryFlag.cpp.'
+        Linking CXX executable cmTC_c16d8
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c16d8.dir/link.txt --verbose=1
+        /usr/bin/c++  -fopenmp -v CMakeFiles/cmTC_c16d8.dir/OpenMPTryFlag.cpp.o -o cmTC_c16d8  -v 
         Using built-in specs.
         COLLECT_GCC=/usr/bin/c++
         COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper
@@ -696,9 +696,9 @@ events:
         COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/13/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/13/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/13/../../../:/lib/:/usr/lib/
         Reading specs from /usr/lib/gcc/x86_64-linux-gnu/13/libgomp.spec
-        COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'cmTC_07a04' '-v' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-pthread' '-dumpdir' 'cmTC_07a04.'
-         /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/cchGzLGW.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_07a04 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o /usr/lib/gcc/x86_64-linux-gnu/13/crtoffloadbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_07a04.dir/OpenMPTryFlag.cpp.o -lstdc++ -lm -lgomp -lgcc_s -lgcc -lpthread -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o /usr/lib/gcc/x86_64-linux-gnu/13/crtoffloadend.o
-        COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'cmTC_07a04' '-v' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-pthread' '-dumpdir' 'cmTC_07a04.'
+        COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'cmTC_c16d8' '-v' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-pthread' '-dumpdir' 'cmTC_c16d8.'
+         /usr/libexec/gcc/x86_64-linux-gnu/13/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/13/lto-wrapper -plugin-opt=-fresolution=/tmp/ccEo7esQ.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_c16d8 /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/13/crtbeginS.o /usr/lib/gcc/x86_64-linux-gnu/13/crtoffloadbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/13 -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/13/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/13/../../.. CMakeFiles/cmTC_c16d8.dir/OpenMPTryFlag.cpp.o -lstdc++ -lm -lgomp -lgcc_s -lgcc -lpthread -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/13/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/crtn.o /usr/lib/gcc/x86_64-linux-gnu/13/crtoffloadend.o
+        COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'cmTC_c16d8' '-v' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-pthread' '-dumpdir' 'cmTC_c16d8.'
         gmake[1]: 离开目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeTmp”
         
       exitCode: 0
@@ -727,14 +727,14 @@ events:
       stdout: |
         Change Dir: '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeTmp'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_412a6/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_412a6.dir/build.make CMakeFiles/cmTC_412a6.dir/build
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_dce65/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_dce65.dir/build.make CMakeFiles/cmTC_dce65.dir/build
         gmake[1]: 进入目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeTmp”
-        Building CXX object CMakeFiles/cmTC_412a6.dir/OpenMPCheckVersion.cpp.o
-        /usr/bin/c++   -fopenmp -std=gnu++14 -o CMakeFiles/cmTC_412a6.dir/OpenMPCheckVersion.cpp.o -c /home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/FindOpenMP/OpenMPCheckVersion.cpp
-        Linking CXX executable cmTC_412a6
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_412a6.dir/link.txt --verbose=1
-        /usr/bin/c++  -fopenmp CMakeFiles/cmTC_412a6.dir/OpenMPCheckVersion.cpp.o -o cmTC_412a6 
+        Building CXX object CMakeFiles/cmTC_dce65.dir/OpenMPCheckVersion.cpp.o
+        /usr/bin/c++   -fopenmp -std=gnu++14 -o CMakeFiles/cmTC_dce65.dir/OpenMPCheckVersion.cpp.o -c /home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/FindOpenMP/OpenMPCheckVersion.cpp
+        Linking CXX executable cmTC_dce65
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dce65.dir/link.txt --verbose=1
+        /usr/bin/c++  -fopenmp CMakeFiles/cmTC_dce65.dir/OpenMPCheckVersion.cpp.o -o cmTC_dce65 
         gmake[1]: 离开目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeTmp”
         
       exitCode: 0
@@ -755,8 +755,8 @@ events:
       - "/opt/ros/jazzy/share/ament_cmake_auto/cmake/ament_auto_find_build_dependencies.cmake:67 (find_package)"
       - "CMakeLists.txt:232 (ament_auto_find_build_dependencies)"
     directories:
-      source: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-llR35v"
-      binary: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-llR35v"
+      source: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-j8xArP"
+      binary: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-j8xArP"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -766,17 +766,17 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-llR35v'
+        Change Dir: '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-j8xArP'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_ef0f1/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_ef0f1.dir/build.make CMakeFiles/cmTC_ef0f1.dir/build
-        gmake[1]: 进入目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-llR35v”
-        Building C object CMakeFiles/cmTC_ef0f1.dir/src.c.o
-        /usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -std=gnu99 -o CMakeFiles/cmTC_ef0f1.dir/src.c.o -c /home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-llR35v/src.c
-        Linking C executable cmTC_ef0f1
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ef0f1.dir/link.txt --verbose=1
-        /usr/bin/cc CMakeFiles/cmTC_ef0f1.dir/src.c.o -o cmTC_ef0f1 
-        gmake[1]: 离开目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-llR35v”
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_74567/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_74567.dir/build.make CMakeFiles/cmTC_74567.dir/build
+        gmake[1]: 进入目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-j8xArP”
+        Building C object CMakeFiles/cmTC_74567.dir/src.c.o
+        /usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -std=gnu99 -o CMakeFiles/cmTC_74567.dir/src.c.o -c /home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-j8xArP/src.c
+        Linking C executable cmTC_74567
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_74567.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_74567.dir/src.c.o -o cmTC_74567 
+        gmake[1]: 离开目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-j8xArP”
         
       exitCode: 0
   -
@@ -796,8 +796,8 @@ events:
       - "CMakeLists.txt:232 (ament_auto_find_build_dependencies)"
     description: "The MPI test test_mpi for C in mode normal"
     directories:
-      source: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-30hdXC"
-      binary: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-30hdXC"
+      source: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-tIvcXS"
+      binary: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-tIvcXS"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -807,17 +807,17 @@ events:
       variable: "MPI_RESULT_C_test_mpi_normal"
       cached: true
       stdout: |
-        Change Dir: '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-30hdXC'
+        Change Dir: '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-tIvcXS'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_e70ba/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_e70ba.dir/build.make CMakeFiles/cmTC_e70ba.dir/build
-        gmake[1]: 进入目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-30hdXC”
-        Building C object CMakeFiles/cmTC_e70ba.dir/test_mpi.c.o
-        /usr/bin/cc  -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -std=gnu99 -o CMakeFiles/cmTC_e70ba.dir/test_mpi.c.o -c /home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-30hdXC/test_mpi.c
-        Linking C executable cmTC_e70ba
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e70ba.dir/link.txt --verbose=1
-        /usr/bin/cc -L/usr/lib/x86_64-linux-gnu/openmpi/lib CMakeFiles/cmTC_e70ba.dir/test_mpi.c.o -o cmTC_e70ba  /usr/lib/x86_64-linux-gnu/libmpi.so 
-        gmake[1]: 离开目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-30hdXC”
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_57469/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_57469.dir/build.make CMakeFiles/cmTC_57469.dir/build
+        gmake[1]: 进入目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-tIvcXS”
+        Building C object CMakeFiles/cmTC_57469.dir/test_mpi.c.o
+        /usr/bin/cc  -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -std=gnu99 -o CMakeFiles/cmTC_57469.dir/test_mpi.c.o -c /home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-tIvcXS/test_mpi.c
+        Linking C executable cmTC_57469
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_57469.dir/link.txt --verbose=1
+        /usr/bin/cc -L/usr/lib/x86_64-linux-gnu/openmpi/lib CMakeFiles/cmTC_57469.dir/test_mpi.c.o -o cmTC_57469  /usr/lib/x86_64-linux-gnu/libmpi.so 
+        gmake[1]: 离开目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-tIvcXS”
         
       exitCode: 0
   -
@@ -835,8 +835,8 @@ events:
       - "/opt/ros/jazzy/share/ament_cmake_auto/cmake/ament_auto_find_build_dependencies.cmake:67 (find_package)"
       - "CMakeLists.txt:232 (ament_auto_find_build_dependencies)"
     directories:
-      source: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-yTD5DS"
-      binary: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-yTD5DS"
+      source: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-L9ZYEj"
+      binary: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-L9ZYEj"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -846,17 +846,17 @@ events:
       variable: "X11_LIB_X11_SOLO"
       cached: true
       stdout: |
-        Change Dir: '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-yTD5DS'
+        Change Dir: '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-L9ZYEj'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_2220b/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_2220b.dir/build.make CMakeFiles/cmTC_2220b.dir/build
-        gmake[1]: 进入目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-yTD5DS”
-        Building C object CMakeFiles/cmTC_2220b.dir/CheckFunctionExists.c.o
-        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay -std=gnu99 -o CMakeFiles/cmTC_2220b.dir/CheckFunctionExists.c.o -c /home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-yTD5DS/CheckFunctionExists.c
-        Linking C executable cmTC_2220b
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2220b.dir/link.txt --verbose=1
-        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=XOpenDisplay CMakeFiles/cmTC_2220b.dir/CheckFunctionExists.c.o -o cmTC_2220b  /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libXext.so 
-        gmake[1]: 离开目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-yTD5DS”
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_c34cf/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_c34cf.dir/build.make CMakeFiles/cmTC_c34cf.dir/build
+        gmake[1]: 进入目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-L9ZYEj”
+        Building C object CMakeFiles/cmTC_c34cf.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay -std=gnu99 -o CMakeFiles/cmTC_c34cf.dir/CheckFunctionExists.c.o -c /home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-L9ZYEj/CheckFunctionExists.c
+        Linking C executable cmTC_c34cf
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c34cf.dir/link.txt --verbose=1
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=XOpenDisplay CMakeFiles/cmTC_c34cf.dir/CheckFunctionExists.c.o -o cmTC_c34cf  /usr/lib/x86_64-linux-gnu/libX11.so /usr/lib/x86_64-linux-gnu/libXext.so 
+        gmake[1]: 离开目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-L9ZYEj”
         
       exitCode: 0
   -
@@ -874,8 +874,8 @@ events:
       - "/opt/ros/jazzy/share/ament_cmake_auto/cmake/ament_auto_find_build_dependencies.cmake:67 (find_package)"
       - "CMakeLists.txt:232 (ament_auto_find_build_dependencies)"
     directories:
-      source: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-b5UYPH"
-      binary: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-b5UYPH"
+      source: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-UQt0Xs"
+      binary: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-UQt0Xs"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -885,17 +885,17 @@ events:
       variable: "CMAKE_HAVE_GETHOSTBYNAME"
       cached: true
       stdout: |
-        Change Dir: '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-b5UYPH'
+        Change Dir: '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-UQt0Xs'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_a8123/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_a8123.dir/build.make CMakeFiles/cmTC_a8123.dir/build
-        gmake[1]: 进入目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-b5UYPH”
-        Building C object CMakeFiles/cmTC_a8123.dir/CheckFunctionExists.c.o
-        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname -std=gnu99 -o CMakeFiles/cmTC_a8123.dir/CheckFunctionExists.c.o -c /home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-b5UYPH/CheckFunctionExists.c
-        Linking C executable cmTC_a8123
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a8123.dir/link.txt --verbose=1
-        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=gethostbyname CMakeFiles/cmTC_a8123.dir/CheckFunctionExists.c.o -o cmTC_a8123 
-        gmake[1]: 离开目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-b5UYPH”
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_34157/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_34157.dir/build.make CMakeFiles/cmTC_34157.dir/build
+        gmake[1]: 进入目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-UQt0Xs”
+        Building C object CMakeFiles/cmTC_34157.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname -std=gnu99 -o CMakeFiles/cmTC_34157.dir/CheckFunctionExists.c.o -c /home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-UQt0Xs/CheckFunctionExists.c
+        Linking C executable cmTC_34157
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_34157.dir/link.txt --verbose=1
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=gethostbyname CMakeFiles/cmTC_34157.dir/CheckFunctionExists.c.o -o cmTC_34157 
+        gmake[1]: 离开目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-UQt0Xs”
         
       exitCode: 0
   -
@@ -913,8 +913,8 @@ events:
       - "/opt/ros/jazzy/share/ament_cmake_auto/cmake/ament_auto_find_build_dependencies.cmake:67 (find_package)"
       - "CMakeLists.txt:232 (ament_auto_find_build_dependencies)"
     directories:
-      source: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-lfEFA7"
-      binary: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-lfEFA7"
+      source: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-IuSmLx"
+      binary: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-IuSmLx"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -924,17 +924,17 @@ events:
       variable: "CMAKE_HAVE_CONNECT"
       cached: true
       stdout: |
-        Change Dir: '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-lfEFA7'
+        Change Dir: '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-IuSmLx'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_1264a/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_1264a.dir/build.make CMakeFiles/cmTC_1264a.dir/build
-        gmake[1]: 进入目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-lfEFA7”
-        Building C object CMakeFiles/cmTC_1264a.dir/CheckFunctionExists.c.o
-        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect -std=gnu99 -o CMakeFiles/cmTC_1264a.dir/CheckFunctionExists.c.o -c /home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-lfEFA7/CheckFunctionExists.c
-        Linking C executable cmTC_1264a
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1264a.dir/link.txt --verbose=1
-        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=connect CMakeFiles/cmTC_1264a.dir/CheckFunctionExists.c.o -o cmTC_1264a 
-        gmake[1]: 离开目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-lfEFA7”
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_8321d/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_8321d.dir/build.make CMakeFiles/cmTC_8321d.dir/build
+        gmake[1]: 进入目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-IuSmLx”
+        Building C object CMakeFiles/cmTC_8321d.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect -std=gnu99 -o CMakeFiles/cmTC_8321d.dir/CheckFunctionExists.c.o -c /home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-IuSmLx/CheckFunctionExists.c
+        Linking C executable cmTC_8321d
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8321d.dir/link.txt --verbose=1
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=connect CMakeFiles/cmTC_8321d.dir/CheckFunctionExists.c.o -o cmTC_8321d 
+        gmake[1]: 离开目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-IuSmLx”
         
       exitCode: 0
   -
@@ -952,8 +952,8 @@ events:
       - "/opt/ros/jazzy/share/ament_cmake_auto/cmake/ament_auto_find_build_dependencies.cmake:67 (find_package)"
       - "CMakeLists.txt:232 (ament_auto_find_build_dependencies)"
     directories:
-      source: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-8XwxU5"
-      binary: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-8XwxU5"
+      source: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-RDVUAS"
+      binary: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-RDVUAS"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -963,17 +963,17 @@ events:
       variable: "CMAKE_HAVE_REMOVE"
       cached: true
       stdout: |
-        Change Dir: '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-8XwxU5'
+        Change Dir: '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-RDVUAS'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_0dcc7/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_0dcc7.dir/build.make CMakeFiles/cmTC_0dcc7.dir/build
-        gmake[1]: 进入目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-8XwxU5”
-        Building C object CMakeFiles/cmTC_0dcc7.dir/CheckFunctionExists.c.o
-        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove -std=gnu99 -o CMakeFiles/cmTC_0dcc7.dir/CheckFunctionExists.c.o -c /home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-8XwxU5/CheckFunctionExists.c
-        Linking C executable cmTC_0dcc7
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0dcc7.dir/link.txt --verbose=1
-        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=remove CMakeFiles/cmTC_0dcc7.dir/CheckFunctionExists.c.o -o cmTC_0dcc7 
-        gmake[1]: 离开目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-8XwxU5”
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_62850/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_62850.dir/build.make CMakeFiles/cmTC_62850.dir/build
+        gmake[1]: 进入目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-RDVUAS”
+        Building C object CMakeFiles/cmTC_62850.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove -std=gnu99 -o CMakeFiles/cmTC_62850.dir/CheckFunctionExists.c.o -c /home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-RDVUAS/CheckFunctionExists.c
+        Linking C executable cmTC_62850
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_62850.dir/link.txt --verbose=1
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=remove CMakeFiles/cmTC_62850.dir/CheckFunctionExists.c.o -o cmTC_62850 
+        gmake[1]: 离开目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-RDVUAS”
         
       exitCode: 0
   -
@@ -991,8 +991,8 @@ events:
       - "/opt/ros/jazzy/share/ament_cmake_auto/cmake/ament_auto_find_build_dependencies.cmake:67 (find_package)"
       - "CMakeLists.txt:232 (ament_auto_find_build_dependencies)"
     directories:
-      source: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-P32Cpm"
-      binary: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-P32Cpm"
+      source: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-4UJAoM"
+      binary: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-4UJAoM"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -1002,17 +1002,17 @@ events:
       variable: "CMAKE_HAVE_SHMAT"
       cached: true
       stdout: |
-        Change Dir: '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-P32Cpm'
+        Change Dir: '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-4UJAoM'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_86293/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_86293.dir/build.make CMakeFiles/cmTC_86293.dir/build
-        gmake[1]: 进入目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-P32Cpm”
-        Building C object CMakeFiles/cmTC_86293.dir/CheckFunctionExists.c.o
-        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat -std=gnu99 -o CMakeFiles/cmTC_86293.dir/CheckFunctionExists.c.o -c /home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-P32Cpm/CheckFunctionExists.c
-        Linking C executable cmTC_86293
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_86293.dir/link.txt --verbose=1
-        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=shmat CMakeFiles/cmTC_86293.dir/CheckFunctionExists.c.o -o cmTC_86293 
-        gmake[1]: 离开目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-P32Cpm”
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_55a95/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_55a95.dir/build.make CMakeFiles/cmTC_55a95.dir/build
+        gmake[1]: 进入目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-4UJAoM”
+        Building C object CMakeFiles/cmTC_55a95.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat -std=gnu99 -o CMakeFiles/cmTC_55a95.dir/CheckFunctionExists.c.o -c /home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-4UJAoM/CheckFunctionExists.c
+        Linking C executable cmTC_55a95
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_55a95.dir/link.txt --verbose=1
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=shmat CMakeFiles/cmTC_55a95.dir/CheckFunctionExists.c.o -o cmTC_55a95 
+        gmake[1]: 离开目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-4UJAoM”
         
       exitCode: 0
   -
@@ -1030,8 +1030,8 @@ events:
       - "/opt/ros/jazzy/share/ament_cmake_auto/cmake/ament_auto_find_build_dependencies.cmake:67 (find_package)"
       - "CMakeLists.txt:232 (ament_auto_find_build_dependencies)"
     directories:
-      source: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-quajIE"
-      binary: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-quajIE"
+      source: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-7Gk0Ye"
+      binary: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-7Gk0Ye"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -1041,17 +1041,17 @@ events:
       variable: "CMAKE_LIB_ICE_HAS_ICECONNECTIONNUMBER"
       cached: true
       stdout: |
-        Change Dir: '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-quajIE'
+        Change Dir: '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-7Gk0Ye'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_78395/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_78395.dir/build.make CMakeFiles/cmTC_78395.dir/build
-        gmake[1]: 进入目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-quajIE”
-        Building C object CMakeFiles/cmTC_78395.dir/CheckFunctionExists.c.o
-        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber -std=gnu99 -o CMakeFiles/cmTC_78395.dir/CheckFunctionExists.c.o -c /home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-quajIE/CheckFunctionExists.c
-        Linking C executable cmTC_78395
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_78395.dir/link.txt --verbose=1
-        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=IceConnectionNumber CMakeFiles/cmTC_78395.dir/CheckFunctionExists.c.o -o cmTC_78395  -lICE 
-        gmake[1]: 离开目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-quajIE”
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_1d2aa/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_1d2aa.dir/build.make CMakeFiles/cmTC_1d2aa.dir/build
+        gmake[1]: 进入目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-7Gk0Ye”
+        Building C object CMakeFiles/cmTC_1d2aa.dir/CheckFunctionExists.c.o
+        /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber -std=gnu99 -o CMakeFiles/cmTC_1d2aa.dir/CheckFunctionExists.c.o -c /home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-7Gk0Ye/CheckFunctionExists.c
+        Linking C executable cmTC_1d2aa
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1d2aa.dir/link.txt --verbose=1
+        /usr/bin/cc  -DCHECK_FUNCTION_EXISTS=IceConnectionNumber CMakeFiles/cmTC_1d2aa.dir/CheckFunctionExists.c.o -o cmTC_1d2aa  -lICE 
+        gmake[1]: 离开目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-7Gk0Ye”
         
       exitCode: 0
   -
@@ -1071,8 +1071,8 @@ events:
       - "CMakeLists.txt:232 (ament_auto_find_build_dependencies)"
     description: "The MPI test test_mpi for C in mode normal"
     directories:
-      source: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-ub6gQX"
-      binary: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-ub6gQX"
+      source: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-HLyVY0"
+      binary: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-HLyVY0"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -1082,17 +1082,17 @@ events:
       variable: "MPI_RESULT_C_test_mpi_normal"
       cached: true
       stdout: |
-        Change Dir: '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-ub6gQX'
+        Change Dir: '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-HLyVY0'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_f9cc9/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_f9cc9.dir/build.make CMakeFiles/cmTC_f9cc9.dir/build
-        gmake[1]: 进入目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-ub6gQX”
-        Building C object CMakeFiles/cmTC_f9cc9.dir/test_mpi.c.o
-        /usr/bin/cc  -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -std=gnu99 -o CMakeFiles/cmTC_f9cc9.dir/test_mpi.c.o -c /home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-ub6gQX/test_mpi.c
-        Linking C executable cmTC_f9cc9
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f9cc9.dir/link.txt --verbose=1
-        /usr/bin/cc -L/usr/lib/x86_64-linux-gnu/openmpi/lib CMakeFiles/cmTC_f9cc9.dir/test_mpi.c.o -o cmTC_f9cc9  /usr/lib/x86_64-linux-gnu/libmpi.so 
-        gmake[1]: 离开目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-ub6gQX”
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_c5f65/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_c5f65.dir/build.make CMakeFiles/cmTC_c5f65.dir/build
+        gmake[1]: 进入目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-HLyVY0”
+        Building C object CMakeFiles/cmTC_c5f65.dir/test_mpi.c.o
+        /usr/bin/cc  -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -std=gnu99 -o CMakeFiles/cmTC_c5f65.dir/test_mpi.c.o -c /home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-HLyVY0/test_mpi.c
+        Linking C executable cmTC_c5f65
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c5f65.dir/link.txt --verbose=1
+        /usr/bin/cc -L/usr/lib/x86_64-linux-gnu/openmpi/lib CMakeFiles/cmTC_c5f65.dir/test_mpi.c.o -o cmTC_c5f65  /usr/lib/x86_64-linux-gnu/libmpi.so 
+        gmake[1]: 离开目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-HLyVY0”
         
       exitCode: 0
   -
@@ -1112,8 +1112,8 @@ events:
       - "CMakeLists.txt:232 (ament_auto_find_build_dependencies)"
     description: "The MPI test test_mpi for C in mode normal"
     directories:
-      source: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-2eXObw"
-      binary: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-2eXObw"
+      source: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-Pb8Fry"
+      binary: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-Pb8Fry"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -1123,17 +1123,17 @@ events:
       variable: "MPI_RESULT_C_test_mpi_normal"
       cached: true
       stdout: |
-        Change Dir: '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-2eXObw'
+        Change Dir: '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-Pb8Fry'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_7a93c/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_7a93c.dir/build.make CMakeFiles/cmTC_7a93c.dir/build
-        gmake[1]: 进入目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-2eXObw”
-        Building C object CMakeFiles/cmTC_7a93c.dir/test_mpi.c.o
-        /usr/bin/cc  -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -std=gnu99 -o CMakeFiles/cmTC_7a93c.dir/test_mpi.c.o -c /home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-2eXObw/test_mpi.c
-        Linking C executable cmTC_7a93c
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7a93c.dir/link.txt --verbose=1
-        /usr/bin/cc -L/usr/lib/x86_64-linux-gnu/openmpi/lib CMakeFiles/cmTC_7a93c.dir/test_mpi.c.o -o cmTC_7a93c  /usr/lib/x86_64-linux-gnu/libmpi.so 
-        gmake[1]: 离开目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-2eXObw”
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_2e752/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_2e752.dir/build.make CMakeFiles/cmTC_2e752.dir/build
+        gmake[1]: 进入目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-Pb8Fry”
+        Building C object CMakeFiles/cmTC_2e752.dir/test_mpi.c.o
+        /usr/bin/cc  -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -std=gnu99 -o CMakeFiles/cmTC_2e752.dir/test_mpi.c.o -c /home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-Pb8Fry/test_mpi.c
+        Linking C executable cmTC_2e752
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2e752.dir/link.txt --verbose=1
+        /usr/bin/cc -L/usr/lib/x86_64-linux-gnu/openmpi/lib CMakeFiles/cmTC_2e752.dir/test_mpi.c.o -o cmTC_2e752  /usr/lib/x86_64-linux-gnu/libmpi.so 
+        gmake[1]: 离开目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-Pb8Fry”
         
       exitCode: 0
   -
@@ -1153,8 +1153,8 @@ events:
       - "CMakeLists.txt:232 (ament_auto_find_build_dependencies)"
     description: "The MPI test test_mpi for C in mode normal"
     directories:
-      source: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-ybEQYY"
-      binary: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-ybEQYY"
+      source: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-ECjsfb"
+      binary: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-ECjsfb"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -1164,17 +1164,17 @@ events:
       variable: "MPI_RESULT_C_test_mpi_normal"
       cached: true
       stdout: |
-        Change Dir: '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-ybEQYY'
+        Change Dir: '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-ECjsfb'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_e8a4f/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_e8a4f.dir/build.make CMakeFiles/cmTC_e8a4f.dir/build
-        gmake[1]: 进入目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-ybEQYY”
-        Building C object CMakeFiles/cmTC_e8a4f.dir/test_mpi.c.o
-        /usr/bin/cc  -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -std=gnu99 -o CMakeFiles/cmTC_e8a4f.dir/test_mpi.c.o -c /home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-ybEQYY/test_mpi.c
-        Linking C executable cmTC_e8a4f
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e8a4f.dir/link.txt --verbose=1
-        /usr/bin/cc -L/usr/lib/x86_64-linux-gnu/openmpi/lib CMakeFiles/cmTC_e8a4f.dir/test_mpi.c.o -o cmTC_e8a4f  /usr/lib/x86_64-linux-gnu/libmpi.so 
-        gmake[1]: 离开目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-ybEQYY”
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_30ce0/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_30ce0.dir/build.make CMakeFiles/cmTC_30ce0.dir/build
+        gmake[1]: 进入目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-ECjsfb”
+        Building C object CMakeFiles/cmTC_30ce0.dir/test_mpi.c.o
+        /usr/bin/cc  -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -std=gnu99 -o CMakeFiles/cmTC_30ce0.dir/test_mpi.c.o -c /home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-ECjsfb/test_mpi.c
+        Linking C executable cmTC_30ce0
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_30ce0.dir/link.txt --verbose=1
+        /usr/bin/cc -L/usr/lib/x86_64-linux-gnu/openmpi/lib CMakeFiles/cmTC_30ce0.dir/test_mpi.c.o -o cmTC_30ce0  /usr/lib/x86_64-linux-gnu/libmpi.so 
+        gmake[1]: 离开目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-ECjsfb”
         
       exitCode: 0
   -
@@ -1194,8 +1194,8 @@ events:
       - "CMakeLists.txt:232 (ament_auto_find_build_dependencies)"
     description: "The MPI test test_mpi for C in mode normal"
     directories:
-      source: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-fPHEN5"
-      binary: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-fPHEN5"
+      source: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-2MQKNN"
+      binary: "/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-2MQKNN"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -1205,17 +1205,17 @@ events:
       variable: "MPI_RESULT_C_test_mpi_normal"
       cached: true
       stdout: |
-        Change Dir: '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-fPHEN5'
+        Change Dir: '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-2MQKNN'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_14380/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_14380.dir/build.make CMakeFiles/cmTC_14380.dir/build
-        gmake[1]: 进入目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-fPHEN5”
-        Building C object CMakeFiles/cmTC_14380.dir/test_mpi.c.o
-        /usr/bin/cc  -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -std=gnu99 -o CMakeFiles/cmTC_14380.dir/test_mpi.c.o -c /home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-fPHEN5/test_mpi.c
-        Linking C executable cmTC_14380
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_14380.dir/link.txt --verbose=1
-        /usr/bin/cc -L/usr/lib/x86_64-linux-gnu/openmpi/lib CMakeFiles/cmTC_14380.dir/test_mpi.c.o -o cmTC_14380  /usr/lib/x86_64-linux-gnu/libmpi.so 
-        gmake[1]: 离开目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-fPHEN5”
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_4e55c/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_4e55c.dir/build.make CMakeFiles/cmTC_4e55c.dir/build
+        gmake[1]: 进入目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-2MQKNN”
+        Building C object CMakeFiles/cmTC_4e55c.dir/test_mpi.c.o
+        /usr/bin/cc  -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -std=gnu99 -o CMakeFiles/cmTC_4e55c.dir/test_mpi.c.o -c /home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-2MQKNN/test_mpi.c
+        Linking C executable cmTC_4e55c
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4e55c.dir/link.txt --verbose=1
+        /usr/bin/cc -L/usr/lib/x86_64-linux-gnu/openmpi/lib CMakeFiles/cmTC_4e55c.dir/test_mpi.c.o -o cmTC_4e55c  /usr/lib/x86_64-linux-gnu/libmpi.so 
+        gmake[1]: 离开目录“/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2/CMakeFiles/CMakeScratch/TryCompile-2MQKNN”
         
       exitCode: 0
 ...

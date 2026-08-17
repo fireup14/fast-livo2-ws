@@ -1,1 +1,33 @@
-/home/fire/Desktop/fast_livo2_ws/src/FAST-LIVO2/config/d405.yaml
+/**:
+  ros__parameters:
+    # RealSense D405 针孔相机模型参数。
+    # vikit_ros 通过 camera_loader::loadFromRosNs() 读取 camera 命名空间。
+    camera:
+      cam_model: Pinhole                 # 相机投影模型；当前使用针孔模型。
+      cam_width: 1280                    # 标定图像原始宽度，单位：像素。
+      cam_height: 720                    # 标定图像原始高度，单位：像素。
+
+      scale: 0.5                         # 图像处理缩放比例；内参和图像尺寸会同步缩放。
+      
+      cam_fx: 665.1898237482282          # 原始分辨率下 x 方向焦距，单位：像素。
+      cam_fy: 665.8415744550642          # 原始分辨率下 y 方向焦距，单位：像素。
+      cam_cx: 637.6588421587555          # 原始分辨率下主点 x 坐标，单位：像素。
+      cam_cy: 355.47059576089157         # 原始分辨率下主点 y 坐标，单位：像素。
+
+      cam_d0: -0.046950622434026715      # 径向畸变系数 k1。
+      cam_d1: 0.04769351060975733        # 径向畸变系数 k2。
+      cam_d2: 0.0                        # 切向畸变系数 p1。
+      cam_d3: 0.0                        # 切向畸变系数 p2。
+
+# 参数使用位置说明：
+# 1. src/FAST-LIVO2/launch/mapping.launch.py
+#    generate_launch_description() 将本文件作为参数文件传给 fastlivo_mapping 节点。
+# 2. src/FAST-LIVO2/src/LIVMapper.cpp
+#    LIVMapper::initializeComponents() 调用
+#    vk::camera_loader::loadFromRosNs(node, "camera", vio_manager->cam) 创建相机模型，
+#    随后由 VIOManager 使用该模型完成像素投影、特征跟踪和点云着色。
+# 3. src/rpg_vikit/vikit_ros/src/camera_loader.cpp
+#    vk::camera_loader::loadFromRosNs() 读取 model、width、height、scale、
+#    fx、fy、cx、cy、d0、d1、d2、d3，并构造 vk::PinholeCamera。
+# 4. src/rpg_vikit/vikit_common/src/pinhole_camera.cpp
+#    vk::PinholeCamera 的构造函数应用 scale，生成实际处理分辨率与缩放后的内参。

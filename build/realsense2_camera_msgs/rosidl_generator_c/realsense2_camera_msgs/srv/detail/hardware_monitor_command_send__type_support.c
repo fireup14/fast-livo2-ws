@@ -4,10 +4,10 @@
 
 #include <string.h>
 
+#include "realsense2_camera_msgs/srv/detail/hardware_monitor_command_send__struct.h"
+#include "realsense2_camera_msgs/srv/detail/hardware_monitor_command_send__type_support.h"
 #include "rosidl_typesupport_interface/macros.h"
 #include "realsense2_camera_msgs/srv/detail/hardware_monitor_command_send__functions.h"
-#include "realsense2_camera_msgs/srv/detail/hardware_monitor_command_send__type_support.h"
-#include "realsense2_camera_msgs/srv/detail/hardware_monitor_command_send__struct.h"
 
 #ifdef __cplusplus
 extern "C"
