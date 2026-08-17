@@ -84,7 +84,7 @@
     publish:
       dense_map_en: true
       pub_effect_point_en: false
-      pub_plane_en: false
+      pub_plane_en: true
       pub_scan_num: 1
       blind_rgb_points: 0.0
 

@@ -110,6 +110,13 @@ void VoxelOctoTree::init_plane(const std::vector<pointWithVar> &points, VoxelPla
   Eigen::Vector3d evecMax = evecs.real().col(evalsMax);
   Eigen::Matrix3d J_Q;
   J_Q << 1.0 / plane->points_size_, 0, 0, 0, 1.0 / plane->points_size_, 0, 0, 0, 1.0 / plane->points_size_;
+  // Every voxel keeps one persistent, unique marker ID even when it is not a plane.
+  if (!plane->is_init_)
+  {
+    plane->id_ = voxel_plane_id++;
+    plane->is_init_ = true;
+  }
+  plane->is_update_ = true;
   // && evalsReal(evalsMid) > 0.05
   //&& evalsReal(evalsMid) > 0.01
   if (evalsReal(evalsMin) < planer_threshold_)
@@ -148,17 +155,9 @@ void VoxelOctoTree::init_plane(const std::vector<pointWithVar> &points, VoxelPla
     plane->radius_ = sqrt(evalsReal(evalsMax));
     plane->d_ = -(plane->normal_(0) * plane->center_(0) + plane->normal_(1) * plane->center_(1) + plane->normal_(2) * plane->center_(2));
     plane->is_plane_ = true;
-    plane->is_update_ = true;
-    if (!plane->is_init_)
-    {
-      plane->id_ = voxel_plane_id;
-      voxel_plane_id++;
-      plane->is_init_ = true;
-    }
   }
   else
   {
-    plane->is_update_ = true;
     plane->is_plane_ = false;
   }
 }
@@ -886,7 +885,8 @@ void VoxelMapManager::pubSinglePlane(visualization_msgs::msg::MarkerArray &plane
   plane.color.r = rgb(0);
   plane.color.g = rgb(1);
   plane.color.b = rgb(2);
-  plane.lifetime = rclcpp::Duration::from_seconds(0.01);
+  // Keep the marker until another marker with the same namespace and ID replaces it.
+  plane.lifetime = rclcpp::Duration::from_seconds(0.0);
   plane_pub.markers.push_back(plane);
 }
 

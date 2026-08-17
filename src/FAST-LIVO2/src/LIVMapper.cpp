@@ -536,7 +536,11 @@ void LIVMapper::handleLIO()
 
   if (!img_en) publish_frame_world(pubLaserCloudFullRes, vio_manager);
   if (pub_effect_point_en) publish_effect_world(pubLaserCloudEffect, voxelmap_manager->ptpl_list_);
-  if (voxelmap_manager->config_setting_.is_pub_plane_map_) voxelmap_manager->pubVoxelMap();
+  if (voxelmap_manager->config_setting_.is_pub_plane_map_
+    && frame_num % 5 == 0) // 个人修改：降频输出
+  {
+    voxelmap_manager->pubVoxelMap();
+  } 
   publish_path(pubPath);
   publish_mavros(mavros_pose_publisher);
 

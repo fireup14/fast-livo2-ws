@@ -16,12 +16,6 @@ def generate_launch_description():
     top_pkg_share = get_package_share_directory("top_pkg")
     fast_livo_share = get_package_share_directory("fast_livo")
 
-    enable_rviz_arg = DeclareLaunchArgument(
-        "enable_rviz",
-        default_value="true",
-        description="Whether to start the top-level bringup RViz.",
-    )
-
     sensor_bringup = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(top_pkg_share, "launch", "bringup_sensor.launch.py")
@@ -35,6 +29,12 @@ def generate_launch_description():
         ),
         launch_arguments={"enable_rviz": "false"}.items(),
     )
+    
+    enable_rviz_arg = DeclareLaunchArgument(
+        "enable_rviz",
+        default_value="true",
+        description="Whether to start the top-level bringup RViz.",
+    )
 
     rviz = Node(
         package="rviz2",
@@ -45,9 +45,11 @@ def generate_launch_description():
         condition=IfCondition(LaunchConfiguration("enable_rviz")),
     )
 
+    # Start this node before including child launches.  Both child launch files
+    # use an enable_rviz argument which is explicitly set to false above.
     return LaunchDescription([
         enable_rviz_arg,
+        rviz,
         sensor_bringup,
         fast_livo_mapping,
-        rviz,
     ])
