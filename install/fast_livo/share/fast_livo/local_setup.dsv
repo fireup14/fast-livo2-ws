@@ -1,2 +1,1 @@
-source;share/fast_livo/environment/ament_prefix_path.sh
-source;share/fast_livo/environment/path.sh
+/home/fire/Desktop/fast_livo2_ws/build/fast_livo/ament_cmake_environment_hooks/local_setup.dsv

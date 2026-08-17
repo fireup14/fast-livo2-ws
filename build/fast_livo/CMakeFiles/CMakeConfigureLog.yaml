@@ -1501,3 +1501,431 @@ events:
         
       exitCode: 0
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1/VTK-vtk-module-find-packages.cmake:397 (find_package)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1/vtk-config.cmake:150 (include)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:275 (find_package)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:324 (find_VTK)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:567 (find_external_library)"
+      - "/opt/ros/jazzy/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)"
+      - "/opt/ros/jazzy/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)"
+      - "/opt/ros/jazzy/share/pcl_ros/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)"
+      - "/opt/ros/jazzy/share/pcl_ros/cmake/pcl_rosConfig.cmake:41 (include)"
+      - "CMakeLists.txt:90 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-4uI6qT"
+      binary: "/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-4uI6qT"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1/patches/99;/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1;/opt/ros/jazzy/share/fastrtps_cmake_module/cmake/Modules;/opt/ros/jazzy/lib/x86_64-linux-gnu/cmake/iceoryx_hoofs;/opt/ros/jazzy/lib/x86_64-linux-gnu/cmake/iceoryx_posh;/usr/lib/x86_64-linux-gnu/cmake/pcl/Modules"
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-4uI6qT'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_2c885/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_2c885.dir/build.make CMakeFiles/cmTC_2c885.dir/build
+        gmake[1]: Entering directory '/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-4uI6qT'
+        Building C object CMakeFiles/cmTC_2c885.dir/test_mpi.c.o
+        /usr/bin/cc  -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi  -o CMakeFiles/cmTC_2c885.dir/test_mpi.c.o -c /home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-4uI6qT/test_mpi.c
+        Linking C executable cmTC_2c885
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2c885.dir/link.txt --verbose=1
+        /usr/bin/cc -L/usr/lib/x86_64-linux-gnu/openmpi/lib CMakeFiles/cmTC_2c885.dir/test_mpi.c.o -o cmTC_2c885  /usr/lib/x86_64-linux-gnu/libmpi.so 
+        gmake[1]: Leaving directory '/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-4uI6qT'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1/VTK-vtk-module-find-packages.cmake:397 (find_package)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1/vtk-config.cmake:150 (include)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:275 (find_package)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:324 (find_VTK)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:567 (find_external_library)"
+      - "/opt/ros/jazzy/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)"
+      - "/opt/ros/jazzy/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)"
+      - "/opt/ros/jazzy/share/pcl_ros/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)"
+      - "/opt/ros/jazzy/share/pcl_ros/cmake/pcl_rosConfig.cmake:41 (include)"
+      - "CMakeLists.txt:90 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-4UG8MF"
+      binary: "/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-4UG8MF"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1/patches/99;/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1;/opt/ros/jazzy/share/fastrtps_cmake_module/cmake/Modules;/opt/ros/jazzy/lib/x86_64-linux-gnu/cmake/iceoryx_hoofs;/opt/ros/jazzy/lib/x86_64-linux-gnu/cmake/iceoryx_posh;/usr/lib/x86_64-linux-gnu/cmake/pcl/Modules"
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-4UG8MF'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_9e753/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_9e753.dir/build.make CMakeFiles/cmTC_9e753.dir/build
+        gmake[1]: Entering directory '/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-4UG8MF'
+        Building C object CMakeFiles/cmTC_9e753.dir/test_mpi.c.o
+        /usr/bin/cc  -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi  -o CMakeFiles/cmTC_9e753.dir/test_mpi.c.o -c /home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-4UG8MF/test_mpi.c
+        Linking C executable cmTC_9e753
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9e753.dir/link.txt --verbose=1
+        /usr/bin/cc -L/usr/lib/x86_64-linux-gnu/openmpi/lib CMakeFiles/cmTC_9e753.dir/test_mpi.c.o -o cmTC_9e753  /usr/lib/x86_64-linux-gnu/libmpi.so 
+        gmake[1]: Leaving directory '/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-4UG8MF'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1/VTK-vtk-module-find-packages.cmake:397 (find_package)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1/vtk-config.cmake:150 (include)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:275 (find_package)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:324 (find_VTK)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:570 (find_external_library)"
+      - "/opt/ros/jazzy/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)"
+      - "/opt/ros/jazzy/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)"
+      - "/opt/ros/jazzy/share/pcl_ros/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)"
+      - "/opt/ros/jazzy/share/pcl_ros/cmake/pcl_rosConfig.cmake:41 (include)"
+      - "CMakeLists.txt:90 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-d0c2tZ"
+      binary: "/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-d0c2tZ"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1/patches/99;/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1;/opt/ros/jazzy/share/fastrtps_cmake_module/cmake/Modules;/opt/ros/jazzy/lib/x86_64-linux-gnu/cmake/iceoryx_hoofs;/opt/ros/jazzy/lib/x86_64-linux-gnu/cmake/iceoryx_posh;/usr/lib/x86_64-linux-gnu/cmake/pcl/Modules"
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-d0c2tZ'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_a9500/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_a9500.dir/build.make CMakeFiles/cmTC_a9500.dir/build
+        gmake[1]: Entering directory '/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-d0c2tZ'
+        Building C object CMakeFiles/cmTC_a9500.dir/test_mpi.c.o
+        /usr/bin/cc  -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi  -o CMakeFiles/cmTC_a9500.dir/test_mpi.c.o -c /home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-d0c2tZ/test_mpi.c
+        Linking C executable cmTC_a9500
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a9500.dir/link.txt --verbose=1
+        /usr/bin/cc -L/usr/lib/x86_64-linux-gnu/openmpi/lib CMakeFiles/cmTC_a9500.dir/test_mpi.c.o -o cmTC_a9500  /usr/lib/x86_64-linux-gnu/libmpi.so 
+        gmake[1]: Leaving directory '/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-d0c2tZ'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1/VTK-vtk-module-find-packages.cmake:397 (find_package)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1/vtk-config.cmake:150 (include)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:275 (find_package)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:324 (find_VTK)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:567 (find_external_library)"
+      - "/opt/ros/jazzy/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)"
+      - "/opt/ros/jazzy/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)"
+      - "/opt/ros/jazzy/share/pcl_ros/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)"
+      - "/opt/ros/jazzy/share/pcl_ros/cmake/pcl_rosConfig.cmake:41 (include)"
+      - "CMakeLists.txt:90 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-qYyOrd"
+      binary: "/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-qYyOrd"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1/patches/99;/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1;/opt/ros/jazzy/share/fastrtps_cmake_module/cmake/Modules;/opt/ros/jazzy/lib/x86_64-linux-gnu/cmake/iceoryx_hoofs;/opt/ros/jazzy/lib/x86_64-linux-gnu/cmake/iceoryx_posh;/usr/lib/x86_64-linux-gnu/cmake/pcl/Modules"
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-qYyOrd'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_dae18/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_dae18.dir/build.make CMakeFiles/cmTC_dae18.dir/build
+        gmake[1]: Entering directory '/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-qYyOrd'
+        Building C object CMakeFiles/cmTC_dae18.dir/test_mpi.c.o
+        /usr/bin/cc  -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi  -o CMakeFiles/cmTC_dae18.dir/test_mpi.c.o -c /home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-qYyOrd/test_mpi.c
+        Linking C executable cmTC_dae18
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dae18.dir/link.txt --verbose=1
+        /usr/bin/cc -L/usr/lib/x86_64-linux-gnu/openmpi/lib CMakeFiles/cmTC_dae18.dir/test_mpi.c.o -o cmTC_dae18  /usr/lib/x86_64-linux-gnu/libmpi.so 
+        gmake[1]: Leaving directory '/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-qYyOrd'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1/VTK-vtk-module-find-packages.cmake:397 (find_package)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1/vtk-config.cmake:150 (include)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:275 (find_package)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:324 (find_VTK)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:567 (find_external_library)"
+      - "/opt/ros/jazzy/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)"
+      - "/opt/ros/jazzy/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)"
+      - "/opt/ros/jazzy/share/pcl_ros/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)"
+      - "/opt/ros/jazzy/share/pcl_ros/cmake/pcl_rosConfig.cmake:41 (include)"
+      - "CMakeLists.txt:90 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-StQ62F"
+      binary: "/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-StQ62F"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1/patches/99;/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1;/opt/ros/jazzy/share/fastrtps_cmake_module/cmake/Modules;/opt/ros/jazzy/lib/x86_64-linux-gnu/cmake/iceoryx_hoofs;/opt/ros/jazzy/lib/x86_64-linux-gnu/cmake/iceoryx_posh;/usr/lib/x86_64-linux-gnu/cmake/pcl/Modules"
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-StQ62F'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_ed1c7/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_ed1c7.dir/build.make CMakeFiles/cmTC_ed1c7.dir/build
+        gmake[1]: Entering directory '/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-StQ62F'
+        Building C object CMakeFiles/cmTC_ed1c7.dir/test_mpi.c.o
+        /usr/bin/cc  -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi  -o CMakeFiles/cmTC_ed1c7.dir/test_mpi.c.o -c /home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-StQ62F/test_mpi.c
+        Linking C executable cmTC_ed1c7
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ed1c7.dir/link.txt --verbose=1
+        /usr/bin/cc -L/usr/lib/x86_64-linux-gnu/openmpi/lib CMakeFiles/cmTC_ed1c7.dir/test_mpi.c.o -o cmTC_ed1c7  /usr/lib/x86_64-linux-gnu/libmpi.so 
+        gmake[1]: Leaving directory '/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-StQ62F'
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1/VTK-vtk-module-find-packages.cmake:397 (find_package)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1/vtk-config.cmake:150 (include)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:275 (find_package)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:324 (find_VTK)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:567 (find_external_library)"
+      - "/opt/ros/jazzy/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)"
+      - "/opt/ros/jazzy/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)"
+      - "/opt/ros/jazzy/share/pcl_ros/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)"
+      - "/opt/ros/jazzy/share/pcl_ros/cmake/pcl_rosConfig.cmake:41 (include)"
+      - "CMakeLists.txt:90 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-ZxrUzQ"
+      binary: "/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-ZxrUzQ"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1/patches/99;/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1;/opt/ros/jazzy/share/fastrtps_cmake_module/cmake/Modules;/opt/ros/jazzy/lib/x86_64-linux-gnu/cmake/iceoryx_hoofs;/opt/ros/jazzy/lib/x86_64-linux-gnu/cmake/iceoryx_posh;/usr/lib/x86_64-linux-gnu/cmake/pcl/Modules"
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-ZxrUzQ'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_ef6b1/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_ef6b1.dir/build.make CMakeFiles/cmTC_ef6b1.dir/build
+        gmake[1]: 进入目录“/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-ZxrUzQ”
+        Building C object CMakeFiles/cmTC_ef6b1.dir/test_mpi.c.o
+        /usr/bin/cc  -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi  -o CMakeFiles/cmTC_ef6b1.dir/test_mpi.c.o -c /home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-ZxrUzQ/test_mpi.c
+        Linking C executable cmTC_ef6b1
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ef6b1.dir/link.txt --verbose=1
+        /usr/bin/cc -L/usr/lib/x86_64-linux-gnu/openmpi/lib CMakeFiles/cmTC_ef6b1.dir/test_mpi.c.o -o cmTC_ef6b1  /usr/lib/x86_64-linux-gnu/libmpi.so 
+        gmake[1]: 离开目录“/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-ZxrUzQ”
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1/VTK-vtk-module-find-packages.cmake:397 (find_package)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1/vtk-config.cmake:150 (include)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:275 (find_package)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:324 (find_VTK)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:567 (find_external_library)"
+      - "/opt/ros/jazzy/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)"
+      - "/opt/ros/jazzy/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)"
+      - "/opt/ros/jazzy/share/pcl_ros/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)"
+      - "/opt/ros/jazzy/share/pcl_ros/cmake/pcl_rosConfig.cmake:41 (include)"
+      - "CMakeLists.txt:90 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-9inbvE"
+      binary: "/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-9inbvE"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1/patches/99;/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1;/opt/ros/jazzy/share/fastrtps_cmake_module/cmake/Modules;/opt/ros/jazzy/lib/x86_64-linux-gnu/cmake/iceoryx_hoofs;/opt/ros/jazzy/lib/x86_64-linux-gnu/cmake/iceoryx_posh;/usr/lib/x86_64-linux-gnu/cmake/pcl/Modules"
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-9inbvE'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_fb923/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_fb923.dir/build.make CMakeFiles/cmTC_fb923.dir/build
+        gmake[1]: 进入目录“/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-9inbvE”
+        Building C object CMakeFiles/cmTC_fb923.dir/test_mpi.c.o
+        /usr/bin/cc  -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi  -o CMakeFiles/cmTC_fb923.dir/test_mpi.c.o -c /home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-9inbvE/test_mpi.c
+        Linking C executable cmTC_fb923
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fb923.dir/link.txt --verbose=1
+        /usr/bin/cc -L/usr/lib/x86_64-linux-gnu/openmpi/lib CMakeFiles/cmTC_fb923.dir/test_mpi.c.o -o cmTC_fb923  /usr/lib/x86_64-linux-gnu/libmpi.so 
+        gmake[1]: 离开目录“/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-9inbvE”
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1/VTK-vtk-module-find-packages.cmake:397 (find_package)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1/vtk-config.cmake:150 (include)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:275 (find_package)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:324 (find_VTK)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:570 (find_external_library)"
+      - "/opt/ros/jazzy/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)"
+      - "/opt/ros/jazzy/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)"
+      - "/opt/ros/jazzy/share/pcl_ros/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)"
+      - "/opt/ros/jazzy/share/pcl_ros/cmake/pcl_rosConfig.cmake:41 (include)"
+      - "CMakeLists.txt:90 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-oOt7S5"
+      binary: "/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-oOt7S5"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1/patches/99;/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1;/opt/ros/jazzy/share/fastrtps_cmake_module/cmake/Modules;/opt/ros/jazzy/lib/x86_64-linux-gnu/cmake/iceoryx_hoofs;/opt/ros/jazzy/lib/x86_64-linux-gnu/cmake/iceoryx_posh;/usr/lib/x86_64-linux-gnu/cmake/pcl/Modules"
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-oOt7S5'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_ee531/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_ee531.dir/build.make CMakeFiles/cmTC_ee531.dir/build
+        gmake[1]: 进入目录“/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-oOt7S5”
+        Building C object CMakeFiles/cmTC_ee531.dir/test_mpi.c.o
+        /usr/bin/cc  -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi  -o CMakeFiles/cmTC_ee531.dir/test_mpi.c.o -c /home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-oOt7S5/test_mpi.c
+        Linking C executable cmTC_ee531
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ee531.dir/link.txt --verbose=1
+        /usr/bin/cc -L/usr/lib/x86_64-linux-gnu/openmpi/lib CMakeFiles/cmTC_ee531.dir/test_mpi.c.o -o cmTC_ee531  /usr/lib/x86_64-linux-gnu/libmpi.so 
+        gmake[1]: 离开目录“/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-oOt7S5”
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1/VTK-vtk-module-find-packages.cmake:397 (find_package)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1/vtk-config.cmake:150 (include)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:275 (find_package)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:324 (find_VTK)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:567 (find_external_library)"
+      - "/opt/ros/jazzy/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)"
+      - "/opt/ros/jazzy/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)"
+      - "/opt/ros/jazzy/share/pcl_ros/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)"
+      - "/opt/ros/jazzy/share/pcl_ros/cmake/pcl_rosConfig.cmake:41 (include)"
+      - "CMakeLists.txt:90 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-DhsLAK"
+      binary: "/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-DhsLAK"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1/patches/99;/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1;/opt/ros/jazzy/share/fastrtps_cmake_module/cmake/Modules;/opt/ros/jazzy/lib/x86_64-linux-gnu/cmake/iceoryx_hoofs;/opt/ros/jazzy/lib/x86_64-linux-gnu/cmake/iceoryx_posh;/usr/lib/x86_64-linux-gnu/cmake/pcl/Modules"
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-DhsLAK'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_28436/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_28436.dir/build.make CMakeFiles/cmTC_28436.dir/build
+        gmake[1]: 进入目录“/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-DhsLAK”
+        Building C object CMakeFiles/cmTC_28436.dir/test_mpi.c.o
+        /usr/bin/cc  -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi  -o CMakeFiles/cmTC_28436.dir/test_mpi.c.o -c /home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-DhsLAK/test_mpi.c
+        Linking C executable cmTC_28436
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_28436.dir/link.txt --verbose=1
+        /usr/bin/cc -L/usr/lib/x86_64-linux-gnu/openmpi/lib CMakeFiles/cmTC_28436.dir/test_mpi.c.o -o cmTC_28436  /usr/lib/x86_64-linux-gnu/libmpi.so 
+        gmake[1]: 离开目录“/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-DhsLAK”
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1/VTK-vtk-module-find-packages.cmake:397 (find_package)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1/vtk-config.cmake:150 (include)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:275 (find_package)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:324 (find_VTK)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:567 (find_external_library)"
+      - "/opt/ros/jazzy/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)"
+      - "/opt/ros/jazzy/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)"
+      - "/opt/ros/jazzy/share/pcl_ros/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)"
+      - "/opt/ros/jazzy/share/pcl_ros/cmake/pcl_rosConfig.cmake:41 (include)"
+      - "CMakeLists.txt:90 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-rkw7iH"
+      binary: "/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-rkw7iH"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1/patches/99;/usr/lib/x86_64-linux-gnu/cmake/vtk-9.1;/opt/ros/jazzy/share/fastrtps_cmake_module/cmake/Modules;/opt/ros/jazzy/lib/x86_64-linux-gnu/cmake/iceoryx_hoofs;/opt/ros/jazzy/lib/x86_64-linux-gnu/cmake/iceoryx_posh;/usr/lib/x86_64-linux-gnu/cmake/pcl/Modules"
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-rkw7iH'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_f9438/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_f9438.dir/build.make CMakeFiles/cmTC_f9438.dir/build
+        gmake[1]: 进入目录“/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-rkw7iH”
+        Building C object CMakeFiles/cmTC_f9438.dir/test_mpi.c.o
+        /usr/bin/cc  -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi  -o CMakeFiles/cmTC_f9438.dir/test_mpi.c.o -c /home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-rkw7iH/test_mpi.c
+        Linking C executable cmTC_f9438
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f9438.dir/link.txt --verbose=1
+        /usr/bin/cc -L/usr/lib/x86_64-linux-gnu/openmpi/lib CMakeFiles/cmTC_f9438.dir/test_mpi.c.o -o cmTC_f9438  /usr/lib/x86_64-linux-gnu/libmpi.so 
+        gmake[1]: 离开目录“/home/fire/Desktop/fast_livo2_ws/build/fast_livo/CMakeFiles/CMakeScratch/TryCompile-rkw7iH”
+        
+      exitCode: 0
+...
