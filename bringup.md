@@ -22,9 +22,84 @@ source install/setup.bash
 ros2 launch top_pkg bringup.launch.py
 ```
 
-  source install/setup.bash
-  ros2 launch lidar_camera_projection_check projection_check.launch.py
+source install/setup.bash
+ros2 launch lidar_camera_projection_check projection_check.launch.py
 
 
-  source install/setup.bash
-  ros2 run rqt_image_view rqt_image_view
+source install/setup.bash
+ros2 run rqt_image_view rqt_image_view
+
+
+source install/setup.bash
+ros2 launch lidar_camera_projection_check bringup_projection_check.launch.py
+
+
+
+cd ~/Desktop/fast_livo2_ws
+source install/setup.bash
+
+ros2 launch top_pkg bringup_sensor.launch.py \
+  enable_lidar:=true \
+  enable_camera:=true \
+  enable_rviz:=false
+
+source ~/Desktop/fast_livo2_ws/install/setup.bash
+ros2 topic info /livox/lidar
+ros2 topic hz /livox/lidar
+ros2 topic info /camera/camera/color/image_raw
+ros2 topic hz /camera/camera/color/image_raw
+
+source install/setup.bash
+ros2 run rqt_image_view rqt_image_view
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
