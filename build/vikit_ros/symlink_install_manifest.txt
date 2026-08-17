@@ -1,0 +1,17 @@
+/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/ament_index/resource_index/package_run_dependencies/vikit_ros
+/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/ament_index/resource_index/parent_prefix_path/vikit_ros
+/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/environment/ament_prefix_path.sh
+/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/environment/ament_prefix_path.dsv
+/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/environment/path.sh
+/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/environment/path.dsv
+/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/local_setup.bash
+/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/local_setup.sh
+/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/local_setup.zsh
+/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/local_setup.dsv
+/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/package.dsv
+/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/ament_index/resource_index/packages/vikit_ros
+/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/cmake/ament_cmake_export_dependencies-extras.cmake
+/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/cmake/ament_cmake_export_include_directories-extras.cmake
+/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/cmake/vikit_rosConfig.cmake
+/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/cmake/vikit_rosConfig-version.cmake
+/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/package.xml

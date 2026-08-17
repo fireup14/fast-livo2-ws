@@ -1,0 +1,10 @@
+/home/fire/Desktop/fast_livo2_ws/build/vikit_ros/CMakeFiles/uninstall.dir
+/home/fire/Desktop/fast_livo2_ws/build/vikit_ros/CMakeFiles/vikit_ros_uninstall.dir
+/home/fire/Desktop/fast_livo2_ws/build/vikit_ros/CMakeFiles/vikit_ros.dir
+/home/fire/Desktop/fast_livo2_ws/build/vikit_ros/CMakeFiles/test.dir
+/home/fire/Desktop/fast_livo2_ws/build/vikit_ros/CMakeFiles/edit_cache.dir
+/home/fire/Desktop/fast_livo2_ws/build/vikit_ros/CMakeFiles/rebuild_cache.dir
+/home/fire/Desktop/fast_livo2_ws/build/vikit_ros/CMakeFiles/list_install_components.dir
+/home/fire/Desktop/fast_livo2_ws/build/vikit_ros/CMakeFiles/install.dir
+/home/fire/Desktop/fast_livo2_ws/build/vikit_ros/CMakeFiles/install/local.dir
+/home/fire/Desktop/fast_livo2_ws/build/vikit_ros/CMakeFiles/install/strip.dir

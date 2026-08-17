@@ -1,0 +1,50 @@
+-- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Override CMake install command with custom implementation using symlinks instead of copying resources
+-- Found rclcpp: 28.1.16 (/opt/ros/jazzy/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+-- Found rmw_cyclonedds_cpp: 2.2.3 (/opt/ros/jazzy/share/rmw_cyclonedds_cpp/cmake)
+-- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+-- Found visualization_msgs: 5.3.6 (/opt/ros/jazzy/share/visualization_msgs/cmake)
+-- Found tf2: 0.36.19 (/opt/ros/jazzy/share/tf2/cmake)
+-- Found tf2_ros: 0.36.19 (/opt/ros/jazzy/share/tf2_ros/cmake)
+-- Found tf2_geometry_msgs: 0.36.19 (/opt/ros/jazzy/share/tf2_geometry_msgs/cmake)
+-- Found eigen3_cmake_module: 0.3.0 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)
+-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+-- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+-- Found rosidl_adapter: 4.6.7 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+-- Configuring done (0.5s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/fire/Desktop/fast_livo2_ws/build/vikit_ros
+[ 33%] Building CXX object CMakeFiles/vikit_ros.dir/src/camera_loader.cpp.o
+[ 66%] Linking CXX shared library libvikit_ros.so
+[100%] Built target vikit_ros
+-- Install configuration: "Release"
+-- Execute custom install script
+-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/ament_index/resource_index/package_run_dependencies/vikit_ros
+-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/ament_index/resource_index/parent_prefix_path/vikit_ros
+-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/environment/ament_prefix_path.sh
+-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/environment/ament_prefix_path.dsv
+-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/environment/path.sh
+-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/environment/path.dsv
+-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/local_setup.bash
+-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/local_setup.sh
+-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/local_setup.zsh
+-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/local_setup.dsv
+-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/package.dsv
+-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/ament_index/resource_index/packages/vikit_ros
+-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/cmake/vikit_rosConfig.cmake
+-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/cmake/vikit_rosConfig-version.cmake
+-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/package.xml
+-- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/include
+-- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/include/vikit
+-- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/include/vikit/output_helper.h
+-- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/include/vikit/params_helper.h
+-- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/include/vikit/camera_loader.h
+-- Installing: /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/lib/libvikit_ros.so
+-- Set non-toolchain portion of runtime path of "/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/lib/libvikit_ros.so" to ""

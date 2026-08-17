@@ -1,0 +1,29 @@
+[ 68%] Built target vikit_common
+[ 78%] Built target test_vk_common_camera
+[ 89%] Built target test_vk_common_triangulation
+[100%] Built target test_vk_common_patch_score
+-- Install configuration: "Release"
+-- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/include/vikit
+-- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/include/vikit/math_utils.h
+-- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/include/vikit/atan_camera.h
+-- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/include/vikit/performance_monitor.h
+-- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/include/vikit/img_align.h
+-- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/include/vikit/file_reader_types.h
+-- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/include/vikit/blender_utils.h
+-- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/include/vikit/file_reader.h
+-- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/include/vikit/nlls_solver.h
+-- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/include/vikit/patch_score.h
+-- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/include/vikit/polynomial_camera.h
+-- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/include/vikit/robust_cost.h
+-- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/include/vikit/equidistant_camera.h
+-- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/include/vikit/abstract_camera.h
+-- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/include/vikit/aligned_mem.h
+-- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/include/vikit/user_input_thread.h
+-- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/include/vikit/vision.h
+-- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/include/vikit/omni_camera.h
+-- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/include/vikit/timer.h
+-- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/include/vikit/homography.h
+-- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/include/vikit/pinhole_camera.h
+-- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/include/vikit/sample.h
+-- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/include/vikit/ringbuffer.h
+-- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/libvikit_common.so

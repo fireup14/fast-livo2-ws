@@ -1,0 +1,4 @@
+# Colcon generated artifacts
+/build/
+/install/
+/log/

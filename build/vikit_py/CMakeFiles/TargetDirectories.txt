@@ -1,0 +1,9 @@
+/home/fire/Desktop/fast_livo2_ws/build/vikit_py/CMakeFiles/uninstall.dir
+/home/fire/Desktop/fast_livo2_ws/build/vikit_py/CMakeFiles/vikit_py_uninstall.dir
+/home/fire/Desktop/fast_livo2_ws/build/vikit_py/CMakeFiles/test.dir
+/home/fire/Desktop/fast_livo2_ws/build/vikit_py/CMakeFiles/edit_cache.dir
+/home/fire/Desktop/fast_livo2_ws/build/vikit_py/CMakeFiles/rebuild_cache.dir
+/home/fire/Desktop/fast_livo2_ws/build/vikit_py/CMakeFiles/list_install_components.dir
+/home/fire/Desktop/fast_livo2_ws/build/vikit_py/CMakeFiles/install.dir
+/home/fire/Desktop/fast_livo2_ws/build/vikit_py/CMakeFiles/install/local.dir
+/home/fire/Desktop/fast_livo2_ws/build/vikit_py/CMakeFiles/install/strip.dir

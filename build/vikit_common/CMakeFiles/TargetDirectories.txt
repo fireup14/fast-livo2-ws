@@ -1,0 +1,10 @@
+/home/fire/Desktop/fast_livo2_ws/build/vikit_common/CMakeFiles/vikit_common.dir
+/home/fire/Desktop/fast_livo2_ws/build/vikit_common/CMakeFiles/test_vk_common_camera.dir
+/home/fire/Desktop/fast_livo2_ws/build/vikit_common/CMakeFiles/test_vk_common_triangulation.dir
+/home/fire/Desktop/fast_livo2_ws/build/vikit_common/CMakeFiles/test_vk_common_patch_score.dir
+/home/fire/Desktop/fast_livo2_ws/build/vikit_common/CMakeFiles/edit_cache.dir
+/home/fire/Desktop/fast_livo2_ws/build/vikit_common/CMakeFiles/rebuild_cache.dir
+/home/fire/Desktop/fast_livo2_ws/build/vikit_common/CMakeFiles/list_install_components.dir
+/home/fire/Desktop/fast_livo2_ws/build/vikit_common/CMakeFiles/install.dir
+/home/fire/Desktop/fast_livo2_ws/build/vikit_common/CMakeFiles/install/local.dir
+/home/fire/Desktop/fast_livo2_ws/build/vikit_common/CMakeFiles/install/strip.dir

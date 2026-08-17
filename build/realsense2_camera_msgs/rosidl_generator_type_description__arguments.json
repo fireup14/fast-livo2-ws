@@ -1,0 +1,30 @@
+{
+  "package_name": "realsense2_camera_msgs",
+  "output_dir": "/home/fire/Desktop/fast_livo2_ws/build/realsense2_camera_msgs/rosidl_generator_type_description/realsense2_camera_msgs",
+  "idl_tuples": [
+    "/home/fire/Desktop/fast_livo2_ws/build/realsense2_camera_msgs/rosidl_adapter/realsense2_camera_msgs:msg/IMUInfo.idl",
+    "/home/fire/Desktop/fast_livo2_ws/build/realsense2_camera_msgs/rosidl_adapter/realsense2_camera_msgs:msg/Extrinsics.idl",
+    "/home/fire/Desktop/fast_livo2_ws/build/realsense2_camera_msgs/rosidl_adapter/realsense2_camera_msgs:msg/Metadata.idl",
+    "/home/fire/Desktop/fast_livo2_ws/build/realsense2_camera_msgs/rosidl_adapter/realsense2_camera_msgs:msg/RGBD.idl",
+    "/home/fire/Desktop/fast_livo2_ws/build/realsense2_camera_msgs/rosidl_adapter/realsense2_camera_msgs:srv/DeviceInfo.idl",
+    "/home/fire/Desktop/fast_livo2_ws/build/realsense2_camera_msgs/rosidl_adapter/realsense2_camera_msgs:srv/SafetyPresetRead.idl",
+    "/home/fire/Desktop/fast_livo2_ws/build/realsense2_camera_msgs/rosidl_adapter/realsense2_camera_msgs:srv/SafetyPresetWrite.idl",
+    "/home/fire/Desktop/fast_livo2_ws/build/realsense2_camera_msgs/rosidl_adapter/realsense2_camera_msgs:srv/SafetyInterfaceConfigRead.idl",
+    "/home/fire/Desktop/fast_livo2_ws/build/realsense2_camera_msgs/rosidl_adapter/realsense2_camera_msgs:srv/SafetyInterfaceConfigWrite.idl",
+    "/home/fire/Desktop/fast_livo2_ws/build/realsense2_camera_msgs/rosidl_adapter/realsense2_camera_msgs:srv/CalibConfigRead.idl",
+    "/home/fire/Desktop/fast_livo2_ws/build/realsense2_camera_msgs/rosidl_adapter/realsense2_camera_msgs:srv/CalibConfigWrite.idl",
+    "/home/fire/Desktop/fast_livo2_ws/build/realsense2_camera_msgs/rosidl_adapter/realsense2_camera_msgs:srv/ApplicationConfigRead.idl",
+    "/home/fire/Desktop/fast_livo2_ws/build/realsense2_camera_msgs/rosidl_adapter/realsense2_camera_msgs:srv/ApplicationConfigWrite.idl",
+    "/home/fire/Desktop/fast_livo2_ws/build/realsense2_camera_msgs/rosidl_adapter/realsense2_camera_msgs:srv/HardwareMonitorCommandSend.idl",
+    "/home/fire/Desktop/fast_livo2_ws/build/realsense2_camera_msgs/rosidl_adapter/realsense2_camera_msgs:action/TriggeredCalibration.idl"
+  ],
+  "include_paths": [
+    "builtin_interfaces:/opt/ros/jazzy/share/builtin_interfaces",
+    "std_msgs:/opt/ros/jazzy/share/std_msgs",
+    "sensor_msgs:/opt/ros/jazzy/share/sensor_msgs",
+    "geometry_msgs:/opt/ros/jazzy/share/geometry_msgs",
+    "service_msgs:/opt/ros/jazzy/share/service_msgs",
+    "action_msgs:/opt/ros/jazzy/share/action_msgs",
+    "unique_identifier_msgs:/opt/ros/jazzy/share/unique_identifier_msgs"
+  ]
+}

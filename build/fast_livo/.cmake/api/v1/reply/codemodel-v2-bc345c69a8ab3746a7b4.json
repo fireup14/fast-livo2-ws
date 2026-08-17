@@ -1,0 +1,133 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-a57ec39c269ef08190db.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "fast_livo",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "fast_livo_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-fast_livo_uninstall-Release-2ccedf04da81d6ec8ad6.json",
+					"name" : "fast_livo_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "fastlivo_mapping::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-fastlivo_mapping-Release-b712f00e586616aa912f.json",
+					"name" : "fastlivo_mapping",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "imu_proc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-imu_proc-Release-2b2383ae3248ec5cdf03.json",
+					"name" : "imu_proc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "laser_mapping::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-laser_mapping-Release-fa3e49a812904d967f40.json",
+					"name" : "laser_mapping",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "lio::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-lio-Release-0f2deb5b2f5ce189dcba.json",
+					"name" : "lio",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "pre::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-pre-Release-7fcd9a162e756a426f31.json",
+					"name" : "pre",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-Release-c2b9db44a65bfef26d9e.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "utils::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-utils-Release-14018bf4b3775a343483.json",
+					"name" : "utils",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "vio::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-vio-Release-602f61d703292e7509a1.json",
+					"name" : "vio",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/fire/Desktop/fast_livo2_ws/build/fast_livo",
+		"source" : "/home/fire/Desktop/fast_livo2_ws/src/FAST-LIVO2"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

@@ -1,0 +1,704 @@
+[0.051s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.051s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=24, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x79ecb76fa930>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x79ecb78c1ee0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x79ecb78c1ee0>>)
+[0.069s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.069s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.069s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.069s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.069s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.069s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.069s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/fire/Desktop/fast_livo2_ws'
+[0.069s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.070s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.070s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.070s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.070s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.070s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.070s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.070s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.070s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.083s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.083s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.083s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.083s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.083s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.083s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.083s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.083s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.083s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.083s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.083s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.084s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.084s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.084s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.084s] Level 1:colcon.colcon_core.package_identification:_identify(other) by extensions ['ignore', 'ignore_ament_install']
+[0.084s] Level 1:colcon.colcon_core.package_identification:_identify(other) by extension 'ignore'
+[0.084s] Level 1:colcon.colcon_core.package_identification:_identify(other) ignored
+[0.084s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.084s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.084s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.084s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.084s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.084s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.084s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.084s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.084s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.084s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.084s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.084s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.084s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.084s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.084s] Level 1:colcon.colcon_core.package_identification:_identify(src/FAST-LIVO2) by extensions ['ignore', 'ignore_ament_install']
+[0.084s] Level 1:colcon.colcon_core.package_identification:_identify(src/FAST-LIVO2) by extension 'ignore'
+[0.084s] Level 1:colcon.colcon_core.package_identification:_identify(src/FAST-LIVO2) by extension 'ignore_ament_install'
+[0.084s] Level 1:colcon.colcon_core.package_identification:_identify(src/FAST-LIVO2) by extensions ['colcon_pkg']
+[0.084s] Level 1:colcon.colcon_core.package_identification:_identify(src/FAST-LIVO2) by extension 'colcon_pkg'
+[0.084s] Level 1:colcon.colcon_core.package_identification:_identify(src/FAST-LIVO2) by extensions ['colcon_meta']
+[0.084s] Level 1:colcon.colcon_core.package_identification:_identify(src/FAST-LIVO2) by extension 'colcon_meta'
+[0.084s] Level 1:colcon.colcon_core.package_identification:_identify(src/FAST-LIVO2) by extensions ['ros']
+[0.084s] Level 1:colcon.colcon_core.package_identification:_identify(src/FAST-LIVO2) by extension 'ros'
+[0.086s] DEBUG:colcon.colcon_core.package_identification:Package 'src/FAST-LIVO2' with type 'ros.ament_cmake' and name 'fast_livo'
+[0.086s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extensions ['ignore', 'ignore_ament_install']
+[0.086s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extension 'ignore'
+[0.086s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extension 'ignore_ament_install'
+[0.086s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extensions ['colcon_pkg']
+[0.086s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extension 'colcon_pkg'
+[0.086s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extensions ['colcon_meta']
+[0.086s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extension 'colcon_meta'
+[0.086s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extensions ['ros']
+[0.086s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extension 'ros'
+[0.086s] DEBUG:colcon.colcon_core.package_identification:Package 'src/livox_ros_driver2' with type 'ros.ament_cmake' and name 'livox_ros_driver2'
+[0.087s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros) by extensions ['ignore', 'ignore_ament_install']
+[0.087s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros) by extension 'ignore'
+[0.087s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros) by extension 'ignore_ament_install'
+[0.087s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros) by extensions ['colcon_pkg']
+[0.087s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros) by extension 'colcon_pkg'
+[0.087s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros) by extensions ['colcon_meta']
+[0.087s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros) by extension 'colcon_meta'
+[0.087s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros) by extensions ['ros']
+[0.087s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros) by extension 'ros'
+[0.087s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros) by extensions ['cmake', 'python']
+[0.087s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros) by extension 'cmake'
+[0.087s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros) by extension 'python'
+[0.087s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros) by extensions ['python_setup_py']
+[0.087s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros) by extension 'python_setup_py'
+[0.087s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_camera) by extensions ['ignore', 'ignore_ament_install']
+[0.087s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_camera) by extension 'ignore'
+[0.087s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_camera) by extension 'ignore_ament_install'
+[0.087s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_camera) by extensions ['colcon_pkg']
+[0.087s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_camera) by extension 'colcon_pkg'
+[0.087s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_camera) by extensions ['colcon_meta']
+[0.087s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_camera) by extension 'colcon_meta'
+[0.087s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_camera) by extensions ['ros']
+[0.087s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_camera) by extension 'ros'
+[0.090s] DEBUG:colcon.colcon_core.package_identification:Package 'src/realsense-ros/realsense2_camera' with type 'ros.ament_cmake' and name 'realsense2_camera'
+[0.090s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_camera_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.090s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_camera_msgs) by extension 'ignore'
+[0.090s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_camera_msgs) by extension 'ignore_ament_install'
+[0.090s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_camera_msgs) by extensions ['colcon_pkg']
+[0.090s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_camera_msgs) by extension 'colcon_pkg'
+[0.090s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_camera_msgs) by extensions ['colcon_meta']
+[0.090s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_camera_msgs) by extension 'colcon_meta'
+[0.090s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_camera_msgs) by extensions ['ros']
+[0.090s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_camera_msgs) by extension 'ros'
+[0.091s] DEBUG:colcon.colcon_core.package_identification:Package 'src/realsense-ros/realsense2_camera_msgs' with type 'ros.ament_cmake' and name 'realsense2_camera_msgs'
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_description) by extensions ['ignore', 'ignore_ament_install']
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_description) by extension 'ignore'
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_description) by extension 'ignore_ament_install'
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_description) by extensions ['colcon_pkg']
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_description) by extension 'colcon_pkg'
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_description) by extensions ['colcon_meta']
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_description) by extension 'colcon_meta'
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_description) by extensions ['ros']
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_description) by extension 'ros'
+[0.091s] DEBUG:colcon.colcon_core.package_identification:Package 'src/realsense-ros/realsense2_description' with type 'ros.ament_cmake' and name 'realsense2_description'
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_rgbd_plugin) by extensions ['ignore', 'ignore_ament_install']
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_rgbd_plugin) by extension 'ignore'
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_rgbd_plugin) by extension 'ignore_ament_install'
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_rgbd_plugin) by extensions ['colcon_pkg']
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_rgbd_plugin) by extension 'colcon_pkg'
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_rgbd_plugin) by extensions ['colcon_meta']
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_rgbd_plugin) by extension 'colcon_meta'
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_rgbd_plugin) by extensions ['ros']
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_rgbd_plugin) by extension 'ros'
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_rgbd_plugin) ignored
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_ros_mqtt_bridge) by extensions ['ignore', 'ignore_ament_install']
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_ros_mqtt_bridge) by extension 'ignore'
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_ros_mqtt_bridge) by extension 'ignore_ament_install'
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_ros_mqtt_bridge) by extensions ['colcon_pkg']
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_ros_mqtt_bridge) by extension 'colcon_pkg'
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_ros_mqtt_bridge) by extensions ['colcon_meta']
+[0.091s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_ros_mqtt_bridge) by extension 'colcon_meta'
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_ros_mqtt_bridge) by extensions ['ros']
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_ros_mqtt_bridge) by extension 'ros'
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/realsense2_ros_mqtt_bridge) ignored
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/res) by extensions ['ignore', 'ignore_ament_install']
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/res) by extension 'ignore'
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/res) by extension 'ignore_ament_install'
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/res) by extensions ['colcon_pkg']
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/res) by extension 'colcon_pkg'
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/res) by extensions ['colcon_meta']
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/res) by extension 'colcon_meta'
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/res) by extensions ['ros']
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/res) by extension 'ros'
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/res) by extensions ['cmake', 'python']
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/res) by extension 'cmake'
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/res) by extension 'python'
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/res) by extensions ['python_setup_py']
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/res) by extension 'python_setup_py'
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/scripts) by extensions ['ignore', 'ignore_ament_install']
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/scripts) by extension 'ignore'
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/scripts) by extension 'ignore_ament_install'
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/scripts) by extensions ['colcon_pkg']
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/scripts) by extension 'colcon_pkg'
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/scripts) by extensions ['colcon_meta']
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/scripts) by extension 'colcon_meta'
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/scripts) by extensions ['ros']
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/scripts) by extension 'ros'
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/scripts) by extensions ['cmake', 'python']
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/scripts) by extension 'cmake'
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/scripts) by extension 'python'
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/scripts) by extensions ['python_setup_py']
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/realsense-ros/scripts) by extension 'python_setup_py'
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/rpg_vikit) by extensions ['ignore', 'ignore_ament_install']
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/rpg_vikit) by extension 'ignore'
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/rpg_vikit) by extension 'ignore_ament_install'
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/rpg_vikit) by extensions ['colcon_pkg']
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/rpg_vikit) by extension 'colcon_pkg'
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/rpg_vikit) by extensions ['colcon_meta']
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/rpg_vikit) by extension 'colcon_meta'
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/rpg_vikit) by extensions ['ros']
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/rpg_vikit) by extension 'ros'
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/rpg_vikit) by extensions ['cmake', 'python']
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/rpg_vikit) by extension 'cmake'
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/rpg_vikit) by extension 'python'
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/rpg_vikit) by extensions ['python_setup_py']
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/rpg_vikit) by extension 'python_setup_py'
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/rpg_vikit/vikit_common) by extensions ['ignore', 'ignore_ament_install']
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/rpg_vikit/vikit_common) by extension 'ignore'
+[0.092s] Level 1:colcon.colcon_core.package_identification:_identify(src/rpg_vikit/vikit_common) by extension 'ignore_ament_install'
+[0.093s] Level 1:colcon.colcon_core.package_identification:_identify(src/rpg_vikit/vikit_common) by extensions ['colcon_pkg']
+[0.093s] Level 1:colcon.colcon_core.package_identification:_identify(src/rpg_vikit/vikit_common) by extension 'colcon_pkg'
+[0.093s] Level 1:colcon.colcon_core.package_identification:_identify(src/rpg_vikit/vikit_common) by extensions ['colcon_meta']
+[0.093s] Level 1:colcon.colcon_core.package_identification:_identify(src/rpg_vikit/vikit_common) by extension 'colcon_meta'
+[0.093s] Level 1:colcon.colcon_core.package_identification:_identify(src/rpg_vikit/vikit_common) by extensions ['ros']
+[0.093s] Level 1:colcon.colcon_core.package_identification:_identify(src/rpg_vikit/vikit_common) by extension 'ros'
+[0.093s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rpg_vikit/vikit_common' with type 'ros.catkin' and name 'vikit_common'
+[0.093s] Level 1:colcon.colcon_core.package_identification:_identify(src/rpg_vikit/vikit_py) by extensions ['ignore', 'ignore_ament_install']
+[0.093s] Level 1:colcon.colcon_core.package_identification:_identify(src/rpg_vikit/vikit_py) by extension 'ignore'
+[0.093s] Level 1:colcon.colcon_core.package_identification:_identify(src/rpg_vikit/vikit_py) by extension 'ignore_ament_install'
+[0.093s] Level 1:colcon.colcon_core.package_identification:_identify(src/rpg_vikit/vikit_py) by extensions ['colcon_pkg']
+[0.093s] Level 1:colcon.colcon_core.package_identification:_identify(src/rpg_vikit/vikit_py) by extension 'colcon_pkg'
+[0.093s] Level 1:colcon.colcon_core.package_identification:_identify(src/rpg_vikit/vikit_py) by extensions ['colcon_meta']
+[0.093s] Level 1:colcon.colcon_core.package_identification:_identify(src/rpg_vikit/vikit_py) by extension 'colcon_meta'
+[0.093s] Level 1:colcon.colcon_core.package_identification:_identify(src/rpg_vikit/vikit_py) by extensions ['ros']
+[0.093s] Level 1:colcon.colcon_core.package_identification:_identify(src/rpg_vikit/vikit_py) by extension 'ros'
+[0.093s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rpg_vikit/vikit_py' with type 'ros.ament_cmake' and name 'vikit_py'
+[0.093s] Level 1:colcon.colcon_core.package_identification:_identify(src/rpg_vikit/vikit_ros) by extensions ['ignore', 'ignore_ament_install']
+[0.093s] Level 1:colcon.colcon_core.package_identification:_identify(src/rpg_vikit/vikit_ros) by extension 'ignore'
+[0.094s] Level 1:colcon.colcon_core.package_identification:_identify(src/rpg_vikit/vikit_ros) by extension 'ignore_ament_install'
+[0.094s] Level 1:colcon.colcon_core.package_identification:_identify(src/rpg_vikit/vikit_ros) by extensions ['colcon_pkg']
+[0.094s] Level 1:colcon.colcon_core.package_identification:_identify(src/rpg_vikit/vikit_ros) by extension 'colcon_pkg'
+[0.094s] Level 1:colcon.colcon_core.package_identification:_identify(src/rpg_vikit/vikit_ros) by extensions ['colcon_meta']
+[0.094s] Level 1:colcon.colcon_core.package_identification:_identify(src/rpg_vikit/vikit_ros) by extension 'colcon_meta'
+[0.094s] Level 1:colcon.colcon_core.package_identification:_identify(src/rpg_vikit/vikit_ros) by extensions ['ros']
+[0.094s] Level 1:colcon.colcon_core.package_identification:_identify(src/rpg_vikit/vikit_ros) by extension 'ros'
+[0.094s] DEBUG:colcon.colcon_core.package_identification:Package 'src/rpg_vikit/vikit_ros' with type 'ros.ament_cmake' and name 'vikit_ros'
+[0.094s] Level 1:colcon.colcon_core.package_identification:_identify(src/top_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.094s] Level 1:colcon.colcon_core.package_identification:_identify(src/top_pkg) by extension 'ignore'
+[0.094s] Level 1:colcon.colcon_core.package_identification:_identify(src/top_pkg) by extension 'ignore_ament_install'
+[0.094s] Level 1:colcon.colcon_core.package_identification:_identify(src/top_pkg) by extensions ['colcon_pkg']
+[0.094s] Level 1:colcon.colcon_core.package_identification:_identify(src/top_pkg) by extension 'colcon_pkg'
+[0.094s] Level 1:colcon.colcon_core.package_identification:_identify(src/top_pkg) by extensions ['colcon_meta']
+[0.094s] Level 1:colcon.colcon_core.package_identification:_identify(src/top_pkg) by extension 'colcon_meta'
+[0.094s] Level 1:colcon.colcon_core.package_identification:_identify(src/top_pkg) by extensions ['ros']
+[0.094s] Level 1:colcon.colcon_core.package_identification:_identify(src/top_pkg) by extension 'ros'
+[0.094s] DEBUG:colcon.colcon_core.package_identification:Package 'src/top_pkg' with type 'ros.ament_cmake' and name 'top_pkg'
+[0.094s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.094s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.094s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.094s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.094s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.105s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'cmake_args' from command line to 'None'
+[0.105s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'cmake_target' from command line to 'None'
+[0.105s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.105s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'cmake_clean_cache' from command line to 'False'
+[0.105s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'cmake_clean_first' from command line to 'False'
+[0.105s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'cmake_force_configure' from command line to 'False'
+[0.106s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'ament_cmake_args' from command line to 'None'
+[0.106s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'catkin_cmake_args' from command line to 'None'
+[0.106s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.106s] DEBUG:colcon.colcon_core.verb:Building package 'livox_ros_driver2' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2', 'merge_install': False, 'path': '/home/fire/Desktop/fast_livo2_ws/src/livox_ros_driver2', 'symlink_install': False, 'test_result_base': None}
+[0.106s] Level 5:colcon.colcon_core.verb:set package 'realsense2_camera_msgs' build argument 'cmake_args' from command line to 'None'
+[0.106s] Level 5:colcon.colcon_core.verb:set package 'realsense2_camera_msgs' build argument 'cmake_target' from command line to 'None'
+[0.106s] Level 5:colcon.colcon_core.verb:set package 'realsense2_camera_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.106s] Level 5:colcon.colcon_core.verb:set package 'realsense2_camera_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.106s] Level 5:colcon.colcon_core.verb:set package 'realsense2_camera_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.106s] Level 5:colcon.colcon_core.verb:set package 'realsense2_camera_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.106s] Level 5:colcon.colcon_core.verb:set package 'realsense2_camera_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.106s] Level 5:colcon.colcon_core.verb:set package 'realsense2_camera_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.106s] Level 5:colcon.colcon_core.verb:set package 'realsense2_camera_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.106s] DEBUG:colcon.colcon_core.verb:Building package 'realsense2_camera_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/fire/Desktop/fast_livo2_ws/build/realsense2_camera_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs', 'merge_install': False, 'path': '/home/fire/Desktop/fast_livo2_ws/src/realsense-ros/realsense2_camera_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.106s] Level 5:colcon.colcon_core.verb:set package 'vikit_common' build argument 'cmake_args' from command line to 'None'
+[0.106s] Level 5:colcon.colcon_core.verb:set package 'vikit_common' build argument 'cmake_target' from command line to 'None'
+[0.106s] Level 5:colcon.colcon_core.verb:set package 'vikit_common' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.106s] Level 5:colcon.colcon_core.verb:set package 'vikit_common' build argument 'cmake_clean_cache' from command line to 'False'
+[0.106s] Level 5:colcon.colcon_core.verb:set package 'vikit_common' build argument 'cmake_clean_first' from command line to 'False'
+[0.106s] Level 5:colcon.colcon_core.verb:set package 'vikit_common' build argument 'cmake_force_configure' from command line to 'False'
+[0.106s] Level 5:colcon.colcon_core.verb:set package 'vikit_common' build argument 'ament_cmake_args' from command line to 'None'
+[0.106s] Level 5:colcon.colcon_core.verb:set package 'vikit_common' build argument 'catkin_cmake_args' from command line to 'None'
+[0.106s] Level 5:colcon.colcon_core.verb:set package 'vikit_common' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.106s] DEBUG:colcon.colcon_core.verb:Building package 'vikit_common' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/fire/Desktop/fast_livo2_ws/build/vikit_common', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/fire/Desktop/fast_livo2_ws/install/vikit_common', 'merge_install': False, 'path': '/home/fire/Desktop/fast_livo2_ws/src/rpg_vikit/vikit_common', 'symlink_install': False, 'test_result_base': None}
+[0.106s] Level 5:colcon.colcon_core.verb:set package 'vikit_py' build argument 'cmake_args' from command line to 'None'
+[0.106s] Level 5:colcon.colcon_core.verb:set package 'vikit_py' build argument 'cmake_target' from command line to 'None'
+[0.106s] Level 5:colcon.colcon_core.verb:set package 'vikit_py' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.106s] Level 5:colcon.colcon_core.verb:set package 'vikit_py' build argument 'cmake_clean_cache' from command line to 'False'
+[0.106s] Level 5:colcon.colcon_core.verb:set package 'vikit_py' build argument 'cmake_clean_first' from command line to 'False'
+[0.106s] Level 5:colcon.colcon_core.verb:set package 'vikit_py' build argument 'cmake_force_configure' from command line to 'False'
+[0.106s] Level 5:colcon.colcon_core.verb:set package 'vikit_py' build argument 'ament_cmake_args' from command line to 'None'
+[0.106s] Level 5:colcon.colcon_core.verb:set package 'vikit_py' build argument 'catkin_cmake_args' from command line to 'None'
+[0.106s] Level 5:colcon.colcon_core.verb:set package 'vikit_py' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.106s] DEBUG:colcon.colcon_core.verb:Building package 'vikit_py' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/fire/Desktop/fast_livo2_ws/build/vikit_py', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/fire/Desktop/fast_livo2_ws/install/vikit_py', 'merge_install': False, 'path': '/home/fire/Desktop/fast_livo2_ws/src/rpg_vikit/vikit_py', 'symlink_install': False, 'test_result_base': None}
+[0.106s] Level 5:colcon.colcon_core.verb:set package 'realsense2_camera' build argument 'cmake_args' from command line to 'None'
+[0.106s] Level 5:colcon.colcon_core.verb:set package 'realsense2_camera' build argument 'cmake_target' from command line to 'None'
+[0.106s] Level 5:colcon.colcon_core.verb:set package 'realsense2_camera' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.106s] Level 5:colcon.colcon_core.verb:set package 'realsense2_camera' build argument 'cmake_clean_cache' from command line to 'False'
+[0.106s] Level 5:colcon.colcon_core.verb:set package 'realsense2_camera' build argument 'cmake_clean_first' from command line to 'False'
+[0.106s] Level 5:colcon.colcon_core.verb:set package 'realsense2_camera' build argument 'cmake_force_configure' from command line to 'False'
+[0.106s] Level 5:colcon.colcon_core.verb:set package 'realsense2_camera' build argument 'ament_cmake_args' from command line to 'None'
+[0.106s] Level 5:colcon.colcon_core.verb:set package 'realsense2_camera' build argument 'catkin_cmake_args' from command line to 'None'
+[0.106s] Level 5:colcon.colcon_core.verb:set package 'realsense2_camera' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.106s] DEBUG:colcon.colcon_core.verb:Building package 'realsense2_camera' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/fire/Desktop/fast_livo2_ws/build/realsense2_camera', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera', 'merge_install': False, 'path': '/home/fire/Desktop/fast_livo2_ws/src/realsense-ros/realsense2_camera', 'symlink_install': False, 'test_result_base': None}
+[0.106s] Level 5:colcon.colcon_core.verb:set package 'realsense2_description' build argument 'cmake_args' from command line to 'None'
+[0.106s] Level 5:colcon.colcon_core.verb:set package 'realsense2_description' build argument 'cmake_target' from command line to 'None'
+[0.106s] Level 5:colcon.colcon_core.verb:set package 'realsense2_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.106s] Level 5:colcon.colcon_core.verb:set package 'realsense2_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.107s] Level 5:colcon.colcon_core.verb:set package 'realsense2_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.107s] Level 5:colcon.colcon_core.verb:set package 'realsense2_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.107s] Level 5:colcon.colcon_core.verb:set package 'realsense2_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.107s] Level 5:colcon.colcon_core.verb:set package 'realsense2_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.107s] Level 5:colcon.colcon_core.verb:set package 'realsense2_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.107s] DEBUG:colcon.colcon_core.verb:Building package 'realsense2_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/fire/Desktop/fast_livo2_ws/build/realsense2_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/fire/Desktop/fast_livo2_ws/install/realsense2_description', 'merge_install': False, 'path': '/home/fire/Desktop/fast_livo2_ws/src/realsense-ros/realsense2_description', 'symlink_install': False, 'test_result_base': None}
+[0.107s] Level 5:colcon.colcon_core.verb:set package 'vikit_ros' build argument 'cmake_args' from command line to 'None'
+[0.107s] Level 5:colcon.colcon_core.verb:set package 'vikit_ros' build argument 'cmake_target' from command line to 'None'
+[0.107s] Level 5:colcon.colcon_core.verb:set package 'vikit_ros' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.107s] Level 5:colcon.colcon_core.verb:set package 'vikit_ros' build argument 'cmake_clean_cache' from command line to 'False'
+[0.107s] Level 5:colcon.colcon_core.verb:set package 'vikit_ros' build argument 'cmake_clean_first' from command line to 'False'
+[0.107s] Level 5:colcon.colcon_core.verb:set package 'vikit_ros' build argument 'cmake_force_configure' from command line to 'False'
+[0.107s] Level 5:colcon.colcon_core.verb:set package 'vikit_ros' build argument 'ament_cmake_args' from command line to 'None'
+[0.107s] Level 5:colcon.colcon_core.verb:set package 'vikit_ros' build argument 'catkin_cmake_args' from command line to 'None'
+[0.107s] Level 5:colcon.colcon_core.verb:set package 'vikit_ros' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.107s] DEBUG:colcon.colcon_core.verb:Building package 'vikit_ros' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/fire/Desktop/fast_livo2_ws/build/vikit_ros', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/fire/Desktop/fast_livo2_ws/install/vikit_ros', 'merge_install': False, 'path': '/home/fire/Desktop/fast_livo2_ws/src/rpg_vikit/vikit_ros', 'symlink_install': False, 'test_result_base': None}
+[0.107s] Level 5:colcon.colcon_core.verb:set package 'fast_livo' build argument 'cmake_args' from command line to 'None'
+[0.107s] Level 5:colcon.colcon_core.verb:set package 'fast_livo' build argument 'cmake_target' from command line to 'None'
+[0.107s] Level 5:colcon.colcon_core.verb:set package 'fast_livo' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.107s] Level 5:colcon.colcon_core.verb:set package 'fast_livo' build argument 'cmake_clean_cache' from command line to 'False'
+[0.107s] Level 5:colcon.colcon_core.verb:set package 'fast_livo' build argument 'cmake_clean_first' from command line to 'False'
+[0.107s] Level 5:colcon.colcon_core.verb:set package 'fast_livo' build argument 'cmake_force_configure' from command line to 'False'
+[0.107s] Level 5:colcon.colcon_core.verb:set package 'fast_livo' build argument 'ament_cmake_args' from command line to 'None'
+[0.107s] Level 5:colcon.colcon_core.verb:set package 'fast_livo' build argument 'catkin_cmake_args' from command line to 'None'
+[0.107s] Level 5:colcon.colcon_core.verb:set package 'fast_livo' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.107s] DEBUG:colcon.colcon_core.verb:Building package 'fast_livo' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/fire/Desktop/fast_livo2_ws/build/fast_livo', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/fire/Desktop/fast_livo2_ws/install/fast_livo', 'merge_install': False, 'path': '/home/fire/Desktop/fast_livo2_ws/src/FAST-LIVO2', 'symlink_install': False, 'test_result_base': None}
+[0.107s] Level 5:colcon.colcon_core.verb:set package 'top_pkg' build argument 'cmake_args' from command line to 'None'
+[0.107s] Level 5:colcon.colcon_core.verb:set package 'top_pkg' build argument 'cmake_target' from command line to 'None'
+[0.107s] Level 5:colcon.colcon_core.verb:set package 'top_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.107s] Level 5:colcon.colcon_core.verb:set package 'top_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.107s] Level 5:colcon.colcon_core.verb:set package 'top_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.107s] Level 5:colcon.colcon_core.verb:set package 'top_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.107s] Level 5:colcon.colcon_core.verb:set package 'top_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.107s] Level 5:colcon.colcon_core.verb:set package 'top_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.107s] Level 5:colcon.colcon_core.verb:set package 'top_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.107s] DEBUG:colcon.colcon_core.verb:Building package 'top_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/fire/Desktop/fast_livo2_ws/build/top_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/fire/Desktop/fast_livo2_ws/install/top_pkg', 'merge_install': False, 'path': '/home/fire/Desktop/fast_livo2_ws/src/top_pkg', 'symlink_install': False, 'test_result_base': None}
+[0.107s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.108s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.108s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/fire/Desktop/fast_livo2_ws/src/realsense-ros/realsense2_camera_msgs' with build type 'ament_cmake'
+[0.108s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/fire/Desktop/fast_livo2_ws/src/realsense-ros/realsense2_camera_msgs'
+[0.109s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.109s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.112s] INFO:colcon.colcon_ros.task.catkin.build:Building ROS package in '/home/fire/Desktop/fast_livo2_ws/src/rpg_vikit/vikit_common' with build type 'catkin'
+[0.112s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/fire/Desktop/fast_livo2_ws/src/rpg_vikit/vikit_common'
+[0.112s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.113s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/fire/Desktop/fast_livo2_ws/src/livox_ros_driver2' with build type 'ament_cmake'
+[0.113s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/fire/Desktop/fast_livo2_ws/src/livox_ros_driver2'
+[0.113s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.115s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/fire/Desktop/fast_livo2_ws/src/rpg_vikit/vikit_py' with build type 'ament_cmake'
+[0.115s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/fire/Desktop/fast_livo2_ws/src/rpg_vikit/vikit_py'
+[0.115s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.119s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fire/Desktop/fast_livo2_ws/build/realsense2_camera_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/fire/Desktop/fast_livo2_ws/build/realsense2_camera_msgs -- -j24 -l24
+[0.119s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fire/Desktop/fast_livo2_ws/build/vikit_common': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/fire/Desktop/fast_livo2_ws/build/vikit_common -- -j24 -l24
+[0.121s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2 -- -j24 -l24
+[0.123s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fire/Desktop/fast_livo2_ws/build/vikit_py': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/fire/Desktop/fast_livo2_ws/build/vikit_py -- -j24 -l24
+[0.150s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fire/Desktop/fast_livo2_ws/build/vikit_py' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/fire/Desktop/fast_livo2_ws/build/vikit_py -- -j24 -l24
+[0.156s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fire/Desktop/fast_livo2_ws/build/vikit_py': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/fire/Desktop/fast_livo2_ws/build/vikit_py
+[0.162s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vikit_py)
+[0.163s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fire/Desktop/fast_livo2_ws/build/vikit_py' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/fire/Desktop/fast_livo2_ws/build/vikit_py
+[0.164s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/vikit_py' for CMake module files
+[0.165s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/vikit_py' for CMake config files
+[0.165s] Level 1:colcon.colcon_core.shell:create_environment_hook('vikit_py', 'cmake_prefix_path')
+[0.165s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fire/Desktop/fast_livo2_ws/install/vikit_py/share/vikit_py/hook/cmake_prefix_path.dsv'
+[0.166s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fire/Desktop/fast_livo2_ws/install/vikit_py/share/vikit_py/hook/cmake_prefix_path.sh'
+[0.167s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/vikit_py/lib'
+[0.167s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/vikit_py/bin'
+[0.167s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/vikit_py/lib/pkgconfig/vikit_py.pc'
+[0.169s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/vikit_py/lib/python3.12/site-packages'
+[0.169s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/vikit_py/bin'
+[0.170s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fire/Desktop/fast_livo2_ws/install/vikit_py/share/vikit_py/package.dsv'
+[0.170s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/vikit_py/share/vikit_py/package.sh'
+[0.171s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/vikit_py/share/vikit_py/package.bash'
+[0.172s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/vikit_py/share/vikit_py/package.zsh'
+[0.172s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fire/Desktop/fast_livo2_ws/install/vikit_py/share/colcon-core/packages/vikit_py)
+[0.173s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vikit_py)
+[0.173s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/vikit_py' for CMake module files
+[0.173s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/vikit_py' for CMake config files
+[0.173s] Level 1:colcon.colcon_core.shell:create_environment_hook('vikit_py', 'cmake_prefix_path')
+[0.173s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fire/Desktop/fast_livo2_ws/install/vikit_py/share/vikit_py/hook/cmake_prefix_path.dsv'
+[0.174s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fire/Desktop/fast_livo2_ws/install/vikit_py/share/vikit_py/hook/cmake_prefix_path.sh'
+[0.174s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/vikit_py/lib'
+[0.174s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/vikit_py/bin'
+[0.174s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/vikit_py/lib/pkgconfig/vikit_py.pc'
+[0.175s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/vikit_py/lib/python3.12/site-packages'
+[0.175s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/vikit_py/bin'
+[0.175s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fire/Desktop/fast_livo2_ws/install/vikit_py/share/vikit_py/package.dsv'
+[0.175s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/vikit_py/share/vikit_py/package.sh'
+[0.176s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/vikit_py/share/vikit_py/package.bash'
+[0.176s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/vikit_py/share/vikit_py/package.zsh'
+[0.176s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fire/Desktop/fast_livo2_ws/install/vikit_py/share/colcon-core/packages/vikit_py)
+[0.192s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fire/Desktop/fast_livo2_ws/build/vikit_common' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/fire/Desktop/fast_livo2_ws/build/vikit_common -- -j24 -l24
+[0.193s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fire/Desktop/fast_livo2_ws/build/vikit_common': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/fire/Desktop/fast_livo2_ws/build/vikit_common
+[0.201s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fire/Desktop/fast_livo2_ws/build/vikit_common' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/fire/Desktop/fast_livo2_ws/build/vikit_common
+[0.202s] Level 1:colcon.colcon_core.shell:create_environment_hook('vikit_common', 'ros_package_path')
+[0.202s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fire/Desktop/fast_livo2_ws/install/vikit_common/share/vikit_common/hook/ros_package_path.dsv'
+[0.202s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fire/Desktop/fast_livo2_ws/install/vikit_common/share/vikit_common/hook/ros_package_path.sh'
+[0.203s] Level 1:colcon.colcon_core.shell:create_environment_hook('vikit_common', 'pkg_config_path')
+[0.203s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fire/Desktop/fast_livo2_ws/install/vikit_common/share/vikit_common/hook/pkg_config_path.dsv'
+[0.203s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fire/Desktop/fast_livo2_ws/install/vikit_common/share/vikit_common/hook/pkg_config_path.sh'
+[0.205s] Level 1:colcon.colcon_core.shell:create_environment_hook('vikit_common', 'pkg_config_path_multiarch')
+[0.205s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fire/Desktop/fast_livo2_ws/install/vikit_common/share/vikit_common/hook/pkg_config_path_multiarch.dsv'
+[0.205s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fire/Desktop/fast_livo2_ws/install/vikit_common/share/vikit_common/hook/pkg_config_path_multiarch.sh'
+[0.206s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vikit_common)
+[0.206s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/vikit_common' for CMake module files
+[0.206s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/vikit_common' for CMake config files
+[0.206s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib'
+[0.206s] Level 1:colcon.colcon_core.shell:create_environment_hook('vikit_common', 'ld_library_path_lib')
+[0.206s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fire/Desktop/fast_livo2_ws/install/vikit_common/share/vikit_common/hook/ld_library_path_lib.dsv'
+[0.206s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fire/Desktop/fast_livo2_ws/install/vikit_common/share/vikit_common/hook/ld_library_path_lib.sh'
+[0.207s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/vikit_common/bin'
+[0.207s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/pkgconfig/vikit_common.pc'
+[0.207s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/python3.12/site-packages'
+[0.208s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/vikit_common/bin'
+[0.208s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fire/Desktop/fast_livo2_ws/install/vikit_common/share/vikit_common/package.dsv'
+[0.208s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/vikit_common/share/vikit_common/package.sh'
+[0.209s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/vikit_common/share/vikit_common/package.bash'
+[0.209s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/vikit_common/share/vikit_common/package.zsh'
+[0.209s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fire/Desktop/fast_livo2_ws/install/vikit_common/share/colcon-core/packages/vikit_common)
+[0.209s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/fire/Desktop/fast_livo2_ws/src/rpg_vikit/vikit_ros' with build type 'ament_cmake'
+[0.209s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/fire/Desktop/fast_livo2_ws/src/rpg_vikit/vikit_ros'
+[0.209s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.215s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fire/Desktop/fast_livo2_ws/build/vikit_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/x86_64-linux-gnu/pkgconfig:/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/pkgconfig ROS_PACKAGE_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_common/share /usr/bin/cmake --build /home/fire/Desktop/fast_livo2_ws/build/vikit_ros -- -j24 -l24
+[0.278s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fire/Desktop/fast_livo2_ws/build/vikit_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/x86_64-linux-gnu/pkgconfig:/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/pkgconfig ROS_PACKAGE_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_common/share /usr/bin/cmake --build /home/fire/Desktop/fast_livo2_ws/build/vikit_ros -- -j24 -l24
+[0.278s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fire/Desktop/fast_livo2_ws/build/vikit_ros': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/x86_64-linux-gnu/pkgconfig:/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/pkgconfig ROS_PACKAGE_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_common/share /usr/bin/cmake --install /home/fire/Desktop/fast_livo2_ws/build/vikit_ros
+[0.284s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vikit_ros)
+[0.284s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fire/Desktop/fast_livo2_ws/build/vikit_ros' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/x86_64-linux-gnu/pkgconfig:/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/pkgconfig ROS_PACKAGE_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_common/share /usr/bin/cmake --install /home/fire/Desktop/fast_livo2_ws/build/vikit_ros
+[0.284s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/vikit_ros' for CMake module files
+[0.285s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/vikit_ros' for CMake config files
+[0.285s] Level 1:colcon.colcon_core.shell:create_environment_hook('vikit_ros', 'cmake_prefix_path')
+[0.285s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/hook/cmake_prefix_path.dsv'
+[0.285s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/hook/cmake_prefix_path.sh'
+[0.286s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/lib'
+[0.286s] Level 1:colcon.colcon_core.shell:create_environment_hook('vikit_ros', 'ld_library_path_lib')
+[0.286s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/hook/ld_library_path_lib.dsv'
+[0.286s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/hook/ld_library_path_lib.sh'
+[0.286s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/bin'
+[0.287s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/lib/pkgconfig/vikit_ros.pc'
+[0.287s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/lib/python3.12/site-packages'
+[0.287s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/bin'
+[0.287s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/package.dsv'
+[0.287s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/package.sh'
+[0.287s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/package.bash'
+[0.287s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/package.zsh'
+[0.288s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/colcon-core/packages/vikit_ros)
+[0.288s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vikit_ros)
+[0.288s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/vikit_ros' for CMake module files
+[0.288s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/vikit_ros' for CMake config files
+[0.288s] Level 1:colcon.colcon_core.shell:create_environment_hook('vikit_ros', 'cmake_prefix_path')
+[0.288s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/hook/cmake_prefix_path.dsv'
+[0.289s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/hook/cmake_prefix_path.sh'
+[0.289s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/lib'
+[0.289s] Level 1:colcon.colcon_core.shell:create_environment_hook('vikit_ros', 'ld_library_path_lib')
+[0.289s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/hook/ld_library_path_lib.dsv'
+[0.289s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/hook/ld_library_path_lib.sh'
+[0.289s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/bin'
+[0.289s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/lib/pkgconfig/vikit_ros.pc'
+[0.289s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/lib/python3.12/site-packages'
+[0.290s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/bin'
+[0.290s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/package.dsv'
+[0.290s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/package.sh'
+[0.290s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/package.bash'
+[0.291s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/package.zsh'
+[0.292s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/colcon-core/packages/vikit_ros)
+[0.365s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fire/Desktop/fast_livo2_ws/build/realsense2_camera_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/fire/Desktop/fast_livo2_ws/build/realsense2_camera_msgs -- -j24 -l24
+[0.366s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fire/Desktop/fast_livo2_ws/build/realsense2_camera_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/fire/Desktop/fast_livo2_ws/build/realsense2_camera_msgs
+[0.368s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2 -- -j24 -l24
+[0.369s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2
+[0.401s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(livox_ros_driver2)
+[0.401s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2' for CMake module files
+[0.401s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/fire/Desktop/fast_livo2_ws/build/livox_ros_driver2
+[0.402s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2' for CMake config files
+[0.403s] Level 1:colcon.colcon_core.shell:create_environment_hook('livox_ros_driver2', 'cmake_prefix_path')
+[0.403s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/cmake_prefix_path.dsv'
+[0.403s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/cmake_prefix_path.sh'
+[0.404s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/lib'
+[0.404s] Level 1:colcon.colcon_core.shell:create_environment_hook('livox_ros_driver2', 'ld_library_path_lib')
+[0.404s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/ld_library_path_lib.dsv'
+[0.404s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/ld_library_path_lib.sh'
+[0.404s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/bin'
+[0.405s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/lib/pkgconfig/livox_ros_driver2.pc'
+[0.405s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/lib/python3.12/site-packages'
+[0.405s] Level 1:colcon.colcon_core.shell:create_environment_hook('livox_ros_driver2', 'pythonpath')
+[0.405s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/pythonpath.dsv'
+[0.406s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/pythonpath.sh'
+[0.409s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/bin'
+[0.409s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.dsv'
+[0.409s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.sh'
+[0.409s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.bash'
+[0.410s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.zsh'
+[0.410s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/share/colcon-core/packages/livox_ros_driver2)
+[0.410s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(livox_ros_driver2)
+[0.410s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2' for CMake module files
+[0.411s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2' for CMake config files
+[0.411s] Level 1:colcon.colcon_core.shell:create_environment_hook('livox_ros_driver2', 'cmake_prefix_path')
+[0.412s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/cmake_prefix_path.dsv'
+[0.412s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/cmake_prefix_path.sh'
+[0.412s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/lib'
+[0.412s] Level 1:colcon.colcon_core.shell:create_environment_hook('livox_ros_driver2', 'ld_library_path_lib')
+[0.412s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/ld_library_path_lib.dsv'
+[0.412s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/ld_library_path_lib.sh'
+[0.412s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/bin'
+[0.412s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/lib/pkgconfig/livox_ros_driver2.pc'
+[0.413s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/lib/python3.12/site-packages'
+[0.413s] Level 1:colcon.colcon_core.shell:create_environment_hook('livox_ros_driver2', 'pythonpath')
+[0.413s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/pythonpath.dsv'
+[0.413s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/pythonpath.sh'
+[0.413s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/bin'
+[0.413s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.dsv'
+[0.414s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.sh'
+[0.414s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.bash'
+[0.414s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.zsh'
+[0.414s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/share/colcon-core/packages/livox_ros_driver2)
+[0.414s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/fire/Desktop/fast_livo2_ws/src/FAST-LIVO2' with build type 'ament_cmake'
+[0.414s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/fire/Desktop/fast_livo2_ws/src/FAST-LIVO2'
+[0.414s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.417s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(realsense2_camera_msgs)
+[0.417s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs' for CMake module files
+[0.417s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fire/Desktop/fast_livo2_ws/build/realsense2_camera_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/fire/Desktop/fast_livo2_ws/build/realsense2_camera_msgs
+[0.417s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs' for CMake config files
+[0.418s] Level 1:colcon.colcon_core.shell:create_environment_hook('realsense2_camera_msgs', 'cmake_prefix_path')
+[0.418s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/hook/cmake_prefix_path.dsv'
+[0.418s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/hook/cmake_prefix_path.sh'
+[0.418s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/lib'
+[0.418s] Level 1:colcon.colcon_core.shell:create_environment_hook('realsense2_camera_msgs', 'ld_library_path_lib')
+[0.418s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/hook/ld_library_path_lib.dsv'
+[0.418s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/hook/ld_library_path_lib.sh'
+[0.419s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/bin'
+[0.419s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/lib/pkgconfig/realsense2_camera_msgs.pc'
+[0.419s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/lib/python3.12/site-packages'
+[0.419s] Level 1:colcon.colcon_core.shell:create_environment_hook('realsense2_camera_msgs', 'pythonpath')
+[0.419s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/hook/pythonpath.dsv'
+[0.419s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/hook/pythonpath.sh'
+[0.419s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/bin'
+[0.420s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/package.dsv'
+[0.420s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/package.sh'
+[0.420s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/package.bash'
+[0.421s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/package.zsh'
+[0.421s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/share/colcon-core/packages/realsense2_camera_msgs)
+[0.421s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(realsense2_camera_msgs)
+[0.421s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs' for CMake module files
+[0.422s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs' for CMake config files
+[0.423s] Level 1:colcon.colcon_core.shell:create_environment_hook('realsense2_camera_msgs', 'cmake_prefix_path')
+[0.423s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/hook/cmake_prefix_path.dsv'
+[0.423s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/hook/cmake_prefix_path.sh'
+[0.423s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/lib'
+[0.423s] Level 1:colcon.colcon_core.shell:create_environment_hook('realsense2_camera_msgs', 'ld_library_path_lib')
+[0.424s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/hook/ld_library_path_lib.dsv'
+[0.424s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/hook/ld_library_path_lib.sh'
+[0.424s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/bin'
+[0.424s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/lib/pkgconfig/realsense2_camera_msgs.pc'
+[0.424s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/lib/python3.12/site-packages'
+[0.424s] Level 1:colcon.colcon_core.shell:create_environment_hook('realsense2_camera_msgs', 'pythonpath')
+[0.425s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/hook/pythonpath.dsv'
+[0.425s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/hook/pythonpath.sh'
+[0.425s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/bin'
+[0.426s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/package.dsv'
+[0.426s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/package.sh'
+[0.426s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/package.bash'
+[0.426s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/share/realsense2_camera_msgs/package.zsh'
+[0.427s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/share/colcon-core/packages/realsense2_camera_msgs)
+[0.427s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/fire/Desktop/fast_livo2_ws/src/realsense-ros/realsense2_camera' with build type 'ament_cmake'
+[0.427s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/fire/Desktop/fast_livo2_ws/src/realsense-ros/realsense2_camera'
+[0.427s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.429s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/fire/Desktop/fast_livo2_ws/src/realsense-ros/realsense2_description' with build type 'ament_cmake'
+[0.429s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/fire/Desktop/fast_livo2_ws/src/realsense-ros/realsense2_description'
+[0.429s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.432s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fire/Desktop/fast_livo2_ws/build/fast_livo': AMENT_PREFIX_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_ros:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_ros:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/lib:/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/x86_64-linux-gnu/pkgconfig:/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/pkgconfig PYTHONPATH=/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/lib/python3.12/site-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_common/share /usr/bin/cmake --build /home/fire/Desktop/fast_livo2_ws/build/fast_livo -- -j24 -l24
+[0.433s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fire/Desktop/fast_livo2_ws/build/realsense2_camera': AMENT_PREFIX_PATH=/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/fire/Desktop/fast_livo2_ws/build/realsense2_camera -- -j24 -l24
+[0.435s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fire/Desktop/fast_livo2_ws/build/realsense2_description': AMENT_PREFIX_PATH=/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/fire/Desktop/fast_livo2_ws/build/realsense2_description -- -j24 -l24
+[0.461s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fire/Desktop/fast_livo2_ws/build/realsense2_description' returned '0': AMENT_PREFIX_PATH=/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/fire/Desktop/fast_livo2_ws/build/realsense2_description -- -j24 -l24
+[0.462s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fire/Desktop/fast_livo2_ws/build/realsense2_description': AMENT_PREFIX_PATH=/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/fire/Desktop/fast_livo2_ws/build/realsense2_description
+[0.471s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(realsense2_description)
+[0.472s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/realsense2_description' for CMake module files
+[0.473s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/realsense2_description' for CMake config files
+[0.474s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fire/Desktop/fast_livo2_ws/build/realsense2_description' returned '0': AMENT_PREFIX_PATH=/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/fire/Desktop/fast_livo2_ws/build/realsense2_description
+[0.474s] Level 1:colcon.colcon_core.shell:create_environment_hook('realsense2_description', 'cmake_prefix_path')
+[0.475s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fire/Desktop/fast_livo2_ws/install/realsense2_description/share/realsense2_description/hook/cmake_prefix_path.dsv'
+[0.475s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fire/Desktop/fast_livo2_ws/install/realsense2_description/share/realsense2_description/hook/cmake_prefix_path.sh'
+[0.476s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/realsense2_description/bin'
+[0.476s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/realsense2_description/lib/pkgconfig/realsense2_description.pc'
+[0.476s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/realsense2_description/lib/python3.12/site-packages'
+[0.476s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/realsense2_description/bin'
+[0.477s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fire/Desktop/fast_livo2_ws/install/realsense2_description/share/realsense2_description/package.dsv'
+[0.477s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/realsense2_description/share/realsense2_description/package.sh'
+[0.477s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/realsense2_description/share/realsense2_description/package.bash'
+[0.477s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/realsense2_description/share/realsense2_description/package.zsh'
+[0.478s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fire/Desktop/fast_livo2_ws/install/realsense2_description/share/colcon-core/packages/realsense2_description)
+[0.478s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(realsense2_description)
+[0.478s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/realsense2_description' for CMake module files
+[0.478s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/realsense2_description' for CMake config files
+[0.479s] Level 1:colcon.colcon_core.shell:create_environment_hook('realsense2_description', 'cmake_prefix_path')
+[0.479s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fire/Desktop/fast_livo2_ws/install/realsense2_description/share/realsense2_description/hook/cmake_prefix_path.dsv'
+[0.479s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fire/Desktop/fast_livo2_ws/install/realsense2_description/share/realsense2_description/hook/cmake_prefix_path.sh'
+[0.480s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/realsense2_description/bin'
+[0.480s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/realsense2_description/lib/pkgconfig/realsense2_description.pc'
+[0.480s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/realsense2_description/lib/python3.12/site-packages'
+[0.480s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/realsense2_description/bin'
+[0.480s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fire/Desktop/fast_livo2_ws/install/realsense2_description/share/realsense2_description/package.dsv'
+[0.480s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/realsense2_description/share/realsense2_description/package.sh'
+[0.481s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/realsense2_description/share/realsense2_description/package.bash'
+[0.481s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/realsense2_description/share/realsense2_description/package.zsh'
+[0.481s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fire/Desktop/fast_livo2_ws/install/realsense2_description/share/colcon-core/packages/realsense2_description)
+[0.524s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fire/Desktop/fast_livo2_ws/build/fast_livo' returned '0': AMENT_PREFIX_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_ros:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_ros:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/lib:/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/x86_64-linux-gnu/pkgconfig:/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/pkgconfig PYTHONPATH=/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/lib/python3.12/site-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_common/share /usr/bin/cmake --build /home/fire/Desktop/fast_livo2_ws/build/fast_livo -- -j24 -l24
+[0.525s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fire/Desktop/fast_livo2_ws/build/fast_livo': AMENT_PREFIX_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_ros:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_ros:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/lib:/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/x86_64-linux-gnu/pkgconfig:/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/pkgconfig PYTHONPATH=/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/lib/python3.12/site-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_common/share /usr/bin/cmake --install /home/fire/Desktop/fast_livo2_ws/build/fast_livo
+[0.526s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fire/Desktop/fast_livo2_ws/build/realsense2_camera' returned '0': AMENT_PREFIX_PATH=/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/fire/Desktop/fast_livo2_ws/build/realsense2_camera -- -j24 -l24
+[0.526s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fire/Desktop/fast_livo2_ws/build/realsense2_camera': AMENT_PREFIX_PATH=/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/fire/Desktop/fast_livo2_ws/build/realsense2_camera
+[0.535s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(realsense2_camera)
+[0.535s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera' for CMake module files
+[0.535s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fire/Desktop/fast_livo2_ws/build/realsense2_camera' returned '0': AMENT_PREFIX_PATH=/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/fire/Desktop/fast_livo2_ws/build/realsense2_camera
+[0.536s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera' for CMake config files
+[0.536s] Level 1:colcon.colcon_core.shell:create_environment_hook('realsense2_camera', 'cmake_prefix_path')
+[0.536s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera/share/realsense2_camera/hook/cmake_prefix_path.dsv'
+[0.536s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera/share/realsense2_camera/hook/cmake_prefix_path.sh'
+[0.537s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera/lib'
+[0.537s] Level 1:colcon.colcon_core.shell:create_environment_hook('realsense2_camera', 'ld_library_path_lib')
+[0.537s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera/share/realsense2_camera/hook/ld_library_path_lib.dsv'
+[0.537s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera/share/realsense2_camera/hook/ld_library_path_lib.sh'
+[0.537s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera/bin'
+[0.537s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera/lib/pkgconfig/realsense2_camera.pc'
+[0.537s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera/lib/python3.12/site-packages'
+[0.537s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera/bin'
+[0.537s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera/share/realsense2_camera/package.dsv'
+[0.538s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera/share/realsense2_camera/package.sh'
+[0.538s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera/share/realsense2_camera/package.bash'
+[0.538s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera/share/realsense2_camera/package.zsh'
+[0.538s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera/share/colcon-core/packages/realsense2_camera)
+[0.538s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(realsense2_camera)
+[0.538s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera' for CMake module files
+[0.539s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera' for CMake config files
+[0.539s] Level 1:colcon.colcon_core.shell:create_environment_hook('realsense2_camera', 'cmake_prefix_path')
+[0.539s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera/share/realsense2_camera/hook/cmake_prefix_path.dsv'
+[0.539s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera/share/realsense2_camera/hook/cmake_prefix_path.sh'
+[0.539s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera/lib'
+[0.539s] Level 1:colcon.colcon_core.shell:create_environment_hook('realsense2_camera', 'ld_library_path_lib')
+[0.539s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera/share/realsense2_camera/hook/ld_library_path_lib.dsv'
+[0.540s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera/share/realsense2_camera/hook/ld_library_path_lib.sh'
+[0.540s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera/bin'
+[0.540s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera/lib/pkgconfig/realsense2_camera.pc'
+[0.540s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera/lib/python3.12/site-packages'
+[0.540s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera/bin'
+[0.540s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera/share/realsense2_camera/package.dsv'
+[0.540s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera/share/realsense2_camera/package.sh'
+[0.541s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera/share/realsense2_camera/package.bash'
+[0.541s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera/share/realsense2_camera/package.zsh'
+[0.541s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera/share/colcon-core/packages/realsense2_camera)
+[0.541s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(fast_livo)
+[0.541s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/fast_livo' for CMake module files
+[0.542s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fire/Desktop/fast_livo2_ws/build/fast_livo' returned '0': AMENT_PREFIX_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_ros:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_ros:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/lib:/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/x86_64-linux-gnu/pkgconfig:/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/pkgconfig PYTHONPATH=/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/lib/python3.12/site-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_common/share /usr/bin/cmake --install /home/fire/Desktop/fast_livo2_ws/build/fast_livo
+[0.542s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/fast_livo' for CMake config files
+[0.542s] Level 1:colcon.colcon_core.shell:create_environment_hook('fast_livo', 'cmake_prefix_path')
+[0.542s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/hook/cmake_prefix_path.dsv'
+[0.542s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/hook/cmake_prefix_path.sh'
+[0.542s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/fast_livo/lib'
+[0.542s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/fast_livo/bin'
+[0.542s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/fast_livo/lib/pkgconfig/fast_livo.pc'
+[0.542s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/fast_livo/lib/python3.12/site-packages'
+[0.543s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/fast_livo/bin'
+[0.543s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/package.dsv'
+[0.543s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/package.sh'
+[0.543s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/package.bash'
+[0.543s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/package.zsh'
+[0.543s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/colcon-core/packages/fast_livo)
+[0.543s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(fast_livo)
+[0.544s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/fast_livo' for CMake module files
+[0.544s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/fast_livo' for CMake config files
+[0.544s] Level 1:colcon.colcon_core.shell:create_environment_hook('fast_livo', 'cmake_prefix_path')
+[0.544s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/hook/cmake_prefix_path.dsv'
+[0.544s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/hook/cmake_prefix_path.sh'
+[0.544s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/fast_livo/lib'
+[0.544s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/fast_livo/bin'
+[0.544s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/fast_livo/lib/pkgconfig/fast_livo.pc'
+[0.545s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/fast_livo/lib/python3.12/site-packages'
+[0.545s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/fast_livo/bin'
+[0.545s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/package.dsv'
+[0.545s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/package.sh'
+[0.545s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/package.bash'
+[0.545s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/package.zsh'
+[0.545s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/colcon-core/packages/fast_livo)
+[0.546s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/fire/Desktop/fast_livo2_ws/src/top_pkg' with build type 'ament_cmake'
+[0.546s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/fire/Desktop/fast_livo2_ws/src/top_pkg'
+[0.546s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.558s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fire/Desktop/fast_livo2_ws/build/top_pkg': AMENT_PREFIX_PATH=/home/fire/Desktop/fast_livo2_ws/install/fast_livo:/home/fire/Desktop/fast_livo2_ws/install/vikit_ros:/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera:/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fire/Desktop/fast_livo2_ws/install/fast_livo:/home/fire/Desktop/fast_livo2_ws/install/vikit_ros:/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera:/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/lib:/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera/lib:/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib:/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/lib:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/x86_64-linux-gnu/pkgconfig:/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/pkgconfig PYTHONPATH=/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/lib/python3.12/site-packages:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/lib/python3.12/site-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_common/share /usr/bin/cmake --build /home/fire/Desktop/fast_livo2_ws/build/top_pkg -- -j24 -l24
+[0.587s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fire/Desktop/fast_livo2_ws/build/top_pkg' returned '0': AMENT_PREFIX_PATH=/home/fire/Desktop/fast_livo2_ws/install/fast_livo:/home/fire/Desktop/fast_livo2_ws/install/vikit_ros:/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera:/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fire/Desktop/fast_livo2_ws/install/fast_livo:/home/fire/Desktop/fast_livo2_ws/install/vikit_ros:/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera:/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/lib:/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera/lib:/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib:/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/lib:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/x86_64-linux-gnu/pkgconfig:/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/pkgconfig PYTHONPATH=/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/lib/python3.12/site-packages:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/lib/python3.12/site-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_common/share /usr/bin/cmake --build /home/fire/Desktop/fast_livo2_ws/build/top_pkg -- -j24 -l24
+[0.587s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/fire/Desktop/fast_livo2_ws/build/top_pkg': AMENT_PREFIX_PATH=/home/fire/Desktop/fast_livo2_ws/install/fast_livo:/home/fire/Desktop/fast_livo2_ws/install/vikit_ros:/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera:/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fire/Desktop/fast_livo2_ws/install/fast_livo:/home/fire/Desktop/fast_livo2_ws/install/vikit_ros:/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera:/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/lib:/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera/lib:/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib:/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/lib:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/x86_64-linux-gnu/pkgconfig:/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/pkgconfig PYTHONPATH=/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/lib/python3.12/site-packages:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/lib/python3.12/site-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_common/share /usr/bin/cmake --install /home/fire/Desktop/fast_livo2_ws/build/top_pkg
+[0.592s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(top_pkg)
+[0.593s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/top_pkg' for CMake module files
+[0.593s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/fire/Desktop/fast_livo2_ws/build/top_pkg' returned '0': AMENT_PREFIX_PATH=/home/fire/Desktop/fast_livo2_ws/install/fast_livo:/home/fire/Desktop/fast_livo2_ws/install/vikit_ros:/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera:/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fire/Desktop/fast_livo2_ws/install/fast_livo:/home/fire/Desktop/fast_livo2_ws/install/vikit_ros:/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera:/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/lib:/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera/lib:/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib:/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/lib:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/x86_64-linux-gnu/pkgconfig:/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/pkgconfig PYTHONPATH=/home/fire/Desktop/fast_livo2_ws/install/realsense2_camera_msgs/lib/python3.12/site-packages:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/lib/python3.12/site-packages:${PYTHONPATH} ROS_PACKAGE_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_common/share /usr/bin/cmake --install /home/fire/Desktop/fast_livo2_ws/build/top_pkg
+[0.593s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/top_pkg' for CMake config files
+[0.593s] Level 1:colcon.colcon_core.shell:create_environment_hook('top_pkg', 'cmake_prefix_path')
+[0.593s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fire/Desktop/fast_livo2_ws/install/top_pkg/share/top_pkg/hook/cmake_prefix_path.dsv'
+[0.593s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fire/Desktop/fast_livo2_ws/install/top_pkg/share/top_pkg/hook/cmake_prefix_path.sh'
+[0.594s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/top_pkg/bin'
+[0.594s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/top_pkg/lib/pkgconfig/top_pkg.pc'
+[0.594s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/top_pkg/lib/python3.12/site-packages'
+[0.594s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/top_pkg/bin'
+[0.594s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fire/Desktop/fast_livo2_ws/install/top_pkg/share/top_pkg/package.dsv'
+[0.594s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/top_pkg/share/top_pkg/package.sh'
+[0.595s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/top_pkg/share/top_pkg/package.bash'
+[0.595s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/top_pkg/share/top_pkg/package.zsh'
+[0.595s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fire/Desktop/fast_livo2_ws/install/top_pkg/share/colcon-core/packages/top_pkg)
+[0.595s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(top_pkg)
+[0.595s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/top_pkg' for CMake module files
+[0.595s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/top_pkg' for CMake config files
+[0.595s] Level 1:colcon.colcon_core.shell:create_environment_hook('top_pkg', 'cmake_prefix_path')
+[0.595s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/fire/Desktop/fast_livo2_ws/install/top_pkg/share/top_pkg/hook/cmake_prefix_path.dsv'
+[0.596s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/fire/Desktop/fast_livo2_ws/install/top_pkg/share/top_pkg/hook/cmake_prefix_path.sh'
+[0.596s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/top_pkg/bin'
+[0.596s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/top_pkg/lib/pkgconfig/top_pkg.pc'
+[0.596s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/top_pkg/lib/python3.12/site-packages'
+[0.596s] Level 1:colcon.colcon_core.environment:checking '/home/fire/Desktop/fast_livo2_ws/install/top_pkg/bin'
+[0.596s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/fire/Desktop/fast_livo2_ws/install/top_pkg/share/top_pkg/package.dsv'
+[0.596s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/top_pkg/share/top_pkg/package.sh'
+[0.597s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/top_pkg/share/top_pkg/package.bash'
+[0.597s] INFO:colcon.colcon_core.shell:Creating package script '/home/fire/Desktop/fast_livo2_ws/install/top_pkg/share/top_pkg/package.zsh'
+[0.597s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/fire/Desktop/fast_livo2_ws/install/top_pkg/share/colcon-core/packages/top_pkg)
+[0.597s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[0.597s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[0.597s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[0.597s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[0.600s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[0.600s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[0.600s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[0.611s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[0.611s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/fire/Desktop/fast_livo2_ws/install/local_setup.sh'
+[0.611s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/fire/Desktop/fast_livo2_ws/install/_local_setup_util_sh.py'
+[0.612s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/fire/Desktop/fast_livo2_ws/install/setup.sh'
+[0.612s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/fire/Desktop/fast_livo2_ws/install/local_setup.bash'
+[0.612s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/fire/Desktop/fast_livo2_ws/install/setup.bash'
+[0.613s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/fire/Desktop/fast_livo2_ws/install/local_setup.zsh'
+[0.613s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/fire/Desktop/fast_livo2_ws/install/setup.zsh'

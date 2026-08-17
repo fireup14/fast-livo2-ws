@@ -1,0 +1,15 @@
+Current CPU architecture: x86_64
+Processor number: 24
+Cores for MP: 3
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    vikit_ros_DIR
+
+
+In file included from /home/fire/Desktop/fast_livo2_ws/src/rpg_vikit/vikit_ros/include/vikit/camera_loader.h:20,
+                 from /home/fire/Desktop/fast_livo2_ws/src/rpg_vikit/vikit_ros/src/camera_loader.cpp:10:
+/home/fire/Desktop/fast_livo2_ws/src/rpg_vikit/vikit_ros/include/vikit/params_helper.h: In function ‘T vk::getParam(const std::string&, const std::string&, const T&)’:
+/home/fire/Desktop/fast_livo2_ws/src/rpg_vikit/vikit_ros/include/vikit/params_helper.h:35:48: warning: ignoring attributes on template argument ‘int (*)(FILE*)’ [-Wignored-attributes]
+   35 |         std::unique_ptr<FILE, decltype(&pclose)> pipe(popen(command.c_str(), "r"), pclose);
+      |                                                ^

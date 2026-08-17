@@ -1,0 +1,4 @@
+/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/include/vikit/output_helper.h
+/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/include/vikit/params_helper.h
+/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/include/vikit/camera_loader.h
+/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/lib/libvikit_ros.so

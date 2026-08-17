@@ -1,0 +1,1 @@
+/home/fire/Desktop/fast_livo2_ws/build/vikit_ros/ament_cmake_environment_hooks/local_setup.bash

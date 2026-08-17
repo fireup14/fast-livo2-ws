@@ -1,0 +1,9 @@
+[0mCurrent CPU architecture: x86_64[0m
+[0mProcessor number: 24[0m
+[0mCores for MP: 3[0m
+In file included from [01m[K/home/fire/Desktop/fast_livo2_ws/src/rpg_vikit/vikit_ros/include/vikit/camera_loader.h:20[m[K,
+                 from [01m[K/home/fire/Desktop/fast_livo2_ws/src/rpg_vikit/vikit_ros/src/camera_loader.cpp:10[m[K:
+[01m[K/home/fire/Desktop/fast_livo2_ws/src/rpg_vikit/vikit_ros/include/vikit/params_helper.h:[m[K In function ‘[01m[KT vk::[01;32m[KgetParam[m[K(const std::string&, const std::string&, const T&)[m[K’:
+[01m[K/home/fire/Desktop/fast_livo2_ws/src/rpg_vikit/vikit_ros/include/vikit/params_helper.h:35:48:[m[K [01;35m[Kwarning: [m[Kignoring attributes on template argument ‘[01m[Kint (*)(FILE*)[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wignored-attributes-Wignored-attributes]8;;[m[K]
+   35 |         std::unique_ptr<FILE, decltype(&pclose)[01;35m[K>[m[K pipe(popen(command.c_str(), "r"), pclose);
+      |                                                [01;35m[K^[m[K

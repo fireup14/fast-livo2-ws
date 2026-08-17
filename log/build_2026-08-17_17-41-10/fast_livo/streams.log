@@ -1,0 +1,135 @@
+[0.009s] Invoking command in '/home/fire/Desktop/fast_livo2_ws/build/fast_livo': AMENT_PREFIX_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_ros:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_ros:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/lib:/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/x86_64-linux-gnu/pkgconfig:/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/pkgconfig ROS_PACKAGE_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_common/share /usr/bin/cmake /home/fire/Desktop/fast_livo2_ws/src/FAST-LIVO2 -Dvikit_common_DIR=/home/fire/Desktop/fast_livo2_ws/build/vikit_common -Dvikit_ros_DIR=/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/cmake -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/fire/Desktop/fast_livo2_ws/install/fast_livo
+[0.019s] -- Build Type: Release
+[0.019s] -- Current CPU architecture: x86_64
+[0.019s] -- Using general x86 optimizations: -O3 -march=native -mtune=native -funroll-loops
+[0.021s] -- Processor count: 24
+[0.022s] -- Multithreading enabled. Cores: 4
+[0.023s] -- OpenMP found
+[0.029s] -- mimalloc not found, proceeding without it
+[0.029s] -- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.160s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.164s] -- Found rclcpp: 28.1.16 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.180s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.185s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.191s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.198s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.232s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.233s] -- Found rmw_cyclonedds_cpp: 2.2.3 (/opt/ros/jazzy/share/rmw_cyclonedds_cpp/cmake)
+[0.246s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[0.278s] -- Found rclpy: 7.1.9 (/opt/ros/jazzy/share/rclpy/cmake)
+[0.278s] -- Found geometry_msgs: 5.3.6 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+[0.295s] -- Found nav_msgs: 5.3.6 (/opt/ros/jazzy/share/nav_msgs/cmake)
+[0.310s] -- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[0.323s] -- Found visualization_msgs: 5.3.6 (/opt/ros/jazzy/share/visualization_msgs/cmake)
+[0.339s] -- Found pcl_ros: 2.6.2 (/opt/ros/jazzy/share/pcl_ros/cmake)
+[0.376s] CMake Warning (dev) at /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindFLANN.cmake:45 (find_package):
+[0.376s]   Policy CMP0144 is not set: find_package uses upper-case <PACKAGENAME>_ROOT
+[0.376s]   variables.  Run "cmake --help-policy CMP0144" for policy details.  Use the
+[0.376s]   cmake_policy command to set the policy and suppress this warning.
+[0.376s] 
+[0.376s]   CMake variable FLANN_ROOT is set to:
+[0.376s] 
+[0.376s]     /usr
+[0.376s] 
+[0.376s]   For compatibility, find_package is ignoring the variable, but code in a
+[0.376s]   .cmake module might still use it.
+[0.376s] Call Stack (most recent call first):
+[0.376s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:261 (find_package)
+[0.376s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:306 (find_flann)
+[0.376s]   /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:570 (find_external_library)
+[0.376s]   /opt/ros/jazzy/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[0.376s]   /opt/ros/jazzy/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)
+[0.376s]   /opt/ros/jazzy/share/pcl_ros/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)
+[0.376s]   /opt/ros/jazzy/share/pcl_ros/cmake/pcl_rosConfig.cmake:41 (include)
+[0.376s]   CMakeLists.txt:90 (find_package)
+[0.376s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.376s] 
+[0.377s] -- Found flann version 1.9.2
+[0.630s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[0.634s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[0.636s] -- Could NOT find Pcap (missing: PCAP_LIBRARIES PCAP_INCLUDE_DIRS) 
+[0.908s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[0.912s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[1.153s] -- Found Qhull version 8.0.2
+[1.425s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[1.738s] -- Found eigen3_cmake_module: 0.3.0 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)
+[1.739s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.739s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.741s] -- Found livox_ros_driver2: 1.0.0 (/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake)
+[1.756s] -- Found vikit_ros: 0.0.0 (/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/cmake)
+[1.760s] -- Found cv_bridge: 4.1.0 (/opt/ros/jazzy/share/cv_bridge/cmake)
+[1.766s] -- Found image_transport: 5.1.7 (/opt/ros/jazzy/share/image_transport/cmake)
+[1.769s] -- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2
+[1.770s] CMake Warning (dev) at CMakeLists.txt:99 (find_package):
+[1.770s]   Policy CMP0074 is not set: find_package uses <PackageName>_ROOT variables.
+[1.770s]   Run "cmake --help-policy CMP0074" for policy details.  Use the cmake_policy
+[1.770s]   command to set the policy and suppress this warning.
+[1.770s] 
+[1.770s]   CMake variable PCL_ROOT is set to:
+[1.771s] 
+[1.771s]     /usr
+[1.771s] 
+[1.771s]   For compatibility, CMake is ignoring the variable.
+[1.771s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.771s] 
+[1.778s] -- Found Eigen3: TRUE (found suitable version "3.4.0", minimum required is "3.4.0") 
+[1.916s] -- Configuring done (1.9s)
+[2.035s] -- Generating done (0.1s)
+[2.042s] -- Build files have been written to: /home/fire/Desktop/fast_livo2_ws/build/fast_livo
+[2.054s] Invoked command in '/home/fire/Desktop/fast_livo2_ws/build/fast_livo' returned '0': AMENT_PREFIX_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_ros:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_ros:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/lib:/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/x86_64-linux-gnu/pkgconfig:/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/pkgconfig ROS_PACKAGE_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_common/share /usr/bin/cmake /home/fire/Desktop/fast_livo2_ws/src/FAST-LIVO2 -Dvikit_common_DIR=/home/fire/Desktop/fast_livo2_ws/build/vikit_common -Dvikit_ros_DIR=/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/cmake -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/fire/Desktop/fast_livo2_ws/install/fast_livo
+[2.055s] Invoking command in '/home/fire/Desktop/fast_livo2_ws/build/fast_livo': AMENT_PREFIX_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_ros:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_ros:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/lib:/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/x86_64-linux-gnu/pkgconfig:/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/pkgconfig ROS_PACKAGE_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_common/share /usr/bin/cmake --build /home/fire/Desktop/fast_livo2_ws/build/fast_livo -- -j24 -l24
+[2.094s] [ 12%] Built target utils
+[2.107s] [ 25%] Built target imu_proc
+[2.107s] [ 37%] Building CXX object CMakeFiles/laser_mapping.dir/src/LIVMapper.cpp.o
+[2.107s] [ 43%] Built target pre
+[2.113s] [ 68%] Built target vio
+[2.116s] [ 75%] Building CXX object CMakeFiles/lio.dir/src/voxel_map.cpp.o
+[5.940s] In file included from /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/include/vikit/camera_loader.h:20,
+[5.941s]                  from /home/fire/Desktop/fast_livo2_ws/src/FAST-LIVO2/include/LIVMapper.h:28,
+[5.941s]                  from /home/fire/Desktop/fast_livo2_ws/src/FAST-LIVO2/src/LIVMapper.cpp:13:
+[5.941s] /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/include/vikit/params_helper.h: In function ‘T vk::getParam(const std::string&, const std::string&, const T&)’:
+[5.941s] /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/include/vikit/params_helper.h:35:48: warning: ignoring attributes on template argument ‘int (*)(FILE*)’ [-Wignored-attributes]
+[5.941s]    35 |         std::unique_ptr<FILE, decltype(&pclose)> pipe(popen(command.c_str(), "r"), pclose);
+[5.941s]       |                                                ^
+[17.770s] [ 81%] Linking CXX static library liblio.a
+[17.816s] [ 81%] Built target lio
+[29.446s] [ 87%] Linking CXX static library liblaser_mapping.a
+[29.515s] [ 87%] Built target laser_mapping
+[29.543s] [ 93%] Building CXX object CMakeFiles/fastlivo_mapping.dir/src/main.cpp.o
+[33.229s] In file included from /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/include/vikit/camera_loader.h:20,
+[33.229s]                  from /home/fire/Desktop/fast_livo2_ws/src/FAST-LIVO2/include/LIVMapper.h:28,
+[33.229s]                  from /home/fire/Desktop/fast_livo2_ws/src/FAST-LIVO2/src/main.cpp:1:
+[33.229s] /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/include/vikit/params_helper.h: In function ‘T vk::getParam(const std::string&, const std::string&, const T&)’:
+[33.230s] /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/include/vikit/params_helper.h:35:48: warning: ignoring attributes on template argument ‘int (*)(FILE*)’ [-Wignored-attributes]
+[33.230s]    35 |         std::unique_ptr<FILE, decltype(&pclose)> pipe(popen(command.c_str(), "r"), pclose);
+[33.230s]       |                                                ^
+[35.984s] [100%] Linking CXX executable fastlivo_mapping
+[36.901s] [100%] Built target fastlivo_mapping
+[36.908s] Invoked command in '/home/fire/Desktop/fast_livo2_ws/build/fast_livo' returned '0': AMENT_PREFIX_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_ros:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_ros:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/lib:/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/x86_64-linux-gnu/pkgconfig:/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/pkgconfig ROS_PACKAGE_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_common/share /usr/bin/cmake --build /home/fire/Desktop/fast_livo2_ws/build/fast_livo -- -j24 -l24
+[36.909s] Invoking command in '/home/fire/Desktop/fast_livo2_ws/build/fast_livo': AMENT_PREFIX_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_ros:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_ros:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/lib:/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/x86_64-linux-gnu/pkgconfig:/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/pkgconfig ROS_PACKAGE_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_common/share /usr/bin/cmake --install /home/fire/Desktop/fast_livo2_ws/build/fast_livo
+[36.914s] -- Install configuration: "Release"
+[36.914s] -- Execute custom install script
+[36.914s] -- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/fast_livo/lib/fast_livo/fastlivo_mapping
+[36.923s] -- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/config/d405.yaml
+[36.928s] -- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/config/livo.yaml
+[36.933s] -- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/config/mid360.yaml
+[36.940s] -- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/launch/mapping.launch.py
+[36.946s] -- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/rviz_cfg/M300.rviz
+[36.954s] -- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/rviz_cfg/fast_livo2.rviz
+[36.959s] -- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/ament_index/resource_index/package_run_dependencies/fast_livo
+[36.963s] -- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/ament_index/resource_index/parent_prefix_path/fast_livo
+[36.968s] -- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/environment/ament_prefix_path.sh
+[36.974s] -- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/environment/ament_prefix_path.dsv
+[36.981s] -- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/environment/path.sh
+[36.986s] -- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/environment/path.dsv
+[36.992s] -- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/local_setup.bash
+[36.999s] -- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/local_setup.sh
+[37.005s] -- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/local_setup.zsh
+[37.009s] -- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/local_setup.dsv
+[37.015s] -- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/package.dsv
+[37.021s] -- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/ament_index/resource_index/packages/fast_livo
+[37.028s] -- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/cmake/ament_cmake_export_dependencies-extras.cmake
+[37.033s] -- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/cmake/fast_livoConfig.cmake
+[37.039s] -- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/cmake/fast_livoConfig-version.cmake
+[37.045s] -- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/package.xml
+[37.054s] Invoked command in '/home/fire/Desktop/fast_livo2_ws/build/fast_livo' returned '0': AMENT_PREFIX_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_ros:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_ros:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/lib:/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib:${LD_LIBRARY_PATH} PKG_CONFIG_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/x86_64-linux-gnu/pkgconfig:/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/pkgconfig ROS_PACKAGE_PATH=/home/fire/Desktop/fast_livo2_ws/install/vikit_common/share /usr/bin/cmake --install /home/fire/Desktop/fast_livo2_ws/build/fast_livo

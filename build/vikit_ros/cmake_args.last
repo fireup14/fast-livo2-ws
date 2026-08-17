@@ -1,0 +1,1 @@
+['-Dvikit_common_DIR=/home/fire/Desktop/fast_livo2_ws/build/vikit_common', '-Dvikit_ros_DIR=/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/cmake', '-DAMENT_CMAKE_SYMLINK_INSTALL=1']

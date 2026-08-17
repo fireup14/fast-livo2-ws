@@ -1,0 +1,2 @@
+This local Vikit variant is retained for reference and is superseded by the
+ROS 2-compatible rpg_vikit dependency to be added to this workspace.

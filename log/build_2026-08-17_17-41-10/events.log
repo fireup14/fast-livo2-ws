@@ -1,0 +1,637 @@
+[0.000000] (-) TimerEvent: {}
+[0.000315] (-) JobUnselected: {'identifier': 'livox_ros_driver2'}
+[0.000342] (-) JobUnselected: {'identifier': 'realsense2_camera'}
+[0.000352] (-) JobUnselected: {'identifier': 'realsense2_camera_msgs'}
+[0.000358] (-) JobUnselected: {'identifier': 'realsense2_description'}
+[0.000363] (-) JobUnselected: {'identifier': 'top_pkg'}
+[0.000368] (-) JobUnselected: {'identifier': 'vikit_common'}
+[0.000372] (-) JobUnselected: {'identifier': 'vikit_py'}
+[0.000378] (vikit_ros) JobQueued: {'identifier': 'vikit_ros', 'dependencies': OrderedDict({'vikit_common': '/home/fire/Desktop/fast_livo2_ws/install/vikit_common'})}
+[0.000388] (fast_livo) JobQueued: {'identifier': 'fast_livo', 'dependencies': OrderedDict({'livox_ros_driver2': '/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2', 'vikit_common': '/home/fire/Desktop/fast_livo2_ws/install/vikit_common', 'vikit_ros': '/home/fire/Desktop/fast_livo2_ws/install/vikit_ros'})}
+[0.000579] (vikit_ros) JobStarted: {'identifier': 'vikit_ros'}
+[0.007260] (vikit_ros) JobProgress: {'identifier': 'vikit_ros', 'progress': 'cmake'}
+[0.007760] (vikit_ros) Command: {'cmd': ['/usr/bin/cmake', '/home/fire/Desktop/fast_livo2_ws/src/rpg_vikit/vikit_ros', '-Dvikit_common_DIR=/home/fire/Desktop/fast_livo2_ws/build/vikit_common', '-Dvikit_ros_DIR=/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/cmake', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/fire/Desktop/fast_livo2_ws/install/vikit_ros'], 'cwd': '/home/fire/Desktop/fast_livo2_ws/build/vikit_ros', 'env': OrderedDict({'SUDO_GID': '1000', 'CODEX_CI': '1', 'MAIL': '/var/mail/root', 'USER': 'root', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'ROS_PACKAGE_PATH': '/home/fire/Desktop/fast_livo2_ws/install/vikit_common/share', 'SHLVL': '0', 'LD_LIBRARY_PATH': '/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/root', 'ROS_PYTHON_VERSION': '3', 'PAGER': 'cat', 'LC_CTYPE': 'C.UTF-8', 'NO_COLOR': '1', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'CODEX_PERMISSION_PROFILE': ':workspace', 'SUDO_UID': '1000', 'ROS_DISTRO': 'jazzy', 'GTK_IM_MODULE': 'fcitx', 'LOGNAME': 'root', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PKG_CONFIG_PATH': '/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/x86_64-linux-gnu/pkgconfig:/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/pkgconfig', 'TERM': 'xterm-256color', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/root/.codex/tmp/arg0/codex-arg07iG4sU:/usr/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin', 'DISPLAY': ':1', 'CODEX_SANDBOX_NETWORK_DISABLED': '1', 'LANG': 'zh_CN.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=fcitx', 'GH_PAGER': 'cat', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SUDO_COMMAND': '/usr/bin/codex', 'AMENT_PREFIX_PATH': '/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'SUDO_USER': 'fire', 'CODEX_THREAD_ID': '01a00efd-8fa1-7273-b330-33d1717f7815', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'GIT_PAGER': 'cat', 'QT_IM_MODULE': 'fcitx', 'PWD': '/home/fire/Desktop/fast_livo2_ws/build/vikit_ros', 'LC_ALL': 'C.UTF-8', 'CODEX_MANAGED_PACKAGE_ROOT': '/usr/lib/node_modules/@openai/codex', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CODEX_MANAGED_BY_NPM': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2:/opt/ros/jazzy'}), 'shell': False}
+[0.017391] (vikit_ros) StderrLine: {'line': b'Current CPU architecture: x86_64\n'}
+[0.020358] (vikit_ros) StderrLine: {'line': b'Processor number: 24\n'}
+[0.020437] (vikit_ros) StderrLine: {'line': b'Cores for MP: 3\n'}
+[0.022736] (vikit_ros) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.100143] (-) TimerEvent: {}
+[0.151592] (vikit_ros) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.155155] (vikit_ros) StdoutLine: {'line': b'-- Found rclcpp: 28.1.16 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[0.170868] (vikit_ros) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[0.175642] (vikit_ros) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[0.181626] (vikit_ros) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.189046] (vikit_ros) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.200213] (-) TimerEvent: {}
+[0.223167] (vikit_ros) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[0.223877] (vikit_ros) StdoutLine: {'line': b'-- Found rmw_cyclonedds_cpp: 2.2.3 (/opt/ros/jazzy/share/rmw_cyclonedds_cpp/cmake)\n'}
+[0.236301] (vikit_ros) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_cyclonedds_cpp' as default\n"}
+[0.268773] (vikit_ros) StdoutLine: {'line': b'-- Found visualization_msgs: 5.3.6 (/opt/ros/jazzy/share/visualization_msgs/cmake)\n'}
+[0.300296] (-) TimerEvent: {}
+[0.317577] (vikit_ros) StdoutLine: {'line': b'-- Found tf2: 0.36.19 (/opt/ros/jazzy/share/tf2/cmake)\n'}
+[0.321754] (vikit_ros) StdoutLine: {'line': b'-- Found tf2_ros: 0.36.19 (/opt/ros/jazzy/share/tf2_ros/cmake)\n'}
+[0.400411] (-) TimerEvent: {}
+[0.409684] (vikit_ros) StdoutLine: {'line': b'-- Found tf2_geometry_msgs: 0.36.19 (/opt/ros/jazzy/share/tf2_geometry_msgs/cmake)\n'}
+[0.411564] (vikit_ros) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.3.0 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)\n'}
+[0.412431] (vikit_ros) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[0.413505] (vikit_ros) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)\n'}
+[0.417854] (vikit_ros) StdoutLine: {'line': b'-- Found rosidl_adapter: 4.6.7 (/opt/ros/jazzy/share/rosidl_adapter/cmake)\n'}
+[0.473047] (vikit_ros) StdoutLine: {'line': b'-- Configuring done (0.5s)\n'}
+[0.481893] (vikit_ros) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[0.483095] (vikit_ros) StderrLine: {'line': b'CMake Warning:\n'}
+[0.483178] (vikit_ros) StderrLine: {'line': b'  Manually-specified variables were not used by the project:\n'}
+[0.483211] (vikit_ros) StderrLine: {'line': b'\n'}
+[0.483242] (vikit_ros) StderrLine: {'line': b'    vikit_ros_DIR\n'}
+[0.483270] (vikit_ros) StderrLine: {'line': b'\n'}
+[0.483300] (vikit_ros) StderrLine: {'line': b'\n'}
+[0.485631] (vikit_ros) StdoutLine: {'line': b'-- Build files have been written to: /home/fire/Desktop/fast_livo2_ws/build/vikit_ros\n'}
+[0.491005] (vikit_ros) CommandEnded: {'returncode': 0}
+[0.491198] (vikit_ros) JobProgress: {'identifier': 'vikit_ros', 'progress': 'build'}
+[0.491627] (vikit_ros) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/fire/Desktop/fast_livo2_ws/build/vikit_ros', '--', '-j24', '-l24'], 'cwd': '/home/fire/Desktop/fast_livo2_ws/build/vikit_ros', 'env': OrderedDict({'SUDO_GID': '1000', 'CODEX_CI': '1', 'MAIL': '/var/mail/root', 'USER': 'root', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'ROS_PACKAGE_PATH': '/home/fire/Desktop/fast_livo2_ws/install/vikit_common/share', 'SHLVL': '0', 'LD_LIBRARY_PATH': '/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/root', 'ROS_PYTHON_VERSION': '3', 'PAGER': 'cat', 'LC_CTYPE': 'C.UTF-8', 'NO_COLOR': '1', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'CODEX_PERMISSION_PROFILE': ':workspace', 'SUDO_UID': '1000', 'ROS_DISTRO': 'jazzy', 'GTK_IM_MODULE': 'fcitx', 'LOGNAME': 'root', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PKG_CONFIG_PATH': '/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/x86_64-linux-gnu/pkgconfig:/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/pkgconfig', 'TERM': 'xterm-256color', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/root/.codex/tmp/arg0/codex-arg07iG4sU:/usr/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin', 'DISPLAY': ':1', 'CODEX_SANDBOX_NETWORK_DISABLED': '1', 'LANG': 'zh_CN.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=fcitx', 'GH_PAGER': 'cat', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SUDO_COMMAND': '/usr/bin/codex', 'AMENT_PREFIX_PATH': '/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'SUDO_USER': 'fire', 'CODEX_THREAD_ID': '01a00efd-8fa1-7273-b330-33d1717f7815', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'GIT_PAGER': 'cat', 'QT_IM_MODULE': 'fcitx', 'PWD': '/home/fire/Desktop/fast_livo2_ws/build/vikit_ros', 'LC_ALL': 'C.UTF-8', 'CODEX_MANAGED_PACKAGE_ROOT': '/usr/lib/node_modules/@openai/codex', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CODEX_MANAGED_BY_NPM': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2:/opt/ros/jazzy'}), 'shell': False}
+[0.500608] (-) TimerEvent: {}
+[0.539944] (vikit_ros) StdoutLine: {'line': b'[ 33%] Building CXX object CMakeFiles/vikit_ros.dir/src/camera_loader.cpp.o\n'}
+[0.600812] (-) TimerEvent: {}
+[0.701060] (-) TimerEvent: {}
+[0.801197] (-) TimerEvent: {}
+[0.901335] (-) TimerEvent: {}
+[1.001548] (-) TimerEvent: {}
+[1.101783] (-) TimerEvent: {}
+[1.202026] (-) TimerEvent: {}
+[1.302167] (-) TimerEvent: {}
+[1.402304] (-) TimerEvent: {}
+[1.502471] (-) TimerEvent: {}
+[1.602698] (-) TimerEvent: {}
+[1.702928] (-) TimerEvent: {}
+[1.803065] (-) TimerEvent: {}
+[1.903203] (-) TimerEvent: {}
+[2.003340] (-) TimerEvent: {}
+[2.103483] (-) TimerEvent: {}
+[2.203701] (-) TimerEvent: {}
+[2.303875] (-) TimerEvent: {}
+[2.404070] (-) TimerEvent: {}
+[2.476168] (vikit_ros) StderrLine: {'line': b'In file included from /home/fire/Desktop/fast_livo2_ws/src/rpg_vikit/vikit_ros/include/vikit/camera_loader.h:20,\n'}
+[2.476286] (vikit_ros) StderrLine: {'line': b'                 from /home/fire/Desktop/fast_livo2_ws/src/rpg_vikit/vikit_ros/src/camera_loader.cpp:10:\n'}
+[2.476322] (vikit_ros) StderrLine: {'line': b'/home/fire/Desktop/fast_livo2_ws/src/rpg_vikit/vikit_ros/include/vikit/params_helper.h: In function \xe2\x80\x98T vk::getParam(const std::string&, const std::string&, const T&)\xe2\x80\x99:\n'}
+[2.476356] (vikit_ros) StderrLine: {'line': b'/home/fire/Desktop/fast_livo2_ws/src/rpg_vikit/vikit_ros/include/vikit/params_helper.h:35:48: warning: ignoring attributes on template argument \xe2\x80\x98int (*)(FILE*)\xe2\x80\x99 [-Wignored-attributes]\n'}
+[2.476388] (vikit_ros) StderrLine: {'line': b'   35 |         std::unique_ptr<FILE, decltype(&pclose)> pipe(popen(command.c_str(), "r"), pclose);\n'}
+[2.476418] (vikit_ros) StderrLine: {'line': b'      |                                                ^\n'}
+[2.504151] (-) TimerEvent: {}
+[2.604284] (-) TimerEvent: {}
+[2.704452] (-) TimerEvent: {}
+[2.804590] (-) TimerEvent: {}
+[2.904840] (-) TimerEvent: {}
+[3.005034] (-) TimerEvent: {}
+[3.105279] (-) TimerEvent: {}
+[3.205537] (-) TimerEvent: {}
+[3.305863] (-) TimerEvent: {}
+[3.406037] (-) TimerEvent: {}
+[3.506166] (-) TimerEvent: {}
+[3.606425] (-) TimerEvent: {}
+[3.706658] (-) TimerEvent: {}
+[3.806993] (-) TimerEvent: {}
+[3.893436] (vikit_ros) StdoutLine: {'line': b'[ 66%] Linking CXX shared library libvikit_ros.so\n'}
+[3.907120] (-) TimerEvent: {}
+[3.972872] (vikit_ros) StdoutLine: {'line': b'[100%] Built target vikit_ros\n'}
+[3.982305] (vikit_ros) CommandEnded: {'returncode': 0}
+[3.982634] (vikit_ros) JobProgress: {'identifier': 'vikit_ros', 'progress': 'install'}
+[3.987596] (vikit_ros) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/fire/Desktop/fast_livo2_ws/build/vikit_ros'], 'cwd': '/home/fire/Desktop/fast_livo2_ws/build/vikit_ros', 'env': OrderedDict({'SUDO_GID': '1000', 'CODEX_CI': '1', 'MAIL': '/var/mail/root', 'USER': 'root', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'ROS_PACKAGE_PATH': '/home/fire/Desktop/fast_livo2_ws/install/vikit_common/share', 'SHLVL': '0', 'LD_LIBRARY_PATH': '/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/root', 'ROS_PYTHON_VERSION': '3', 'PAGER': 'cat', 'LC_CTYPE': 'C.UTF-8', 'NO_COLOR': '1', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'CODEX_PERMISSION_PROFILE': ':workspace', 'SUDO_UID': '1000', 'ROS_DISTRO': 'jazzy', 'GTK_IM_MODULE': 'fcitx', 'LOGNAME': 'root', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PKG_CONFIG_PATH': '/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/x86_64-linux-gnu/pkgconfig:/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/pkgconfig', 'TERM': 'xterm-256color', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/root/.codex/tmp/arg0/codex-arg07iG4sU:/usr/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin', 'DISPLAY': ':1', 'CODEX_SANDBOX_NETWORK_DISABLED': '1', 'LANG': 'zh_CN.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=fcitx', 'GH_PAGER': 'cat', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SUDO_COMMAND': '/usr/bin/codex', 'AMENT_PREFIX_PATH': '/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'SUDO_USER': 'fire', 'CODEX_THREAD_ID': '01a00efd-8fa1-7273-b330-33d1717f7815', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'GIT_PAGER': 'cat', 'QT_IM_MODULE': 'fcitx', 'PWD': '/home/fire/Desktop/fast_livo2_ws/build/vikit_ros', 'LC_ALL': 'C.UTF-8', 'CODEX_MANAGED_PACKAGE_ROOT': '/usr/lib/node_modules/@openai/codex', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CODEX_MANAGED_BY_NPM': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2:/opt/ros/jazzy'}), 'shell': False}
+[3.992340] (vikit_ros) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[3.992582] (vikit_ros) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[3.992627] (vikit_ros) StdoutLine: {'line': b'-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/ament_index/resource_index/package_run_dependencies/vikit_ros\n'}
+[3.998133] (vikit_ros) StdoutLine: {'line': b'-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/ament_index/resource_index/parent_prefix_path/vikit_ros\n'}
+[4.005361] (vikit_ros) StdoutLine: {'line': b'-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/environment/ament_prefix_path.sh\n'}
+[4.007169] (-) TimerEvent: {}
+[4.011181] (vikit_ros) StdoutLine: {'line': b'-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/environment/ament_prefix_path.dsv\n'}
+[4.018496] (vikit_ros) StdoutLine: {'line': b'-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/environment/path.sh\n'}
+[4.024367] (vikit_ros) StdoutLine: {'line': b'-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/environment/path.dsv\n'}
+[4.030435] (vikit_ros) StdoutLine: {'line': b'-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/local_setup.bash\n'}
+[4.038006] (vikit_ros) StdoutLine: {'line': b'-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/local_setup.sh\n'}
+[4.043601] (vikit_ros) StdoutLine: {'line': b'-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/local_setup.zsh\n'}
+[4.048797] (vikit_ros) StdoutLine: {'line': b'-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/local_setup.dsv\n'}
+[4.055153] (vikit_ros) StdoutLine: {'line': b'-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/package.dsv\n'}
+[4.062001] (vikit_ros) StdoutLine: {'line': b'-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/ament_index/resource_index/packages/vikit_ros\n'}
+[4.068674] (vikit_ros) StdoutLine: {'line': b'-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[4.073301] (vikit_ros) StdoutLine: {'line': b'-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[4.080623] (vikit_ros) StdoutLine: {'line': b'-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/cmake/vikit_rosConfig.cmake\n'}
+[4.087941] (vikit_ros) StdoutLine: {'line': b'-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/cmake/vikit_rosConfig-version.cmake\n'}
+[4.094273] (vikit_ros) StdoutLine: {'line': b'-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/package.xml\n'}
+[4.099712] (vikit_ros) StdoutLine: {'line': b'-- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/include\n'}
+[4.099902] (vikit_ros) StdoutLine: {'line': b'-- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/include/vikit\n'}
+[4.100105] (vikit_ros) StdoutLine: {'line': b'-- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/include/vikit/output_helper.h\n'}
+[4.100192] (vikit_ros) StdoutLine: {'line': b'-- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/include/vikit/params_helper.h\n'}
+[4.100271] (vikit_ros) StdoutLine: {'line': b'-- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/include/vikit/camera_loader.h\n'}
+[4.100352] (vikit_ros) StdoutLine: {'line': b'-- Installing: /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/lib/libvikit_ros.so\n'}
+[4.100481] (vikit_ros) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/lib/libvikit_ros.so" to ""\n'}
+[4.101574] (vikit_ros) CommandEnded: {'returncode': 0}
+[4.107283] (-) TimerEvent: {}
+[4.110754] (vikit_ros) JobEnded: {'identifier': 'vikit_ros', 'rc': 0}
+[4.111167] (fast_livo) JobStarted: {'identifier': 'fast_livo'}
+[4.118721] (fast_livo) JobProgress: {'identifier': 'fast_livo', 'progress': 'cmake'}
+[4.119874] (fast_livo) Command: {'cmd': ['/usr/bin/cmake', '/home/fire/Desktop/fast_livo2_ws/src/FAST-LIVO2', '-Dvikit_common_DIR=/home/fire/Desktop/fast_livo2_ws/build/vikit_common', '-Dvikit_ros_DIR=/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/cmake', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/fire/Desktop/fast_livo2_ws/install/fast_livo'], 'cwd': '/home/fire/Desktop/fast_livo2_ws/build/fast_livo', 'env': OrderedDict({'SUDO_GID': '1000', 'CODEX_CI': '1', 'MAIL': '/var/mail/root', 'USER': 'root', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'ROS_PACKAGE_PATH': '/home/fire/Desktop/fast_livo2_ws/install/vikit_common/share', 'SHLVL': '0', 'LD_LIBRARY_PATH': '/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/lib:/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/root', 'ROS_PYTHON_VERSION': '3', 'PAGER': 'cat', 'LC_CTYPE': 'C.UTF-8', 'NO_COLOR': '1', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'CODEX_PERMISSION_PROFILE': ':workspace', 'SUDO_UID': '1000', 'ROS_DISTRO': 'jazzy', 'GTK_IM_MODULE': 'fcitx', 'LOGNAME': 'root', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PKG_CONFIG_PATH': '/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/x86_64-linux-gnu/pkgconfig:/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/pkgconfig', 'TERM': 'xterm-256color', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/root/.codex/tmp/arg0/codex-arg07iG4sU:/usr/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin', 'DISPLAY': ':1', 'CODEX_SANDBOX_NETWORK_DISABLED': '1', 'LANG': 'zh_CN.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=fcitx', 'GH_PAGER': 'cat', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SUDO_COMMAND': '/usr/bin/codex', 'AMENT_PREFIX_PATH': '/home/fire/Desktop/fast_livo2_ws/install/vikit_ros:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'SUDO_USER': 'fire', 'CODEX_THREAD_ID': '01a00efd-8fa1-7273-b330-33d1717f7815', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'GIT_PAGER': 'cat', 'QT_IM_MODULE': 'fcitx', 'PWD': '/home/fire/Desktop/fast_livo2_ws/build/fast_livo', 'LC_ALL': 'C.UTF-8', 'CODEX_MANAGED_PACKAGE_ROOT': '/usr/lib/node_modules/@openai/codex', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CODEX_MANAGED_BY_NPM': '1', 'CMAKE_PREFIX_PATH': '/home/fire/Desktop/fast_livo2_ws/install/vikit_ros:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[4.130177] (fast_livo) StdoutLine: {'line': b'-- Build Type: Release\n'}
+[4.130270] (fast_livo) StdoutLine: {'line': b'-- Current CPU architecture: x86_64\n'}
+[4.130304] (fast_livo) StdoutLine: {'line': b'-- Using general x86 optimizations: -O3 -march=native -mtune=native -funroll-loops\n'}
+[4.132603] (fast_livo) StdoutLine: {'line': b'-- Processor count: 24\n'}
+[4.132674] (fast_livo) StdoutLine: {'line': b'-- Multithreading enabled. Cores: 4\n'}
+[4.134196] (fast_livo) StdoutLine: {'line': b'-- OpenMP found\n'}
+[4.140299] (fast_livo) StdoutLine: {'line': b'-- mimalloc not found, proceeding without it\n'}
+[4.140485] (fast_livo) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[4.207441] (-) TimerEvent: {}
+[4.271464] (fast_livo) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[4.275174] (fast_livo) StdoutLine: {'line': b'-- Found rclcpp: 28.1.16 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[4.290982] (fast_livo) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[4.296041] (fast_livo) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[4.301910] (fast_livo) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[4.307553] (-) TimerEvent: {}
+[4.309127] (fast_livo) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[4.343525] (fast_livo) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[4.344258] (fast_livo) StdoutLine: {'line': b'-- Found rmw_cyclonedds_cpp: 2.2.3 (/opt/ros/jazzy/share/rmw_cyclonedds_cpp/cmake)\n'}
+[4.356773] (fast_livo) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_cyclonedds_cpp' as default\n"}
+[4.389208] (fast_livo) StdoutLine: {'line': b'-- Found rclpy: 7.1.9 (/opt/ros/jazzy/share/rclpy/cmake)\n'}
+[4.389315] (fast_livo) StdoutLine: {'line': b'-- Found geometry_msgs: 5.3.6 (/opt/ros/jazzy/share/geometry_msgs/cmake)\n'}
+[4.406166] (fast_livo) StdoutLine: {'line': b'-- Found nav_msgs: 5.3.6 (/opt/ros/jazzy/share/nav_msgs/cmake)\n'}
+[4.407704] (-) TimerEvent: {}
+[4.420918] (fast_livo) StdoutLine: {'line': b'-- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)\n'}
+[4.434265] (fast_livo) StdoutLine: {'line': b'-- Found visualization_msgs: 5.3.6 (/opt/ros/jazzy/share/visualization_msgs/cmake)\n'}
+[4.450192] (fast_livo) StdoutLine: {'line': b'-- Found pcl_ros: 2.6.2 (/opt/ros/jazzy/share/pcl_ros/cmake)\n'}
+[4.486681] (fast_livo) StderrLine: {'line': b'CMake Warning (dev) at /usr/lib/x86_64-linux-gnu/cmake/pcl/Modules/FindFLANN.cmake:45 (find_package):\n'}
+[4.486812] (fast_livo) StderrLine: {'line': b'  Policy CMP0144 is not set: find_package uses upper-case <PACKAGENAME>_ROOT\n'}
+[4.486849] (fast_livo) StderrLine: {'line': b'  variables.  Run "cmake --help-policy CMP0144" for policy details.  Use the\n'}
+[4.486882] (fast_livo) StderrLine: {'line': b'  cmake_policy command to set the policy and suppress this warning.\n'}
+[4.486919] (fast_livo) StderrLine: {'line': b'\n'}
+[4.486950] (fast_livo) StderrLine: {'line': b'  CMake variable FLANN_ROOT is set to:\n'}
+[4.486980] (fast_livo) StderrLine: {'line': b'\n'}
+[4.487026] (fast_livo) StderrLine: {'line': b'    /usr\n'}
+[4.487235] (fast_livo) StderrLine: {'line': b'\n'}
+[4.487283] (fast_livo) StderrLine: {'line': b'  For compatibility, find_package is ignoring the variable, but code in a\n'}
+[4.487321] (fast_livo) StderrLine: {'line': b'  .cmake module might still use it.\n'}
+[4.487351] (fast_livo) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[4.487380] (fast_livo) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:261 (find_package)\n'}
+[4.487412] (fast_livo) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:306 (find_flann)\n'}
+[4.487441] (fast_livo) StderrLine: {'line': b'  /usr/lib/x86_64-linux-gnu/cmake/pcl/PCLConfig.cmake:570 (find_external_library)\n'}
+[4.487471] (fast_livo) StderrLine: {'line': b'  /opt/ros/jazzy/share/pcl_conversions/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)\n'}
+[4.487499] (fast_livo) StderrLine: {'line': b'  /opt/ros/jazzy/share/pcl_conversions/cmake/pcl_conversionsConfig.cmake:41 (include)\n'}
+[4.487529] (fast_livo) StderrLine: {'line': b'  /opt/ros/jazzy/share/pcl_ros/cmake/ament_cmake_export_dependencies-extras.cmake:21 (find_package)\n'}
+[4.487557] (fast_livo) StderrLine: {'line': b'  /opt/ros/jazzy/share/pcl_ros/cmake/pcl_rosConfig.cmake:41 (include)\n'}
+[4.487585] (fast_livo) StderrLine: {'line': b'  CMakeLists.txt:90 (find_package)\n'}
+[4.487614] (fast_livo) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[4.487641] (fast_livo) StderrLine: {'line': b'\n'}
+[4.487667] (fast_livo) StdoutLine: {'line': b'-- Found flann version 1.9.2\n'}
+[4.507862] (-) TimerEvent: {}
+[4.608053] (-) TimerEvent: {}
+[4.708253] (-) TimerEvent: {}
+[4.740766] (fast_livo) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[4.745237] (fast_livo) StdoutLine: {'line': b'-- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)\n'}
+[4.747514] (fast_livo) StdoutLine: {'line': b'-- Could NOT find Pcap (missing: PCAP_LIBRARIES PCAP_INCLUDE_DIRS) \n'}
+[4.808352] (-) TimerEvent: {}
+[4.908513] (-) TimerEvent: {}
+[5.008729] (-) TimerEvent: {}
+[5.018744] (fast_livo) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[5.023533] (fast_livo) StdoutLine: {'line': b'-- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)\n'}
+[5.108908] (-) TimerEvent: {}
+[5.209029] (-) TimerEvent: {}
+[5.263659] (fast_livo) StdoutLine: {'line': b'-- Found Qhull version 8.0.2\n'}
+[5.309113] (-) TimerEvent: {}
+[5.409354] (-) TimerEvent: {}
+[5.509519] (-) TimerEvent: {}
+[5.536183] (fast_livo) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[5.609721] (-) TimerEvent: {}
+[5.709993] (-) TimerEvent: {}
+[5.810227] (-) TimerEvent: {}
+[5.849172] (fast_livo) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.3.0 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)\n'}
+[5.849890] (fast_livo) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[5.849970] (fast_livo) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[5.852416] (fast_livo) StdoutLine: {'line': b'-- Found livox_ros_driver2: 1.0.0 (/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake)\n'}
+[5.867106] (fast_livo) StdoutLine: {'line': b'-- Found vikit_ros: 0.0.0 (/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/share/vikit_ros/cmake)\n'}
+[5.871449] (fast_livo) StdoutLine: {'line': b'-- Found cv_bridge: 4.1.0 (/opt/ros/jazzy/share/cv_bridge/cmake)\n'}
+[5.877111] (fast_livo) StdoutLine: {'line': b'-- Found image_transport: 5.1.7 (/opt/ros/jazzy/share/image_transport/cmake)\n'}
+[5.880112] (fast_livo) StdoutLine: {'line': b'-- Found TinyXML2 via Config file: /usr/lib/x86_64-linux-gnu/cmake/tinyxml2\n'}
+[5.881412] (fast_livo) StderrLine: {'line': b'CMake Warning (dev) at CMakeLists.txt:99 (find_package):\n'}
+[5.881503] (fast_livo) StderrLine: {'line': b'  Policy CMP0074 is not set: find_package uses <PackageName>_ROOT variables.\n'}
+[5.881544] (fast_livo) StderrLine: {'line': b'  Run "cmake --help-policy CMP0074" for policy details.  Use the cmake_policy\n'}
+[5.881588] (fast_livo) StderrLine: {'line': b'  command to set the policy and suppress this warning.\n'}
+[5.881621] (fast_livo) StderrLine: {'line': b'\n'}
+[5.881652] (fast_livo) StderrLine: {'line': b'  CMake variable PCL_ROOT is set to:\n'}
+[5.881682] (fast_livo) StderrLine: {'line': b'\n'}
+[5.881712] (fast_livo) StderrLine: {'line': b'    /usr\n'}
+[5.881741] (fast_livo) StderrLine: {'line': b'\n'}
+[5.881770] (fast_livo) StderrLine: {'line': b'  For compatibility, CMake is ignoring the variable.\n'}
+[5.881800] (fast_livo) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[5.881830] (fast_livo) StderrLine: {'line': b'\n'}
+[5.889496] (fast_livo) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found suitable version "3.4.0", minimum required is "3.4.0") \n'}
+[5.910322] (-) TimerEvent: {}
+[6.010495] (-) TimerEvent: {}
+[6.026639] (fast_livo) StdoutLine: {'line': b'-- Configuring done (1.9s)\n'}
+[6.110687] (-) TimerEvent: {}
+[6.145979] (fast_livo) StdoutLine: {'line': b'-- Generating done (0.1s)\n'}
+[6.153117] (fast_livo) StdoutLine: {'line': b'-- Build files have been written to: /home/fire/Desktop/fast_livo2_ws/build/fast_livo\n'}
+[6.165438] (fast_livo) CommandEnded: {'returncode': 0}
+[6.165781] (fast_livo) JobProgress: {'identifier': 'fast_livo', 'progress': 'build'}
+[6.165793] (fast_livo) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/fire/Desktop/fast_livo2_ws/build/fast_livo', '--', '-j24', '-l24'], 'cwd': '/home/fire/Desktop/fast_livo2_ws/build/fast_livo', 'env': OrderedDict({'SUDO_GID': '1000', 'CODEX_CI': '1', 'MAIL': '/var/mail/root', 'USER': 'root', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'ROS_PACKAGE_PATH': '/home/fire/Desktop/fast_livo2_ws/install/vikit_common/share', 'SHLVL': '0', 'LD_LIBRARY_PATH': '/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/lib:/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/root', 'ROS_PYTHON_VERSION': '3', 'PAGER': 'cat', 'LC_CTYPE': 'C.UTF-8', 'NO_COLOR': '1', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'CODEX_PERMISSION_PROFILE': ':workspace', 'SUDO_UID': '1000', 'ROS_DISTRO': 'jazzy', 'GTK_IM_MODULE': 'fcitx', 'LOGNAME': 'root', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PKG_CONFIG_PATH': '/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/x86_64-linux-gnu/pkgconfig:/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/pkgconfig', 'TERM': 'xterm-256color', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/root/.codex/tmp/arg0/codex-arg07iG4sU:/usr/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin', 'DISPLAY': ':1', 'CODEX_SANDBOX_NETWORK_DISABLED': '1', 'LANG': 'zh_CN.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=fcitx', 'GH_PAGER': 'cat', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SUDO_COMMAND': '/usr/bin/codex', 'AMENT_PREFIX_PATH': '/home/fire/Desktop/fast_livo2_ws/install/vikit_ros:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'SUDO_USER': 'fire', 'CODEX_THREAD_ID': '01a00efd-8fa1-7273-b330-33d1717f7815', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'GIT_PAGER': 'cat', 'QT_IM_MODULE': 'fcitx', 'PWD': '/home/fire/Desktop/fast_livo2_ws/build/fast_livo', 'LC_ALL': 'C.UTF-8', 'CODEX_MANAGED_PACKAGE_ROOT': '/usr/lib/node_modules/@openai/codex', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CODEX_MANAGED_BY_NPM': '1', 'CMAKE_PREFIX_PATH': '/home/fire/Desktop/fast_livo2_ws/install/vikit_ros:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[6.205068] (fast_livo) StdoutLine: {'line': b'[ 12%] Built target utils\n'}
+[6.210819] (-) TimerEvent: {}
+[6.218020] (fast_livo) StdoutLine: {'line': b'[ 25%] Built target imu_proc\n'}
+[6.218271] (fast_livo) StdoutLine: {'line': b'[ 37%] Building CXX object CMakeFiles/laser_mapping.dir/src/LIVMapper.cpp.o\n'}
+[6.218368] (fast_livo) StdoutLine: {'line': b'[ 43%] Built target pre\n'}
+[6.224262] (fast_livo) StdoutLine: {'line': b'[ 68%] Built target vio\n'}
+[6.227428] (fast_livo) StdoutLine: {'line': b'[ 75%] Building CXX object CMakeFiles/lio.dir/src/voxel_map.cpp.o\n'}
+[6.310906] (-) TimerEvent: {}
+[6.411148] (-) TimerEvent: {}
+[6.511310] (-) TimerEvent: {}
+[6.611513] (-) TimerEvent: {}
+[6.711677] (-) TimerEvent: {}
+[6.811874] (-) TimerEvent: {}
+[6.912042] (-) TimerEvent: {}
+[7.012208] (-) TimerEvent: {}
+[7.112372] (-) TimerEvent: {}
+[7.212533] (-) TimerEvent: {}
+[7.312701] (-) TimerEvent: {}
+[7.412870] (-) TimerEvent: {}
+[7.513044] (-) TimerEvent: {}
+[7.613208] (-) TimerEvent: {}
+[7.713373] (-) TimerEvent: {}
+[7.813532] (-) TimerEvent: {}
+[7.913689] (-) TimerEvent: {}
+[8.013905] (-) TimerEvent: {}
+[8.114072] (-) TimerEvent: {}
+[8.214237] (-) TimerEvent: {}
+[8.314398] (-) TimerEvent: {}
+[8.414561] (-) TimerEvent: {}
+[8.514750] (-) TimerEvent: {}
+[8.614996] (-) TimerEvent: {}
+[8.715186] (-) TimerEvent: {}
+[8.815378] (-) TimerEvent: {}
+[8.915575] (-) TimerEvent: {}
+[9.015736] (-) TimerEvent: {}
+[9.116016] (-) TimerEvent: {}
+[9.216179] (-) TimerEvent: {}
+[9.316377] (-) TimerEvent: {}
+[9.416539] (-) TimerEvent: {}
+[9.516774] (-) TimerEvent: {}
+[9.617074] (-) TimerEvent: {}
+[9.717301] (-) TimerEvent: {}
+[9.817570] (-) TimerEvent: {}
+[9.917737] (-) TimerEvent: {}
+[10.017989] (-) TimerEvent: {}
+[10.051486] (fast_livo) StderrLine: {'line': b'In file included from /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/include/vikit/camera_loader.h:20,\n'}
+[10.051672] (fast_livo) StderrLine: {'line': b'                 from /home/fire/Desktop/fast_livo2_ws/src/FAST-LIVO2/include/LIVMapper.h:28,\n'}
+[10.051754] (fast_livo) StderrLine: {'line': b'                 from /home/fire/Desktop/fast_livo2_ws/src/FAST-LIVO2/src/LIVMapper.cpp:13:\n'}
+[10.051828] (fast_livo) StderrLine: {'line': b'/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/include/vikit/params_helper.h: In function \xe2\x80\x98T vk::getParam(const std::string&, const std::string&, const T&)\xe2\x80\x99:\n'}
+[10.051909] (fast_livo) StderrLine: {'line': b'/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/include/vikit/params_helper.h:35:48: warning: ignoring attributes on template argument \xe2\x80\x98int (*)(FILE*)\xe2\x80\x99 [-Wignored-attributes]\n'}
+[10.051982] (fast_livo) StderrLine: {'line': b'   35 |         std::unique_ptr<FILE, decltype(&pclose)> pipe(popen(command.c_str(), "r"), pclose);\n'}
+[10.052053] (fast_livo) StderrLine: {'line': b'      |                                                ^\n'}
+[10.118094] (-) TimerEvent: {}
+[10.218288] (-) TimerEvent: {}
+[10.318452] (-) TimerEvent: {}
+[10.418655] (-) TimerEvent: {}
+[10.518816] (-) TimerEvent: {}
+[10.619036] (-) TimerEvent: {}
+[10.719199] (-) TimerEvent: {}
+[10.819362] (-) TimerEvent: {}
+[10.919565] (-) TimerEvent: {}
+[11.019883] (-) TimerEvent: {}
+[11.120069] (-) TimerEvent: {}
+[11.220249] (-) TimerEvent: {}
+[11.320446] (-) TimerEvent: {}
+[11.420609] (-) TimerEvent: {}
+[11.520843] (-) TimerEvent: {}
+[11.621046] (-) TimerEvent: {}
+[11.721245] (-) TimerEvent: {}
+[11.821414] (-) TimerEvent: {}
+[11.921617] (-) TimerEvent: {}
+[12.021819] (-) TimerEvent: {}
+[12.122033] (-) TimerEvent: {}
+[12.222280] (-) TimerEvent: {}
+[12.322443] (-) TimerEvent: {}
+[12.422612] (-) TimerEvent: {}
+[12.522782] (-) TimerEvent: {}
+[12.622940] (-) TimerEvent: {}
+[12.723107] (-) TimerEvent: {}
+[12.823276] (-) TimerEvent: {}
+[12.923440] (-) TimerEvent: {}
+[13.023606] (-) TimerEvent: {}
+[13.123858] (-) TimerEvent: {}
+[13.224120] (-) TimerEvent: {}
+[13.324266] (-) TimerEvent: {}
+[13.424441] (-) TimerEvent: {}
+[13.524668] (-) TimerEvent: {}
+[13.624853] (-) TimerEvent: {}
+[13.725000] (-) TimerEvent: {}
+[13.825140] (-) TimerEvent: {}
+[13.925299] (-) TimerEvent: {}
+[14.025583] (-) TimerEvent: {}
+[14.125812] (-) TimerEvent: {}
+[14.226037] (-) TimerEvent: {}
+[14.326175] (-) TimerEvent: {}
+[14.426348] (-) TimerEvent: {}
+[14.526604] (-) TimerEvent: {}
+[14.626768] (-) TimerEvent: {}
+[14.726940] (-) TimerEvent: {}
+[14.827103] (-) TimerEvent: {}
+[14.927238] (-) TimerEvent: {}
+[15.027373] (-) TimerEvent: {}
+[15.127532] (-) TimerEvent: {}
+[15.227844] (-) TimerEvent: {}
+[15.327964] (-) TimerEvent: {}
+[15.428103] (-) TimerEvent: {}
+[15.528241] (-) TimerEvent: {}
+[15.628423] (-) TimerEvent: {}
+[15.728641] (-) TimerEvent: {}
+[15.828862] (-) TimerEvent: {}
+[15.929046] (-) TimerEvent: {}
+[16.029186] (-) TimerEvent: {}
+[16.129359] (-) TimerEvent: {}
+[16.229490] (-) TimerEvent: {}
+[16.329653] (-) TimerEvent: {}
+[16.429883] (-) TimerEvent: {}
+[16.530070] (-) TimerEvent: {}
+[16.630223] (-) TimerEvent: {}
+[16.730384] (-) TimerEvent: {}
+[16.830548] (-) TimerEvent: {}
+[16.930777] (-) TimerEvent: {}
+[17.031052] (-) TimerEvent: {}
+[17.131190] (-) TimerEvent: {}
+[17.231324] (-) TimerEvent: {}
+[17.331469] (-) TimerEvent: {}
+[17.431727] (-) TimerEvent: {}
+[17.531968] (-) TimerEvent: {}
+[17.632107] (-) TimerEvent: {}
+[17.732260] (-) TimerEvent: {}
+[17.832405] (-) TimerEvent: {}
+[17.932640] (-) TimerEvent: {}
+[18.032917] (-) TimerEvent: {}
+[18.133135] (-) TimerEvent: {}
+[18.233274] (-) TimerEvent: {}
+[18.333431] (-) TimerEvent: {}
+[18.433586] (-) TimerEvent: {}
+[18.533731] (-) TimerEvent: {}
+[18.633869] (-) TimerEvent: {}
+[18.734009] (-) TimerEvent: {}
+[18.834227] (-) TimerEvent: {}
+[18.934387] (-) TimerEvent: {}
+[19.034542] (-) TimerEvent: {}
+[19.134700] (-) TimerEvent: {}
+[19.234856] (-) TimerEvent: {}
+[19.334998] (-) TimerEvent: {}
+[19.435131] (-) TimerEvent: {}
+[19.535318] (-) TimerEvent: {}
+[19.635485] (-) TimerEvent: {}
+[19.735789] (-) TimerEvent: {}
+[19.835957] (-) TimerEvent: {}
+[19.936090] (-) TimerEvent: {}
+[20.036248] (-) TimerEvent: {}
+[20.136380] (-) TimerEvent: {}
+[20.236544] (-) TimerEvent: {}
+[20.336676] (-) TimerEvent: {}
+[20.436854] (-) TimerEvent: {}
+[20.537016] (-) TimerEvent: {}
+[20.637151] (-) TimerEvent: {}
+[20.737293] (-) TimerEvent: {}
+[20.837548] (-) TimerEvent: {}
+[20.937821] (-) TimerEvent: {}
+[21.038057] (-) TimerEvent: {}
+[21.138192] (-) TimerEvent: {}
+[21.238354] (-) TimerEvent: {}
+[21.338481] (-) TimerEvent: {}
+[21.438734] (-) TimerEvent: {}
+[21.538999] (-) TimerEvent: {}
+[21.639134] (-) TimerEvent: {}
+[21.739260] (-) TimerEvent: {}
+[21.839444] (-) TimerEvent: {}
+[21.881275] (fast_livo) StdoutLine: {'line': b'[ 81%] Linking CXX static library liblio.a\n'}
+[21.927188] (fast_livo) StdoutLine: {'line': b'[ 81%] Built target lio\n'}
+[21.939564] (-) TimerEvent: {}
+[22.039728] (-) TimerEvent: {}
+[22.139999] (-) TimerEvent: {}
+[22.240256] (-) TimerEvent: {}
+[22.340492] (-) TimerEvent: {}
+[22.440625] (-) TimerEvent: {}
+[22.540853] (-) TimerEvent: {}
+[22.641036] (-) TimerEvent: {}
+[22.741277] (-) TimerEvent: {}
+[22.841504] (-) TimerEvent: {}
+[22.941738] (-) TimerEvent: {}
+[23.042015] (-) TimerEvent: {}
+[23.142159] (-) TimerEvent: {}
+[23.242288] (-) TimerEvent: {}
+[23.342457] (-) TimerEvent: {}
+[23.442629] (-) TimerEvent: {}
+[23.542891] (-) TimerEvent: {}
+[23.643188] (-) TimerEvent: {}
+[23.743320] (-) TimerEvent: {}
+[23.843479] (-) TimerEvent: {}
+[23.943653] (-) TimerEvent: {}
+[24.043779] (-) TimerEvent: {}
+[24.143959] (-) TimerEvent: {}
+[24.244089] (-) TimerEvent: {}
+[24.344316] (-) TimerEvent: {}
+[24.444578] (-) TimerEvent: {}
+[24.544813] (-) TimerEvent: {}
+[24.645062] (-) TimerEvent: {}
+[24.745237] (-) TimerEvent: {}
+[24.845422] (-) TimerEvent: {}
+[24.945558] (-) TimerEvent: {}
+[25.045793] (-) TimerEvent: {}
+[25.146194] (-) TimerEvent: {}
+[25.246496] (-) TimerEvent: {}
+[25.346749] (-) TimerEvent: {}
+[25.447049] (-) TimerEvent: {}
+[25.547189] (-) TimerEvent: {}
+[25.647320] (-) TimerEvent: {}
+[25.747485] (-) TimerEvent: {}
+[25.847742] (-) TimerEvent: {}
+[25.947872] (-) TimerEvent: {}
+[26.048067] (-) TimerEvent: {}
+[26.148200] (-) TimerEvent: {}
+[26.248341] (-) TimerEvent: {}
+[26.348757] (-) TimerEvent: {}
+[26.449022] (-) TimerEvent: {}
+[26.549153] (-) TimerEvent: {}
+[26.649297] (-) TimerEvent: {}
+[26.749465] (-) TimerEvent: {}
+[26.849694] (-) TimerEvent: {}
+[26.949874] (-) TimerEvent: {}
+[27.050153] (-) TimerEvent: {}
+[27.150291] (-) TimerEvent: {}
+[27.250462] (-) TimerEvent: {}
+[27.350636] (-) TimerEvent: {}
+[27.450957] (-) TimerEvent: {}
+[27.551092] (-) TimerEvent: {}
+[27.651225] (-) TimerEvent: {}
+[27.751366] (-) TimerEvent: {}
+[27.851500] (-) TimerEvent: {}
+[27.951635] (-) TimerEvent: {}
+[28.051780] (-) TimerEvent: {}
+[28.151975] (-) TimerEvent: {}
+[28.252109] (-) TimerEvent: {}
+[28.352275] (-) TimerEvent: {}
+[28.452441] (-) TimerEvent: {}
+[28.552601] (-) TimerEvent: {}
+[28.652745] (-) TimerEvent: {}
+[28.752937] (-) TimerEvent: {}
+[28.853230] (-) TimerEvent: {}
+[28.953375] (-) TimerEvent: {}
+[29.053504] (-) TimerEvent: {}
+[29.153728] (-) TimerEvent: {}
+[29.253975] (-) TimerEvent: {}
+[29.354104] (-) TimerEvent: {}
+[29.454232] (-) TimerEvent: {}
+[29.554361] (-) TimerEvent: {}
+[29.654487] (-) TimerEvent: {}
+[29.754651] (-) TimerEvent: {}
+[29.854786] (-) TimerEvent: {}
+[29.955032] (-) TimerEvent: {}
+[30.055167] (-) TimerEvent: {}
+[30.155353] (-) TimerEvent: {}
+[30.255524] (-) TimerEvent: {}
+[30.355688] (-) TimerEvent: {}
+[30.455814] (-) TimerEvent: {}
+[30.556034] (-) TimerEvent: {}
+[30.656182] (-) TimerEvent: {}
+[30.756331] (-) TimerEvent: {}
+[30.856511] (-) TimerEvent: {}
+[30.956644] (-) TimerEvent: {}
+[31.056925] (-) TimerEvent: {}
+[31.157079] (-) TimerEvent: {}
+[31.257224] (-) TimerEvent: {}
+[31.357402] (-) TimerEvent: {}
+[31.457652] (-) TimerEvent: {}
+[31.557870] (-) TimerEvent: {}
+[31.658027] (-) TimerEvent: {}
+[31.758159] (-) TimerEvent: {}
+[31.858314] (-) TimerEvent: {}
+[31.958491] (-) TimerEvent: {}
+[32.058790] (-) TimerEvent: {}
+[32.159063] (-) TimerEvent: {}
+[32.259202] (-) TimerEvent: {}
+[32.359338] (-) TimerEvent: {}
+[32.459504] (-) TimerEvent: {}
+[32.559719] (-) TimerEvent: {}
+[32.659984] (-) TimerEvent: {}
+[32.760119] (-) TimerEvent: {}
+[32.860252] (-) TimerEvent: {}
+[32.960384] (-) TimerEvent: {}
+[33.060602] (-) TimerEvent: {}
+[33.160832] (-) TimerEvent: {}
+[33.261086] (-) TimerEvent: {}
+[33.361224] (-) TimerEvent: {}
+[33.461451] (-) TimerEvent: {}
+[33.556930] (fast_livo) StdoutLine: {'line': b'[ 87%] Linking CXX static library liblaser_mapping.a\n'}
+[33.561545] (-) TimerEvent: {}
+[33.626334] (fast_livo) StdoutLine: {'line': b'[ 87%] Built target laser_mapping\n'}
+[33.654033] (fast_livo) StdoutLine: {'line': b'[ 93%] Building CXX object CMakeFiles/fastlivo_mapping.dir/src/main.cpp.o\n'}
+[33.661632] (-) TimerEvent: {}
+[33.761918] (-) TimerEvent: {}
+[33.862276] (-) TimerEvent: {}
+[33.962590] (-) TimerEvent: {}
+[34.062924] (-) TimerEvent: {}
+[34.163109] (-) TimerEvent: {}
+[34.263329] (-) TimerEvent: {}
+[34.363497] (-) TimerEvent: {}
+[34.463693] (-) TimerEvent: {}
+[34.564046] (-) TimerEvent: {}
+[34.664286] (-) TimerEvent: {}
+[34.764417] (-) TimerEvent: {}
+[34.864589] (-) TimerEvent: {}
+[34.964755] (-) TimerEvent: {}
+[35.064999] (-) TimerEvent: {}
+[35.165135] (-) TimerEvent: {}
+[35.265272] (-) TimerEvent: {}
+[35.365465] (-) TimerEvent: {}
+[35.465699] (-) TimerEvent: {}
+[35.565891] (-) TimerEvent: {}
+[35.666025] (-) TimerEvent: {}
+[35.766154] (-) TimerEvent: {}
+[35.866311] (-) TimerEvent: {}
+[35.966483] (-) TimerEvent: {}
+[36.066671] (-) TimerEvent: {}
+[36.166920] (-) TimerEvent: {}
+[36.267180] (-) TimerEvent: {}
+[36.367327] (-) TimerEvent: {}
+[36.467498] (-) TimerEvent: {}
+[36.567675] (-) TimerEvent: {}
+[36.667933] (-) TimerEvent: {}
+[36.768075] (-) TimerEvent: {}
+[36.868237] (-) TimerEvent: {}
+[36.968409] (-) TimerEvent: {}
+[37.068650] (-) TimerEvent: {}
+[37.168797] (-) TimerEvent: {}
+[37.268970] (-) TimerEvent: {}
+[37.340424] (fast_livo) StderrLine: {'line': b'In file included from /home/fire/Desktop/fast_livo2_ws/install/vikit_ros/include/vikit/camera_loader.h:20,\n'}
+[37.340569] (fast_livo) StderrLine: {'line': b'                 from /home/fire/Desktop/fast_livo2_ws/src/FAST-LIVO2/include/LIVMapper.h:28,\n'}
+[37.340607] (fast_livo) StderrLine: {'line': b'                 from /home/fire/Desktop/fast_livo2_ws/src/FAST-LIVO2/src/main.cpp:1:\n'}
+[37.340651] (fast_livo) StderrLine: {'line': b'/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/include/vikit/params_helper.h: In function \xe2\x80\x98T vk::getParam(const std::string&, const std::string&, const T&)\xe2\x80\x99:\n'}
+[37.340689] (fast_livo) StderrLine: {'line': b'/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/include/vikit/params_helper.h:35:48: warning: ignoring attributes on template argument \xe2\x80\x98int (*)(FILE*)\xe2\x80\x99 [-Wignored-attributes]\n'}
+[37.340721] (fast_livo) StderrLine: {'line': b'   35 |         std::unique_ptr<FILE, decltype(&pclose)> pipe(popen(command.c_str(), "r"), pclose);\n'}
+[37.340750] (fast_livo) StderrLine: {'line': b'      |                                                ^\n'}
+[37.369042] (-) TimerEvent: {}
+[37.469178] (-) TimerEvent: {}
+[37.569345] (-) TimerEvent: {}
+[37.669537] (-) TimerEvent: {}
+[37.769811] (-) TimerEvent: {}
+[37.870009] (-) TimerEvent: {}
+[37.970241] (-) TimerEvent: {}
+[38.070409] (-) TimerEvent: {}
+[38.170575] (-) TimerEvent: {}
+[38.270837] (-) TimerEvent: {}
+[38.371114] (-) TimerEvent: {}
+[38.471261] (-) TimerEvent: {}
+[38.571408] (-) TimerEvent: {}
+[38.671643] (-) TimerEvent: {}
+[38.771904] (-) TimerEvent: {}
+[38.872068] (-) TimerEvent: {}
+[38.972203] (-) TimerEvent: {}
+[39.072465] (-) TimerEvent: {}
+[39.172637] (-) TimerEvent: {}
+[39.272812] (-) TimerEvent: {}
+[39.373036] (-) TimerEvent: {}
+[39.473180] (-) TimerEvent: {}
+[39.573322] (-) TimerEvent: {}
+[39.673475] (-) TimerEvent: {}
+[39.773758] (-) TimerEvent: {}
+[39.874027] (-) TimerEvent: {}
+[39.974253] (-) TimerEvent: {}
+[40.074432] (-) TimerEvent: {}
+[40.095439] (fast_livo) StdoutLine: {'line': b'[100%] Linking CXX executable fastlivo_mapping\n'}
+[40.174554] (-) TimerEvent: {}
+[40.274693] (-) TimerEvent: {}
+[40.374927] (-) TimerEvent: {}
+[40.475059] (-) TimerEvent: {}
+[40.575197] (-) TimerEvent: {}
+[40.675380] (-) TimerEvent: {}
+[40.775555] (-) TimerEvent: {}
+[40.875783] (-) TimerEvent: {}
+[40.976043] (-) TimerEvent: {}
+[41.012050] (fast_livo) StdoutLine: {'line': b'[100%] Built target fastlivo_mapping\n'}
+[41.018895] (fast_livo) CommandEnded: {'returncode': 0}
+[41.019637] (fast_livo) JobProgress: {'identifier': 'fast_livo', 'progress': 'install'}
+[41.019674] (fast_livo) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/fire/Desktop/fast_livo2_ws/build/fast_livo'], 'cwd': '/home/fire/Desktop/fast_livo2_ws/build/fast_livo', 'env': OrderedDict({'SUDO_GID': '1000', 'CODEX_CI': '1', 'MAIL': '/var/mail/root', 'USER': 'root', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'ROS_PACKAGE_PATH': '/home/fire/Desktop/fast_livo2_ws/install/vikit_common/share', 'SHLVL': '0', 'LD_LIBRARY_PATH': '/home/fire/Desktop/fast_livo2_ws/install/vikit_ros/lib:/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/root', 'ROS_PYTHON_VERSION': '3', 'PAGER': 'cat', 'LC_CTYPE': 'C.UTF-8', 'NO_COLOR': '1', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'CODEX_PERMISSION_PROFILE': ':workspace', 'SUDO_UID': '1000', 'ROS_DISTRO': 'jazzy', 'GTK_IM_MODULE': 'fcitx', 'LOGNAME': 'root', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PKG_CONFIG_PATH': '/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/x86_64-linux-gnu/pkgconfig:/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/pkgconfig', 'TERM': 'xterm-256color', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/root/.codex/tmp/arg0/codex-arg07iG4sU:/usr/lib/node_modules/@openai/codex/node_modules/@openai/codex-linux-x64/vendor/x86_64-unknown-linux-musl/codex-path:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin', 'DISPLAY': ':1', 'CODEX_SANDBOX_NETWORK_DISABLED': '1', 'LANG': 'zh_CN.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=fcitx', 'GH_PAGER': 'cat', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'SUDO_COMMAND': '/usr/bin/codex', 'AMENT_PREFIX_PATH': '/home/fire/Desktop/fast_livo2_ws/install/vikit_ros:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'SUDO_USER': 'fire', 'CODEX_THREAD_ID': '01a00efd-8fa1-7273-b330-33d1717f7815', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'GIT_PAGER': 'cat', 'QT_IM_MODULE': 'fcitx', 'PWD': '/home/fire/Desktop/fast_livo2_ws/build/fast_livo', 'LC_ALL': 'C.UTF-8', 'CODEX_MANAGED_PACKAGE_ROOT': '/usr/lib/node_modules/@openai/codex', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CODEX_MANAGED_BY_NPM': '1', 'CMAKE_PREFIX_PATH': '/home/fire/Desktop/fast_livo2_ws/install/vikit_ros:/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[41.025109] (fast_livo) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[41.025300] (fast_livo) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[41.025430] (fast_livo) StdoutLine: {'line': b'-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/fast_livo/lib/fast_livo/fastlivo_mapping\n'}
+[41.034010] (fast_livo) StdoutLine: {'line': b'-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/config/d405.yaml\n'}
+[41.038664] (fast_livo) StdoutLine: {'line': b'-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/config/livo.yaml\n'}
+[41.043763] (fast_livo) StdoutLine: {'line': b'-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/config/mid360.yaml\n'}
+[41.051015] (fast_livo) StdoutLine: {'line': b'-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/launch/mapping.launch.py\n'}
+[41.057601] (fast_livo) StdoutLine: {'line': b'-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/rviz_cfg/M300.rviz\n'}
+[41.065042] (fast_livo) StdoutLine: {'line': b'-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/rviz_cfg/fast_livo2.rviz\n'}
+[41.069660] (fast_livo) StdoutLine: {'line': b'-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/ament_index/resource_index/package_run_dependencies/fast_livo\n'}
+[41.074293] (fast_livo) StdoutLine: {'line': b'-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/ament_index/resource_index/parent_prefix_path/fast_livo\n'}
+[41.076103] (-) TimerEvent: {}
+[41.078880] (fast_livo) StdoutLine: {'line': b'-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/environment/ament_prefix_path.sh\n'}
+[41.085551] (fast_livo) StdoutLine: {'line': b'-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/environment/ament_prefix_path.dsv\n'}
+[41.091725] (fast_livo) StdoutLine: {'line': b'-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/environment/path.sh\n'}
+[41.097398] (fast_livo) StdoutLine: {'line': b'-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/environment/path.dsv\n'}
+[41.102865] (fast_livo) StdoutLine: {'line': b'-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/local_setup.bash\n'}
+[41.110326] (fast_livo) StdoutLine: {'line': b'-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/local_setup.sh\n'}
+[41.115932] (fast_livo) StdoutLine: {'line': b'-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/local_setup.zsh\n'}
+[41.120272] (fast_livo) StdoutLine: {'line': b'-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/local_setup.dsv\n'}
+[41.126259] (fast_livo) StdoutLine: {'line': b'-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/package.dsv\n'}
+[41.132167] (fast_livo) StdoutLine: {'line': b'-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/ament_index/resource_index/packages/fast_livo\n'}
+[41.139568] (fast_livo) StdoutLine: {'line': b'-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[41.144601] (fast_livo) StdoutLine: {'line': b'-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/cmake/fast_livoConfig.cmake\n'}
+[41.150123] (fast_livo) StdoutLine: {'line': b'-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/cmake/fast_livoConfig-version.cmake\n'}
+[41.156443] (fast_livo) StdoutLine: {'line': b'-- Symlinking: /home/fire/Desktop/fast_livo2_ws/install/fast_livo/share/fast_livo/package.xml\n'}
+[41.164576] (fast_livo) CommandEnded: {'returncode': 0}
+[41.169647] (fast_livo) JobEnded: {'identifier': 'fast_livo', 'rc': 0}
+[41.169896] (-) EventReactorShutdown: {}

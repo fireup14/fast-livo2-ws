@@ -1,0 +1,88 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-8e5956f41bc4c8572dd6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "vikit_common",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "test_vk_common_camera::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_vk_common_camera-Release-1ad530041c1a9a455ce9.json",
+					"name" : "test_vk_common_camera",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_vk_common_patch_score::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_vk_common_patch_score-Release-574dfbcc1c95a82701d1.json",
+					"name" : "test_vk_common_patch_score",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test_vk_common_triangulation::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test_vk_common_triangulation-Release-a131c822d061e728b60e.json",
+					"name" : "test_vk_common_triangulation",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "vikit_common::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-vikit_common-Release-a36950388b6571da2719.json",
+					"name" : "vikit_common",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/fire/Desktop/fast_livo2_ws/build/vikit_common",
+		"source" : "/home/fire/Desktop/fast_livo2_ws/src/rpg_vikit/vikit_common"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

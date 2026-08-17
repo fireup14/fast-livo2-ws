@@ -1,0 +1,72 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"INSTALL"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 108,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 109,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "/home/fire/Desktop/fast_livo2_ws/install/vikit_common/include",
+			"paths" : 
+			[
+				"include/vikit"
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib",
+			"paths" : 
+			[
+				"/home/fire/Desktop/fast_livo2_ws/src/rpg_vikit/vikit_common/lib/libvikit_common.so"
+			],
+			"targetId" : "vikit_common::@6890427a1f51a3e7e1df",
+			"targetIndex" : 3,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"cxxModuleBmiTarget" : 
+			{
+				"id" : "vikit_common::@6890427a1f51a3e7e1df",
+				"index" : 3
+			},
+			"destination" : "/home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib",
+			"type" : "cxxModuleBmi"
+		}
+	],
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	}
+}

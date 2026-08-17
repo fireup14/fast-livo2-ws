@@ -1,0 +1,33 @@
+[0.008s] Invoking command in '/home/fire/Desktop/fast_livo2_ws/build/vikit_common': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/fire/Desktop/fast_livo2_ws/build/vikit_common -- -j24 -l24
+[0.055s] [ 68%] Built target vikit_common
+[0.071s] [ 78%] Built target test_vk_common_camera
+[0.071s] [ 89%] Built target test_vk_common_triangulation
+[0.072s] [100%] Built target test_vk_common_patch_score
+[0.080s] Invoked command in '/home/fire/Desktop/fast_livo2_ws/build/vikit_common' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/fire/Desktop/fast_livo2_ws/build/vikit_common -- -j24 -l24
+[0.081s] Invoking command in '/home/fire/Desktop/fast_livo2_ws/build/vikit_common': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/fire/Desktop/fast_livo2_ws/build/vikit_common
+[0.088s] -- Install configuration: "Release"
+[0.088s] -- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/include/vikit
+[0.088s] -- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/include/vikit/math_utils.h
+[0.088s] -- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/include/vikit/atan_camera.h
+[0.088s] -- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/include/vikit/performance_monitor.h
+[0.088s] -- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/include/vikit/img_align.h
+[0.088s] -- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/include/vikit/file_reader_types.h
+[0.088s] -- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/include/vikit/blender_utils.h
+[0.088s] -- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/include/vikit/file_reader.h
+[0.089s] -- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/include/vikit/nlls_solver.h
+[0.089s] -- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/include/vikit/patch_score.h
+[0.089s] -- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/include/vikit/polynomial_camera.h
+[0.089s] -- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/include/vikit/robust_cost.h
+[0.089s] -- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/include/vikit/equidistant_camera.h
+[0.089s] -- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/include/vikit/abstract_camera.h
+[0.089s] -- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/include/vikit/aligned_mem.h
+[0.089s] -- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/include/vikit/user_input_thread.h
+[0.089s] -- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/include/vikit/vision.h
+[0.089s] -- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/include/vikit/omni_camera.h
+[0.089s] -- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/include/vikit/timer.h
+[0.089s] -- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/include/vikit/homography.h
+[0.089s] -- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/include/vikit/pinhole_camera.h
+[0.089s] -- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/include/vikit/sample.h
+[0.089s] -- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/include/vikit/ringbuffer.h
+[0.089s] -- Up-to-date: /home/fire/Desktop/fast_livo2_ws/install/vikit_common/lib/libvikit_common.so
+[0.090s] Invoked command in '/home/fire/Desktop/fast_livo2_ws/build/vikit_common' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/fire/Desktop/fast_livo2_ws/build/vikit_common
