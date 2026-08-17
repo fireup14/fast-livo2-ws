@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "livox_ros_driver2/msg/detail/custom_msg__functions.h"
 #include "rosidl_typesupport_interface/macros.h"
-#include "livox_ros_driver2/msg/detail/custom_msg__type_support.h"
 #include "livox_ros_driver2/msg/detail/custom_msg__struct.h"
+#include "livox_ros_driver2/msg/detail/custom_msg__type_support.h"
+#include "livox_ros_driver2/msg/detail/custom_msg__functions.h"
 
 #ifdef __cplusplus
 extern "C"

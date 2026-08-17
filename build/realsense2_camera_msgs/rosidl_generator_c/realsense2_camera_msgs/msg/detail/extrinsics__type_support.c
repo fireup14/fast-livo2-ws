@@ -4,10 +4,10 @@
 
 #include <string.h>
 
+#include "realsense2_camera_msgs/msg/detail/extrinsics__type_support.h"
 #include "realsense2_camera_msgs/msg/detail/extrinsics__struct.h"
 #include "realsense2_camera_msgs/msg/detail/extrinsics__functions.h"
 #include "rosidl_typesupport_interface/macros.h"
-#include "realsense2_camera_msgs/msg/detail/extrinsics__type_support.h"
 
 #ifdef __cplusplus
 extern "C"

@@ -104,6 +104,7 @@
 /home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/share/livox_ros_driver2/local_setup.dsv
 /home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.dsv
 /home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/share/ament_index/resource_index/packages/livox_ros_driver2
+/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/share/ament_index/resource_index/rclcpp_components/livox_ros_driver2
 /home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/export_livox_interfaces2__rosidl_generator_cExport.cmake
 /home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/export_livox_interfaces2__rosidl_generator_cExport-noconfig.cmake
 /home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/export_livox_interfaces2__rosidl_typesupport_fastrtps_cExport.cmake
@@ -121,7 +122,6 @@
 /home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_interfaces2__rosidl_typesupport_cppExport-noconfig.cmake
 /home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/export_livox_interfaces2__rosidl_generator_pyExport.cmake
 /home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/export_livox_interfaces2__rosidl_generator_pyExport-noconfig.cmake
-/home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/share/ament_index/resource_index/rclcpp_components/livox_ros_driver2
 /home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/rosidl_cmake-extras.cmake
 /home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/ament_cmake_export_dependencies-extras.cmake
 /home/fire/Desktop/fast_livo2_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/ament_cmake_export_include_directories-extras.cmake

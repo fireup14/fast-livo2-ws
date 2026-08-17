@@ -23,7 +23,6 @@ def generate_launch_description():
 
     config = load_bringup_config()
     livox_cfg = config["livox"]
-    realsense_cfg = config["realsense"]
     livox_config_path = os.path.join(
         get_package_share_directory("livox_ros_driver2"),
         "config",
@@ -67,17 +66,20 @@ def generate_launch_description():
     realsense_driver = Node(
         package="realsense2_camera",
         executable="realsense2_camera_node",
-        namespace=realsense_cfg["camera_namespace"],
-        name=realsense_cfg["camera_name"],
+        namespace="camera",
+        name="camera",
         output="screen",
         condition=IfCondition(LaunchConfiguration("enable_camera")),
         parameters=[{
-            "camera_name": realsense_cfg["camera_name"],
-            "camera_namespace": realsense_cfg["camera_namespace"],
-            "device_type": realsense_cfg["device_type"],
+            "camera_name": "camera",
+            "camera_namespace": "camera",
+            "device_type": "d405",
             # Keep parameter types native.  Quoted booleans are passed as
             # strings and rejected by realsense2_camera.
             "enable_color": True,
+            # Match the real-time, latest-frame QoS policy used by image consumers.
+            "color_qos": "SENSOR_DATA",
+            "color_info_qos": "SENSOR_DATA",
             # This bringup only needs RGB images and their CameraInfo.
             "enable_depth": False,
             "pointcloud.enable": False,
@@ -86,7 +88,7 @@ def generate_launch_description():
             "enable_infra1": False,
             "enable_infra2": False,
             # D405 exposes its color stream through the depth module.
-            "depth_module.color_profile": realsense_cfg["color_profile"],
+            "depth_module.color_profile": "1280,720,30",
         }],
     )
 

@@ -17,12 +17,19 @@
 #include "rclcpp/rclcpp.hpp"
 #include "sensor_msgs/image_encodings.hpp"
 #include "sensor_msgs/msg/image.hpp"
+#ifndef PROJECTION_CHECK_STANDALONE
+#include <rclcpp_components/register_node_macro.hpp>
+#endif
+
+namespace lidar_camera_projection_check
+{
+
 
 class LidarCameraProjectionCheck : public rclcpp::Node
 {
 public:
-  LidarCameraProjectionCheck()
-  : Node("lidar_camera_projection_check")
+  explicit LidarCameraProjectionCheck(const rclcpp::NodeOptions & options)
+  : Node("lidar_camera_projection_check",options)
   {
     lidar_topic_ = declare_parameter<std::string>("common.lid_topic", "");
     image_topic_ = declare_parameter<std::string>("common.img_topic", "");
@@ -70,12 +77,13 @@ public:
     RCLCPP_INFO(get_logger(), "projection.image_step: %d", image_step_);
     RCLCPP_INFO(get_logger(), "projection.img_time_offset: %.3f s", test_img_time_offset_);
 
-    image_pub_ = create_publisher<sensor_msgs::msg::Image>("/lidar_projection/image", rclcpp::SensorDataQoS());
+    const auto image_qos = rclcpp::SensorDataQoS().keep_last(1);
+    image_pub_ = create_publisher<sensor_msgs::msg::Image>("/lidar_projection/image", image_qos);
     lidar_sub_ = create_subscription<livox_ros_driver2::msg::CustomMsg>(
       lidar_topic_, rclcpp::SensorDataQoS(),
       std::bind(&LidarCameraProjectionCheck::lidarCallback, this, std::placeholders::_1));
     image_sub_ = create_subscription<sensor_msgs::msg::Image>(
-      image_topic_, rclcpp::SensorDataQoS(),
+      image_topic_, image_qos,
       std::bind(&LidarCameraProjectionCheck::imageCallback, this, std::placeholders::_1));
   }
 
@@ -124,15 +132,15 @@ private:
     const rclcpp::Time &lidar_stamp)
   {
     const auto start = std::chrono::steady_clock::now();
-    cv_bridge::CvImagePtr input;
+    cv_bridge::CvImageConstPtr input;
     try {
-      input = cv_bridge::toCvCopy(image_msg, sensor_msgs::image_encodings::BGR8);
+      input = cv_bridge::toCvShare(image_msg, sensor_msgs::image_encodings::BGR8);
     } catch (const cv_bridge::Exception &exception) {
       RCLCPP_ERROR(get_logger(), "Unable to convert image to BGR8: %s", exception.what());
       return;
     }
 
-    cv::Mat overlay = input->image;
+    cv::Mat overlay = input->image.clone();
     const size_t points_in = lidar_msg->points.size();
     size_t range_valid = 0;
     size_t camera_front = 0;
@@ -248,10 +256,21 @@ private:
   rclcpp::Subscription<sensor_msgs::msg::Image>::SharedPtr image_sub_;
 };
 
-int main(int argc, char **argv)
+
+}// namespace lidar_camera_projection_check
+
+
+
+#ifdef PROJECTION_CHECK_STANDALONE
+int main(int argc, char ** argv)
 {
   rclcpp::init(argc, argv);
-  rclcpp::spin(std::make_shared<LidarCameraProjectionCheck>());
+  rclcpp::spin(std::make_shared<
+      lidar_camera_projection_check::LidarCameraProjectionCheck>(rclcpp::NodeOptions{}));
   rclcpp::shutdown();
   return 0;
 }
+#else
+RCLCPP_COMPONENTS_REGISTER_NODE(
+  lidar_camera_projection_check::LidarCameraProjectionCheck)
+#endif

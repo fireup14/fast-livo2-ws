@@ -5,9 +5,9 @@
 #include <string.h>
 
 #include "realsense2_camera_msgs/msg/detail/rgbd__functions.h"
+#include "realsense2_camera_msgs/msg/detail/rgbd__type_support.h"
 #include "realsense2_camera_msgs/msg/detail/rgbd__struct.h"
 #include "rosidl_typesupport_interface/macros.h"
-#include "realsense2_camera_msgs/msg/detail/rgbd__type_support.h"
 
 #ifdef __cplusplus
 extern "C"

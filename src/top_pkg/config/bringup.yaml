@@ -10,9 +10,3 @@ bringup:
     config_file: MID360_config.json
     cmdline_input_bd_code: livox0000000001
     lvx_file_path: /home/livox/livox_test.lvx
-
-  realsense:
-    camera_name: camera
-    camera_namespace: camera
-    device_type: d405
-    color_profile: 1280,720,30
