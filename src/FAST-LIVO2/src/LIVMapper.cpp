@@ -287,8 +287,15 @@ void LIVMapper::initializeSubscribersAndPublishers(rclcpp::Node::SharedPtr &node
     sub_pcl = this->node->create_subscription<sensor_msgs::msg::PointCloud2>(lid_topic, 200000, std::bind(&LIVMapper::standard_pcl_cbk, this, std::placeholders::_1));
   }
   sub_imu = this->node->create_subscription<sensor_msgs::msg::Imu>(imu_topic, 200000, std::bind(&LIVMapper::imu_cbk, this, std::placeholders::_1));
-  sub_img = this->node->create_subscription<sensor_msgs::msg::Image>(img_topic, 200000, std::bind(&LIVMapper::img_cbk, this, std::placeholders::_1));
-  
+  sub_img = this->node->create_subscription<sensor_msgs::msg::Image>(
+    img_topic,
+    rclcpp::SensorDataQoS().keep_last(1),
+    std::bind(
+        &LIVMapper::img_cbk,
+        this,
+        std::placeholders::_1
+    )
+  );
   pubLaserCloudFullRes = this->node->create_publisher<sensor_msgs::msg::PointCloud2>("/cloud_registered", 100);
   pubNormal = this->node->create_publisher<visualization_msgs::msg::MarkerArray>("/visualization_marker", 100);
   pubSubVisualMap = this->node->create_publisher<sensor_msgs::msg::PointCloud2>("/cloud_visual_sub_map_before", 100);
