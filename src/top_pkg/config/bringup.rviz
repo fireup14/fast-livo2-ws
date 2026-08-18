@@ -6,7 +6,7 @@ Panels:
       Expanded:
         - /Odometry1/Shape1
       Splitter Ratio: 0.5
-    Tree Height: 1376
+    Tree Height: 965
   - Class: rviz_common/Views
     Expanded:
       - /Current View1
@@ -34,7 +34,7 @@ Visualization Manager:
       Reference Frame: <Fixed Frame>
       Value: true
     - Class: rviz_default_plugins/Image
-      Enabled: false
+      Enabled: true
       Max Value: 1
       Median window: 5
       Min Value: 0
@@ -44,9 +44,9 @@ Visualization Manager:
         Depth: 5
         Durability Policy: Volatile
         History Policy: Keep Last
-        Reliability Policy: Reliable
+        Reliability Policy: Best Effort
         Value: /camera/camera/color/image_raw
-      Value: false
+      Value: true
     - Alpha: 1
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
@@ -232,14 +232,14 @@ Visualization Manager:
 Window Geometry:
   Displays:
     collapsed: false
-  Height: 1788
+  Height: 1992
   Hide Left Dock: false
   Hide Right Dock: false
-  QMainWindow State: 000000ff00000000fd00000001000000000000053f0000065cfc0200000003fb0000001a005200650061006c00530065006e0073006500200052004700420000000070000001570000002800fffffffb000000100044006900730070006c00610079007301000000700000065c0000018600fffffffb0000000a0056006900650077007300000005510000017b0000013800ffffff000007910000065c00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd00000001000000000000053f00000728fc0200000003fb0000001a005200650061006c00530065006e00730065002000520047004201000000700000025b0000002800fffffffb000000100044006900730070006c00610079007301000002d7000004c10000018600fffffffb0000000a0056006900650077007300000005510000017b0000013800ffffff000007810000072800000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   RealSense RGB:
     collapsed: false
   Views:
     collapsed: false
-  Width: 3292
-  X: 3540
+  Width: 3276
+  X: 132
   Y: 64

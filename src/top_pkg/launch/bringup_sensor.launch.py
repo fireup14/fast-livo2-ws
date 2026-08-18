@@ -3,8 +3,9 @@ import yaml
 
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument
+from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
 from launch.conditions import IfCondition
+from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
 
@@ -61,35 +62,31 @@ def generate_launch_description():
         ],
     )
 
-    # Start the camera node directly. Including rs_launch.py would expose this
-    # launch file's enable_* switches to the driver's unsupported-param checker.
-    realsense_driver = Node(
-        package="realsense2_camera",
-        executable="realsense2_camera_node",
-        namespace="camera",
-        name="camera",
-        output="screen",
+    realsense_driver = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            os.path.join(
+                get_package_share_directory("realsense2_camera"),
+                "launch",
+                "rs_launch.py",
+            )
+        ),
         condition=IfCondition(LaunchConfiguration("enable_camera")),
-        parameters=[{
-            "camera_name": "camera",
+        launch_arguments={
             "camera_namespace": "camera",
+            "camera_name": "camera",
             "device_type": "d405",
-            # Keep parameter types native.  Quoted booleans are passed as
-            # strings and rejected by realsense2_camera.
-            "enable_color": True,
-            # Match the real-time, latest-frame QoS policy used by image consumers.
-            "color_qos": "SENSOR_DATA",
-            "color_info_qos": "SENSOR_DATA",
-            # This bringup only needs RGB images and their CameraInfo.
-            "enable_depth": False,
-            "pointcloud.enable": False,
-            "align_depth.enable": False,
-            "enable_infra": False,
-            "enable_infra1": False,
-            "enable_infra2": False,
-            # D405 exposes its color stream through the depth module.
-            "depth_module.color_profile": "1280,720,30",
-        }],
+            "enable_depth": "false",
+            "enable_color": "true",
+            "enable_sync": "false",
+            "align_depth.enable": "false",
+            "pointcloud.enable": "false",
+            "spatial_filter.enable": "false",
+            "temporal_filter.enable": "false",
+            "rgb_camera.color_profile": "1280,720,30",
+            "depth_module.depth_profile": "1280,720,30",
+            "log_level": "warn",
+
+        }.items(),
     )
 
     rviz = Node(

@@ -24,6 +24,8 @@ source install/setup.bash
 ros2 launch top_pkg bringup_sensor.launch.py
 ```
 
+ros2 launch realsense2_camera rs_launch.py
+
 ```bash
 source install/setup.bash
 ros2 launch top_pkg bringup_sensor.launch.py enable_rviz:=false
@@ -40,10 +42,8 @@ ros2 launch top_pkg bringup.launch.py
 ```
 
 
-
-
-
-
+            "color_qos": "SENSOR_DATA",
+            "color_info_qos": "SENSOR_DATA",
 
 
 
