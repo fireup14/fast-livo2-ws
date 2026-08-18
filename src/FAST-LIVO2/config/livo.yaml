@@ -4,7 +4,7 @@
       img_topic: "/camera/camera/color/image_raw"
       lid_topic: "/livox/lidar"
       imu_topic: "/livox/imu"
-      img_en: 0
+      img_en: 1
       lidar_en: 1
       ros_driver_bug_fix: false
 
@@ -102,3 +102,4 @@
     image_save:
       img_save_en: false
       interval: 1
+可以直接跑。你现在的基线已经满足“先开 LIVO 做功能验证”的条件；关键是不要再动外参和 LIO 参数，只把视觉链真正接进 FAST-LIVO2。我先把你这套环境对应的启动顺序和检查点整理成可直接照着敲的命令。
