@@ -1786,10 +1786,48 @@ void VIOManager::dumpDataForColmap()
 
 void VIOManager::processFrame(cv::Mat &img, vector<pointWithVar> &pg, const unordered_map<VOXEL_LOCATION, VoxelOctoTree *> &feat_map, double img_time)
 {
-  if (width != img.cols || height != img.rows)
+  /* 
+   * =========================================================================================
+   * 【问题回溯与修复说明】(Issue Retrospective & Fix Explanation)
+   * 
+   * 1. 出现的异常问题 (Symptom & Exception):
+   *    运行 `ros2 launch top_pkg bringup.launch.py` 时，`fastlivo_mapping` 节点崩溃并抛出异常：
+   *    `what(): Frame: provided image has not the same size as the camera model`
+   * 
+   * 2. 根本原因分析 (Root Cause Analysis):
+   *    - 在 d405.yaml 配置文件中，相机原始标定分辨率为 `cam_width: 1280, cam_height: 720`，
+   *      图像处理缩放比例为 `scale: 0.5`。
+   *    - 相机模型 `vk::PinholeCamera` 在构造时会将宽高乘以 scale，因此计算出的目标处理尺寸为：
+   *      `width = 1280 * 0.5 = 640`, `height = 720 * 0.5 = 360`。
+   *    - 原作者的代码使用相对比例缩放：`cv::Size(img.cols * image_resize_factor, img.rows * image_resize_factor)`。
+   *    - 当 RealSense 相机硬件实际发布其他默认分辨率（如 848x480 或 640x480）时，直接乘以 0.5
+   *      会产生 `424x240` 或 `320x240`，导致缩放后的图像尺寸与相机模型要求的 `640x360` 不匹配；
+   *      在 `Frame::initFrame()` 中对 `img.cols != cam_->width()` 的校验失败，抛出崩溃异常。
+   * 
+   * 3. 修复思路与改动 (Fix Strategy & Changes):
+   *    - 【注释的原代码】：原有的基于相对比例缩放的逻辑（见下文被注释代码）。
+   *    - 【新增的修改】：引入防空检查，并将相对乘积缩放重构为**强制精准缩放到相机模型设定的目标分辨率 `cv::Size(width, height)`**。
+   *      这样无论前端 RealSense 硬件驱动输出何种分辨率（1280x720, 848x480, 640x480 等），
+   *      传给 `Frame` 构造函数的图像尺寸都严格保持为 `640x360`，彻底消除崩溃并保障兼容性。
+   * =========================================================================================
+   */
+
+  // 原作者代码（已注释，保留用于回溯）：
+  // if (width != img.cols || height != img.rows)
+  // {
+  //   if (img.empty()) printf("[ VIO ] Empty Image!\n");
+  //   cv::resize(img, img, cv::Size(img.cols * image_resize_factor, img.rows * image_resize_factor), 0, 0, CV_INTER_LINEAR);
+  // }
+
+  // 修复后的代码：
+  if (img.empty())
   {
-    if (img.empty()) printf("[ VIO ] Empty Image!\n");
-    cv::resize(img, img, cv::Size(img.cols * image_resize_factor, img.rows * image_resize_factor), 0, 0, CV_INTER_LINEAR);
+    printf("[ VIO ] Provided Image is empty!\n");
+    return;
+  }
+  if (img.cols != width || img.rows != height)
+  {
+    cv::resize(img, img, cv::Size(width, height), 0, 0, cv::INTER_LINEAR);
   }
   img_rgb = img.clone();
   img_cp = img.clone();

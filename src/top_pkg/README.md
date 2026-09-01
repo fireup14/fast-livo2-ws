@@ -1,182 +1,70 @@
 # top_pkg
 
-Top-level ROS 2 bringup package for Livox, RealSense, and optional RViz.
+`top_pkg` 是工作区（FAST-LIVO2 Workspace）的顶层总控 ROS 2 功能包，用于集中管理传感器驱动（Livox MID-360 LiDAR、RealSense D405 Camera）、RViz 可视化及 FAST-LIVO2 建图定位系统的统一启动与参数配置。
 
-## Config
+---
 
-Main bringup switches are in `config/bringup.yaml`:
+## 目录结构
 
-- `enable_lidar`
-- `enable_camera`
-- `enable_rviz`
-
-`livox.config_file` is resolved relative to the installed
-`livox_ros_driver2/config/` directory, so it does not depend on an absolute
-workspace path.
-
-## Launch
-
-Bring up selected drivers:
-
-```bash
-ros2 launch top_pkg bringup_sensor.launch.py
+```text
+top_pkg/
+├── CMakeLists.txt         # 编译及安装配置
+├── package.xml            # 包依赖定义
+├── config/
+│   ├── bringup.yaml       # 传感器及系统启动配置参数
+│   └── bringup.rviz       # 默认 RViz 视图配置文件
+└── launch/
+    ├── bringup_sensor.launch.py # 传感器驱动单独启动脚本
+    └── bringup.launch.py        # 传感器 + FAST-LIVO2 整体一键启动脚本
 ```
 
+---
+
+## 参数配置 (`config/bringup.yaml`)
+
+可以在 `config/bringup.yaml` 中灵活配置启动开关及传感器参数：
+
+```yaml
+bringup:
+  enable_lidar: true     # 是否启动 Livox MID-360 雷达
+  enable_camera: true    # 是否启动 RealSense D405 相机
+  enable_rviz: true      # 是否启动 RViz2 可视化界面
+
+  livox:
+    frame_id: livox_frame
+    publish_freq: 10.0   # 雷达发布频率 (Hz)
+    config_file: MID360_config.json # Livox 配置文件名（相对 livox_ros_driver2/config 目录）
+    cmdline_input_bd_code: livox0000000001
+    lvx_file_path: /home/livox/livox_test.lvx
+```
+
+---
+
+## 启动方式 Launch
+
+### 1. 单独启动传感器驱动 (Sensors Only)
+
+用于硬件调试、外参对准或数据采集：
+
 ```bash
+# 启动所有已启用的传感器和 RViz
+ros2 launch top_pkg bringup_sensor.launch.py
+
+# 命令行覆盖参数（例如关闭 RViz）
 ros2 launch top_pkg bringup_sensor.launch.py enable_rviz:=false
 ```
 
-Bring up the sensors and FAST-LIVO2 MID-360 mapping together:
+### 2. 整体一键启动 (Sensors + FAST-LIVO2 Mapping)
+
+同时启动传感器驱动、FAST-LIVO2 建图定位节点及 RViz：
 
 ```bash
 ros2 launch top_pkg bringup.launch.py
 ```
 
+---
 
+## 注意事项
 
-
-
-
-
-
-    # Start the camera node directly. Including rs_launch.py would expose this
-    # launch file's enable_* switches to the driver's unsupported-param checker.
-    # realsense_driver = Node(
-    #     package="realsense2_camera",
-    #     executable="realsense2_camera_node",
-    #     namespace="camera",
-    #     name="camera",
-    #     output="screen",
-    #     condition=IfCondition(LaunchConfiguration("enable_camera")),
-    #     parameters=[{
-    #         "camera_name": "camera",
-    #         "camera_namespace": "camera",
-    #         "device_type": "d405",
-    #         # Keep parameter types native.  Quoted booleans are passed as
-    #         # strings and rejected by realsense2_camera.
-    #         "enable_color": True,
-    #         # Match the real-time, latest-frame QoS policy used by image consumers.
-    #         "color_qos": "SENSOR_DATA",
-    #         "color_info_qos": "SENSOR_DATA",
-    #         # This bringup only needs RGB images and their CameraInfo.
-    #         "enable_depth": False,
-    #         "pointcloud.enable": False,
-    #         "align_depth.enable": False,
-    #         "enable_infra": False,
-    #         "enable_infra1": False,
-    #         "enable_infra2": False,
-    #         # D405 exposes its color stream through the depth module.
-    #         "depth_module.color_profile": "1280,720,30",
-    #     }],
-    # )
-
-
-    # realsense_driver = Node(
-    #     package="realsense2_camera",
-    #     executable="realsense2_camera_node",
-    #     namespace="camera",
-    #     name="camera",
-    #     output="screen",
-    #     emulate_tty=True,
-    #     arguments=["--ros-args", "--log-level", "info"],
-    #     parameters=[{
-    #         # Device selection / input
-    #         "camera_name": "camera",
-    #         "camera_namespace": "camera",
-    #         "serial_no": "",
-    #         "usb_port_id": "",
-    #         "device_type": "",
-    #         "json_file_path": "",
-    #         "initial_reset": False,
-    #         "accelerate_gpu_with_glsl": False,
-    #         "rosbag_filename": "",
-    #         "rosbag_loop": False,
-
-    #         # RGB camera
-    #         "enable_color": True,
-    #         "rgb_camera.color_profile": "1280,720,30", ### num2
-    #         "rgb_camera.color_format": "RGB8",
-    #         "rgb_camera.enable_auto_exposure": True,
-
-    #         # Depth / infrared
-    #         "enable_depth": False, ### num1
-    #         "enable_infra": False,
-    #         "enable_infra1": False,
-    #         "enable_infra2": False,
-    #         "depth_module.depth_profile": "0,0,0",
-    #         "depth_module.depth_format": "Z16",
-    #         "depth_module.infra_profile": "0,0,0",
-    #         "depth_module.infra_format": "RGB8",
-    #         "depth_module.infra1_format": "Y8",
-    #         "depth_module.infra2_format": "Y8",
-
-    #         # D405 color stream (from depth module)
-    #         "depth_module.color_profile": "0,0,0",
-    #         "depth_module.color_format": "RGB8",
-    #         "depth_module.exposure": 8500,
-    #         "depth_module.gain": 16,
-    #         "depth_module.hdr_enabled": False,
-    #         "depth_module.enable_auto_exposure": True,
-    #         "depth_module.exposure.1": 7500,
-    #         "depth_module.gain.1": 16,
-    #         "depth_module.exposure.2": 1,
-    #         "depth_module.gain.2": 16,
-
-    #         # Synchronization / IMU
-    #         "enable_sync": False,
-    #         "depth_module.inter_cam_sync_mode": 0,
-    #         "enable_rgbd": False,
-    #         "enable_gyro": False,
-    #         "enable_accel": False,
-    #         "enable_motion": False,
-    #         "gyro_fps": 0,
-    #         "accel_fps": 0,
-    #         "motion_fps": 0,
-    #         "unite_imu_method": 0,
-    #         "clip_distance": -2.0,
-    #         "angular_velocity_cov": 0.01,
-    #         "linear_accel_cov": 0.01,
-    #         "diagnostics_period": 0.0,
-
-    #         # TF
-    #         "publish_tf": True,
-    #         "tf_publish_rate": 0.0,
-    #         "base_frame_id": "link",
-    #         "tf_prefix": "",
-
-    #         # Point cloud / processing filters
-    #         "pointcloud.enable": False,
-    #         "pointcloud.stream_filter": 2,
-    #         "pointcloud.stream_index_filter": 0,
-    #         "pointcloud.ordered_pc": False,
-    #         "pointcloud.allow_no_texture_points": False,
-    #         "align_depth.enable": False,
-    #         "colorizer.enable": False,
-    #         "decimation_filter.enable": False,
-    #         "decimation_filter.filter_magnitude": 2,
-    #         "rotation_filter.enable": False,
-    #         "rotation_filter.rotation": 0.0,
-    #         "spatial_filter.enable": False,
-    #         "temporal_filter.enable": False,
-    #         "disparity_filter.enable": False,
-    #         "hole_filling_filter.enable": False,
-    #         "hdr_merge.enable": False,
-
-    #         # Reconnection
-    #         "wait_for_device_timeout": -1.0,
-    #         "reconnect_timeout": 6.0,
-
-    #         # Safety / mapping cameras (supported device only)
-    #         "enable_safety": False,
-    #         "safety_camera.safety_mode": 0,
-    #         "enable_labeled_point_cloud": False,
-    #         "depth_mapping_camera.labeled_point_cloud_profile": "0,0,0",
-    #         "enable_occupancy": False,
-    #         "depth_mapping_camera.occupancy_profile": "0,0,0",
-    #     }],
-    # )
-
-为什么我在一个终端进行ros2 launch top_pkg bringup_sensor.launch.py启动相机雷达加rviz显示之后
-相机数据有明显迟钝
-在另一个终端进行ros2 topic hz /camera/camera/color/image_raw之后
-相机数据明显流畅，但这个终端卡住没有输出
+- 相机默认数据 QoS 策略为 `SENSOR_DATA` (Best Effort)，以降低高分辨率 RGB 传输延迟。
+- `livox.config_file` 路径会在启动时自动解析为 `livox_ros_driver2/config/` 中的绝对路径，无需硬编码本机工作区路径。

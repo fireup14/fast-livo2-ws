@@ -1,1 +1,0 @@
-/home/fire/Desktop/fast_livo2_ws/src/top_pkg/launch/bringup.launch.py

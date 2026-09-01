@@ -83,6 +83,7 @@ def generate_launch_description():
             "spatial_filter.enable": "false",
             "temporal_filter.enable": "false",
             "rgb_camera.color_profile": "1280,720,30",
+            "depth_module.color_profile": "1280,720,30",
             "depth_module.depth_profile": "1280,720,30",
             "log_level": "warn",
 
