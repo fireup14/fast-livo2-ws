@@ -1,3 +1,5 @@
+"""传感器硬件驱动（Livox MID-360 雷达与 RealSense D405 相机）统一启动文件。"""
+
 import os
 import yaml
 
@@ -11,6 +13,7 @@ from launch_ros.actions import Node
 
 
 def load_bringup_config():
+    """从 top_pkg/config/bringup.yaml 中加载模块使能配置。"""
     config_path = os.path.join(
         get_package_share_directory("top_pkg"),
         "config",
@@ -21,47 +24,39 @@ def load_bringup_config():
 
 
 def generate_launch_description():
-
+    """解析参数并包含各传感器官方启动脚本，实现传感器驱动集中调用。"""
     config = load_bringup_config()
-    livox_cfg = config["livox"]
-    livox_config_path = os.path.join(
-        get_package_share_directory("livox_ros_driver2"),
-        "config",
-        livox_cfg["config_file"],
-    )
 
+    # 声明命令行可覆写使能参数（默认值读取自 bringup.yaml）
     enable_lidar_arg = DeclareLaunchArgument(
         "enable_lidar",
         default_value=str(config["enable_lidar"]).lower(),
+        description="是否启动 Livox MID-360 激光雷达驱动 (true/false)。",
     )
     enable_camera_arg = DeclareLaunchArgument(
         "enable_camera",
         default_value=str(config["enable_camera"]).lower(),
+        description="是否启动 Intel RealSense D405 相机驱动 (true/false)。",
     )
     enable_rviz_arg = DeclareLaunchArgument(
         "enable_rviz",
         default_value=str(config["enable_rviz"]).lower(),
+        description="是否启动 RViz2 可视化界面 (true/false)。",
     )
 
-    livox_driver = Node(
-        package="livox_ros_driver2",
-        executable="livox_ros_driver2_node",
-        name="livox_lidar_publisher",
-        output="screen",
+    # 包含 Livox 官方 MID360 启动文件 (msg_MID360_launch.py)
+    livox_driver = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            os.path.join(
+                get_package_share_directory("livox_ros_driver2"),
+                "launch",
+                "msg_MID360_launch.py",
+            )
+        ),
         condition=IfCondition(LaunchConfiguration("enable_lidar")),
-        parameters=[
-            {"xfer_format": 1},
-            {"multi_topic": 0},
-            {"data_src": 0},
-            {"publish_freq": livox_cfg["publish_freq"]},
-            {"output_data_type": 0},
-            {"frame_id": livox_cfg["frame_id"]},
-            {"user_config_path": livox_config_path},
-            {"cmdline_input_bd_code": livox_cfg["cmdline_input_bd_code"]},
-            {"lvx_file_path": livox_cfg["lvx_file_path"]},
-        ],
     )
 
+    # 包含 RealSense 官方相机启动文件 (rs_launch.py)，配置为 D405 模式及 1280x720 彩色流
     realsense_driver = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(
@@ -86,10 +81,10 @@ def generate_launch_description():
             "depth_module.color_profile": "1280,720,30",
             "depth_module.depth_profile": "1280,720,30",
             "log_level": "warn",
-
         }.items(),
     )
 
+    # 启动传感器调试专用的 RViz2 可视化节点
     rviz = Node(
         package="rviz2",
         executable="rviz2",

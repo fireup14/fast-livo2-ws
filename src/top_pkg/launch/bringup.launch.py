@@ -1,4 +1,4 @@
-"""Launch sensor bringup and FAST-LIVO2 MID-360 mapping together."""
+"""传感器驱动与 FAST-LIVO2 建图定位一键联合启动文件。"""
 
 import os
 
@@ -12,10 +12,11 @@ from launch_ros.actions import Node
 
 
 def generate_launch_description():
-    """Start sensors, FAST-LIVO2 mapping, and the top-level RViz view."""
+    """同时启动传感器硬件驱动、FAST-LIVO2 建图定位算法及顶层 RViz 可视化。"""
     top_pkg_share = get_package_share_directory("top_pkg")
     fast_livo_share = get_package_share_directory("fast_livo")
 
+    # 包含传感器驱动启动文件（强制屏蔽其内部单独打开的 RViz，统一由顶层控制）
     sensor_bringup = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(top_pkg_share, "launch", "bringup_sensor.launch.py")
@@ -23,19 +24,22 @@ def generate_launch_description():
         launch_arguments={"enable_rviz": "false"}.items(),
     )
 
+    # 包含 FAST-LIVO2 建图定位算法启动文件（同样屏蔽其内部单独打开的 RViz）
     fast_livo_mapping = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(fast_livo_share, "launch", "mapping.launch.py")
         ),
         launch_arguments={"enable_rviz": "false"}.items(),
     )
-    
+
+    # 声明顶层 RViz2 启动开关参数
     enable_rviz_arg = DeclareLaunchArgument(
         "enable_rviz",
         default_value="true",
-        description="Whether to start the top-level bringup RViz.",
+        description="是否启动顶层统一的 RViz2 可视化界面 (true/false)。",
     )
 
+    # 顶层统一的 RViz2 节点（加载综合视图配置文件 bringup.rviz）
     rviz = Node(
         package="rviz2",
         executable="rviz2",
@@ -45,8 +49,6 @@ def generate_launch_description():
         condition=IfCondition(LaunchConfiguration("enable_rviz")),
     )
 
-    # Start this node before including child launches.  Both child launch files
-    # use an enable_rviz argument which is explicitly set to false above.
     return LaunchDescription([
         enable_rviz_arg,
         rviz,
