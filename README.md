@@ -8,6 +8,10 @@
 
 - [1. 工作区架构](#1-工作区架构)
 - [2. 环境依赖](#2-环境依赖)
+  - [2.1 操作系统与 ROS 2 平台](#21-操作系统与-ros-2-平台)
+  - [2.2 ROS 2 系统依赖包 (APT 自适应安装)](#22-ros-2-系统依赖包-apt-自适应安装)
+  - [2.3 第三方 C++ 基础与数学库](#23-第三方-c-基础与数学库)
+  - [2.4 传感器底层硬件 SDK 驱动](#24-传感器底层硬件-sdk-驱动-sensor-sdks)
 - [3. 快速启动指令 (Quick Start Launch)](#3-快速启动指令-quick-start-launch)
 
 ---
@@ -36,11 +40,28 @@ fast-livo2-ws/
 - **操作系统**: Ubuntu 24.04 LTS (Noble Numbat)
 - **ROS 2 版本**: ROS 2 Jazzy (Jazzy Jalisco)
 
-### 2.2 第三方 C++ 基础与数学库
-- **PCL (Point Cloud Library)** == 1.14.0（用于点云数据预处理与滤波）
+### 2.2 ROS 2 系统依赖包 (APT 自适应安装)
+在编译工作区前，请先使用 APT 安装以下 ROS 2 扩展依赖包。以下命令会自动读取当前终端已加载的 `$ROS_DISTRO` 环境变量（自动适配 `jazzy`、`humble` 等不同 ROS 2 版本）：
+
+```bash
+# 自动检测当前 ROS 2 发行版并一键安装对应依赖包
+sudo apt update && sudo apt install -y \
+  ros-${ROS_DISTRO}-pcl-ros \
+  ros-${ROS_DISTRO}-pcl-conversions \
+  ros-${ROS_DISTRO}-diagnostic-updater \
+  ros-${ROS_DISTRO}-image-transport
+```
+
+> [!TIP]
+> **版本适配说明**：
+> - 若您已 `source /opt/ros/<distro>/setup.bash`（例如 `humble` 或 `jazzy`），该命令会自动匹配安装对应的 `ros-humble-*` 或 `ros-jazzy-*` 包。
+> - 若尚未加载 ROS 环境变量，也可以手动在命令行先指定版本，例如：`ROS_DISTRO=humble` 再运行安装。
+
+### 2.3 第三方 C++ 基础与数学库
+- **PCL (Point Cloud Library)** >= 1.12.1（用于点云数据预处理与滤波，依赖 `pcl-ros` / `pcl-conversions`）
 - **Eigen** == 3.4.0（用于矩阵运算与线性代数求解）
-- **OpenCV** == 4.6.0（用于视觉图像处理与金字塔生成）
-- **Sophus** == 1.22.10（非模板双精度版本，用于三维空间李群与李代数转换）
+- **OpenCV** >= 4.5.4（用于视觉图像处理与金字塔生成）
+- **Sophus** == 1.22.10（用于三维空间李群与李代数转换）
 
   **安装步骤**：
   ```bash
@@ -66,9 +87,9 @@ fast-livo2-ws/
   > }
   > ```
 
-### 2.3 传感器底层硬件 SDK 驱动 (Sensor SDKs)
+### 2.4 传感器底层硬件 SDK 驱动 (Sensor SDKs)
 - **Livox-SDK2**: Livox MID-360 雷达底层硬件通信接口库，参考 [Livox-SDK2 官方仓库](https://github.com/Livox-SDK/Livox-SDK2)
-- **librealsense2**: Intel RealSense 相机底层硬件 SDK 驱动库，参考 [librealsense 官方仓库](https://github.com/IntelRealSense/librealsense)
+- **librealsense2**: Intel RealSense 相机底层硬件 SDK 驱动库，参考 [librealsense 官方仓库](https://github.com/IntelRealSense/librealsense)（依赖 `diagnostic-updater` / `image-transport`）
 
 ---
 
