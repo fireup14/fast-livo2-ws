@@ -123,6 +123,7 @@ void LIVMapper::readParameters(rclcpp::Node::SharedPtr &node)
   try_declare.template operator()<vector<double>>("extrin_calib.extrinsic_R", vector<double>{});
   try_declare.template operator()<vector<double>>("extrin_calib.Pcl", vector<double>{});
   try_declare.template operator()<vector<double>>("extrin_calib.Rcl", vector<double>{});
+  try_declare.template operator()<vector<double>>("extrin_calib.T_cl", vector<double>{});
   try_declare.template operator()<double>("debug.plot_time", -10);
   try_declare.template operator()<int>("debug.frame_cnt", 6);
 
@@ -187,6 +188,7 @@ void LIVMapper::readParameters(rclcpp::Node::SharedPtr &node)
   this->node->get_parameter("extrin_calib.extrinsic_R", extrinR);
   this->node->get_parameter("extrin_calib.Pcl", cameraextrinT);
   this->node->get_parameter("extrin_calib.Rcl", cameraextrinR);
+  this->node->get_parameter("extrin_calib.T_cl", cameraextrinTcl);
   this->node->get_parameter("debug.plot_time", plot_time);
   this->node->get_parameter("debug.frame_cnt", frame_cnt);
 
@@ -219,7 +221,18 @@ void LIVMapper::initializeComponents(rclcpp::Node::SharedPtr &node)
   vio_manager->patch_size = patch_size;
   vio_manager->outlier_threshold = outlier_threshold;
   vio_manager->setImuToLidarExtrinsic(extT, extR);
-  vio_manager->setLidarToCameraExtrinsic(cameraextrinR, cameraextrinT);
+  if (!cameraextrinTcl.empty())
+  {
+    RCLCPP_INFO(this->node->get_logger(),
+                "Using extrin_calib.T_cl for the LiDAR-to-camera extrinsic.");
+    vio_manager->setLidarToCameraExtrinsic(cameraextrinTcl);
+  }
+  else
+  {
+    RCLCPP_WARN(this->node->get_logger(),
+                "extrin_calib.T_cl is not set; falling back to legacy Rcl/Pcl parameters.");
+    vio_manager->setLidarToCameraExtrinsic(cameraextrinR, cameraextrinT);
+  }
   vio_manager->state = &_state;
   vio_manager->state_propagat = &state_propagat;
   vio_manager->max_iterations = max_iterations;

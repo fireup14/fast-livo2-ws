@@ -11,6 +11,8 @@ which is included as part of this source code package.
 */
 
 #include "vio.h"
+#include <cmath>
+#include <stdexcept>
 
 using namespace Eigen;
 VIOManager::VIOManager()
@@ -33,10 +35,54 @@ void VIOManager::setImuToLidarExtrinsic(const V3D &transl, const M3D &rot)
   Rli = rot.transpose();
 }
 
-void VIOManager::setLidarToCameraExtrinsic(vector<double> &R, vector<double> &P)
+namespace
 {
+void validateLidarToCameraRotation(const M3D &R)
+{
+  constexpr double tolerance = 1e-3;
+  if (!R.allFinite() ||
+      (R.transpose() * R - M3D::Identity()).norm() > tolerance ||
+      std::abs(R.determinant() - 1.0) > tolerance)
+  {
+    throw std::invalid_argument(
+        "The rotation in the LiDAR-to-camera extrinsic is not a valid rotation matrix.");
+  }
+}
+}  // namespace
+
+void VIOManager::setLidarToCameraExtrinsic(const vector<double> &R, const vector<double> &P)
+{
+  if (R.size() != 9 || P.size() != 3)
+  {
+    throw std::invalid_argument(
+        "Legacy extrin_calib.Rcl/Pcl must contain exactly 9 and 3 values.");
+  }
+
   Rcl << MAT_FROM_ARRAY(R);
   Pcl << VEC_FROM_ARRAY(P);
+  validateLidarToCameraRotation(Rcl);
+}
+
+void VIOManager::setLidarToCameraExtrinsic(const vector<double> &T_cl)
+{
+  if (T_cl.size() != 16)
+  {
+    throw std::invalid_argument("extrin_calib.T_cl must contain exactly 16 values.");
+  }
+
+  constexpr double tolerance = 1e-9;
+  if (std::abs(T_cl[12]) > tolerance || std::abs(T_cl[13]) > tolerance ||
+      std::abs(T_cl[14]) > tolerance || std::abs(T_cl[15] - 1.0) > tolerance)
+  {
+    throw std::invalid_argument(
+        "The last row of extrin_calib.T_cl must be [0, 0, 0, 1].");
+  }
+
+  Rcl << T_cl[0], T_cl[1], T_cl[2],
+         T_cl[4], T_cl[5], T_cl[6],
+         T_cl[8], T_cl[9], T_cl[10];
+  Pcl << T_cl[3], T_cl[7], T_cl[11];
+  validateLidarToCameraRotation(Rcl);
 }
 
 void VIOManager::initializeVIO()

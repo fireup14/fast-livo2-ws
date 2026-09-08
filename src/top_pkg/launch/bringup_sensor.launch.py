@@ -13,11 +13,11 @@ from launch_ros.actions import Node
 
 
 def load_bringup_config():
-    """从 top_pkg/config/bringup.yaml 中加载模块使能配置。"""
+    """从 top_pkg/config/bringup_sensor.yaml 中加载模块使能配置。"""
     config_path = os.path.join(
         get_package_share_directory("top_pkg"),
         "config",
-        "bringup.yaml",
+        "bringup_sensor.yaml",
     )
     with open(config_path, "r", encoding="utf-8") as f:
         return yaml.safe_load(f)["bringup"]
@@ -27,7 +27,7 @@ def generate_launch_description():
     """解析参数并包含各传感器官方启动脚本，实现传感器驱动集中调用。"""
     config = load_bringup_config()
 
-    # 声明命令行可覆写使能参数（默认值读取自 bringup.yaml）
+    # 声明命令行可覆写使能参数（默认值读取自 bringup_sensor.yaml）
     enable_lidar_arg = DeclareLaunchArgument(
         "enable_lidar",
         default_value=str(config["enable_lidar"]).lower(),

@@ -59,11 +59,66 @@ sudo apt update && sudo apt install -y \
 
 ### 2.3 第三方 C++ 基础与数学库
 - **PCL (Point Cloud Library)** >= 1.12.1（用于点云数据预处理与滤波，依赖 `pcl-ros` / `pcl-conversions`）
+
+  **安装步骤**：
+
+  ```bash
+  sudo apt install -y \
+    build-essential \
+    cmake \
+    git \
+    pkg-config \
+    libeigen3-dev \
+    libboost-all-dev \
+    libflann-dev \
+    libvtk9-dev \
+    libqhull-dev \
+    libusb-1.0-0-dev \
+    libopenni2-dev
+
+  sudo add-apt-repository universe
+  sudo apt update
+
+  mkdir -p ~/third_party
+  cd ~/third_party
+  git clone --depth 1 --branch pcl-1.14.0 \
+    https://github.com/PointCloudLibrary/pcl.git pcl-1.14.0
+
+  cd ~/third_party/pcl-1.14.0
+  mkdir build
+  cd build
+  cmake .. \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_INSTALL_PREFIX=/opt/pcl-1.14.0 \
+    -DBUILD_examples=OFF \
+    -DBUILD_tools=OFF \
+    -DBUILD_apps=OFF \
+    -DBUILD_global_tests=OFF \
+    -DBUILD_visualization=OFF \
+    -DWITH_OPENGL=OFF \
+    -DWITH_QT=OFF
+
+  make -j2
+  sudo make install
+  find /opt/pcl-1.14.0 -name "PCLConfig.cmake"
+  ```
+
 - **Eigen** == 3.4.0（用于矩阵运算与线性代数求解）
+
+  ```bash
+  sudo apt install -y libeigen3-dev
+  ```
+
 - **OpenCV** >= 4.5.4（用于视觉图像处理与金字塔生成）
+
+  ```bash
+  sudo apt install libopencv-dev
+  ```
+
 - **Sophus** == 1.22.10（用于三维空间李群与李代数转换）
 
   **安装步骤**：
+
   ```bash
   git clone https://github.com/strasdat/Sophus.git -b 1.22.10
   cd Sophus && mkdir build && cd build

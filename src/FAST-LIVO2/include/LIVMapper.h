@@ -133,6 +133,7 @@ public:
   vector<double> extrinR;
   vector<double> cameraextrinT;
   vector<double> cameraextrinR;
+  vector<double> cameraextrinTcl;
   double IMG_POINT_COV;
 
   PointCloudXYZI::Ptr visual_sub_map;
