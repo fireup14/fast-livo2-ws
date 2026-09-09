@@ -267,41 +267,45 @@ endif()
 # Tests
 # ============================================================
 
-add_executable(
-  test_vk_common_camera
-  test/test_camera.cpp
-)
+option(VIKIT_COMMON_BUILD_TESTS "Build standalone vikit_common development tests" OFF)
 
-target_link_libraries(
-  test_vk_common_camera
-  PRIVATE
-    ${PROJECT_NAME}
-    ${OpenCV_LIBS}
-)
+if(VIKIT_COMMON_BUILD_TESTS)
+  add_executable(
+    test_vk_common_camera
+    test/test_camera.cpp
+  )
 
-add_executable(
-  test_vk_common_triangulation
-  test/test_triangulation.cpp
-)
+  target_link_libraries(
+    test_vk_common_camera
+    PRIVATE
+      ${PROJECT_NAME}
+      ${OpenCV_LIBS}
+  )
 
-target_link_libraries(
-  test_vk_common_triangulation
-  PRIVATE
-    ${PROJECT_NAME}
-    ${OpenCV_LIBS}
-)
+  add_executable(
+    test_vk_common_triangulation
+    test/test_triangulation.cpp
+  )
 
-add_executable(
-  test_vk_common_patch_score
-  test/test_patch_score.cpp
-)
+  target_link_libraries(
+    test_vk_common_triangulation
+    PRIVATE
+      ${PROJECT_NAME}
+      ${OpenCV_LIBS}
+  )
 
-target_link_libraries(
-  test_vk_common_patch_score
-  PRIVATE
-    ${PROJECT_NAME}
-    ${OpenCV_LIBS}
-)
+  add_executable(
+    test_vk_common_patch_score
+    test/test_patch_score.cpp
+  )
+
+  target_link_libraries(
+    test_vk_common_patch_score
+    PRIVATE
+      ${PROJECT_NAME}
+      ${OpenCV_LIBS}
+  )
+endif()
 
 # ============================================================
 # Plain-CMake package export
