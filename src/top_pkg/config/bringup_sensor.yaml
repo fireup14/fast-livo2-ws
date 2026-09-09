@@ -21,4 +21,4 @@ bringup:
   enable_camera: true
 
   # 是否默认启动 RViz2 三维可视化界面 (true: 默认开启, false: 默认关闭)
-  enable_rviz: true
+  enable_rviz: false
