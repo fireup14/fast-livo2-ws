@@ -41,6 +41,10 @@ LIVMapper::LIVMapper(rclcpp::Node::SharedPtr &node, std::string node_name, const
   pcl_wait_save.reset(new PointCloudXYZRGB());
   pcl_wait_save_intensity.reset(new PointCloudXYZI());
   voxelmap_manager.reset(new VoxelMapManager(voxel_config, voxel_map));
+  voxelmap_manager->log_feature_statistics = log_voxel_feature_statistics;
+  voxelmap_manager->log_map_sliding_below_threshold = log_voxel_map_sliding_below_threshold;
+  voxelmap_manager->log_map_sliding_timing = log_voxel_map_sliding_timing;
+  voxelmap_manager->log_voxel_cleanup = log_voxel_cleanup;
   vio_manager.reset(new VIOManager());
   root_dir = ROOT_DIR;
   initializeFiles();
@@ -132,6 +136,21 @@ void LIVMapper::readParameters(rclcpp::Node::SharedPtr &node)
   try_declare.template operator()<bool>("publish.pub_effect_point_en", false);
   try_declare.template operator()<bool>("publish.dense_map_en", false);
 
+  try_declare.template operator()<bool>("log.lio.no_points", true);
+  try_declare.template operator()<bool>("log.lio.voxel_map_update", false);
+  try_declare.template operator()<bool>("log.lio.timing", false);
+  try_declare.template operator()<bool>("log.preprocess.input_point_count", false);
+  try_declare.template operator()<bool>("log.preprocess.output_point_count", false);
+  try_declare.template operator()<bool>("log.voxel.feature_statistics", false);
+  try_declare.template operator()<bool>("log.voxel.map_sliding_below_threshold", false);
+  try_declare.template operator()<bool>("log.voxel.map_sliding_timing", false);
+  try_declare.template operator()<bool>("log.voxel.cleanup", false);
+  try_declare.template operator()<bool>("log.sensor.lidar_timestamp", false);
+  try_declare.template operator()<bool>("log.sensor.imu_timestamp", false);
+  try_declare.template operator()<bool>("log.sensor.imu_buffer_size", false);
+  try_declare.template operator()<bool>("log.sensor.self_sync", false);
+  try_declare.template operator()<bool>("log.sensor.imu_lidar_desync", false);
+
   // get parameter
   this->node->get_parameter("common.lid_topic", lid_topic);
   this->node->get_parameter("common.imu_topic", imu_topic);
@@ -196,6 +215,21 @@ void LIVMapper::readParameters(rclcpp::Node::SharedPtr &node)
   this->node->get_parameter("publish.pub_scan_num", pub_scan_num);
   this->node->get_parameter("publish.pub_effect_point_en", pub_effect_point_en);
   this->node->get_parameter("publish.dense_map_en", dense_map_en);
+
+  this->node->get_parameter("log.lio.no_points", log_lio_no_points);
+  this->node->get_parameter("log.lio.voxel_map_update", log_lio_voxel_map_update);
+  this->node->get_parameter("log.lio.timing", log_lio_timing);
+  this->node->get_parameter("log.preprocess.input_point_count", p_pre->log_input_point_count);
+  this->node->get_parameter("log.preprocess.output_point_count", p_pre->log_output_point_count);
+  this->node->get_parameter("log.voxel.feature_statistics", log_voxel_feature_statistics);
+  this->node->get_parameter("log.voxel.map_sliding_below_threshold", log_voxel_map_sliding_below_threshold);
+  this->node->get_parameter("log.voxel.map_sliding_timing", log_voxel_map_sliding_timing);
+  this->node->get_parameter("log.voxel.cleanup", log_voxel_cleanup);
+  this->node->get_parameter("log.sensor.lidar_timestamp", log_sensor_lidar_timestamp);
+  this->node->get_parameter("log.sensor.imu_timestamp", log_sensor_imu_timestamp);
+  this->node->get_parameter("log.sensor.imu_buffer_size", log_sensor_imu_buffer_size);
+  this->node->get_parameter("log.sensor.self_sync", log_sensor_self_sync);
+  this->node->get_parameter("log.sensor.imu_lidar_desync", log_sensor_imu_lidar_desync);
 
   p_pre->blind_sqr = p_pre->blind * p_pre->blind;
 }
@@ -454,7 +488,9 @@ void LIVMapper::handleLIO()
            
   if (feats_undistort->empty() || (feats_undistort == nullptr)) 
   {
-    std::cout << "[ LIO ]: No point!!!" << std::endl;
+    if (log_lio_no_points) {
+      std::cout << "[ LIO ]: No point!!!" << std::endl;
+    }
     return;
   }
 
@@ -534,7 +570,9 @@ void LIVMapper::handleLIO()
     voxelmap_manager->pv_list_[i].var = var;
   }
   voxelmap_manager->UpdateVoxelMap(voxelmap_manager->pv_list_);
-  std::cout << "[ LIO ] Update Voxel Map" << std::endl;
+  if (log_lio_voxel_map_update) {
+    std::cout << "[ LIO ] Update Voxel Map" << std::endl;
+  }
   _pv_list = voxelmap_manager->pv_list_;
   
   double t4 = omp_get_wtime();
@@ -578,18 +616,20 @@ void LIVMapper::handleLIO()
   // printf("\033[1;36m[ LIO mapping time ]: current scan: icp: %0.6f secs, map incre: %0.6f secs, total: %0.6f secs.\033[0m\n"
   //         "\033[1;36m[ LIO mapping time ]: average: icp: %0.6f secs, map incre: %0.6f secs, total: %0.6f secs.\033[0m\n",
   //         t2 - t1, t4 - t3, t4 - t0, aver_time_icp, aver_time_map_inre, aver_time_consu);
-  printf("\033[1;34m+-------------------------------------------------------------+\033[0m\n");
-  printf("\033[1;34m|                         LIO Mapping Time                    |\033[0m\n");
-  printf("\033[1;34m+-------------------------------------------------------------+\033[0m\n");
-  printf("\033[1;34m| %-29s | %-27s |\033[0m\n", "Algorithm Stage", "Time (secs)");
-  printf("\033[1;34m+-------------------------------------------------------------+\033[0m\n");
-  printf("\033[1;36m| %-29s | %-27f |\033[0m\n", "DownSample", t_down - t0);
-  printf("\033[1;36m| %-29s | %-27f |\033[0m\n", "ICP", t2 - t1);
-  printf("\033[1;36m| %-29s | %-27f |\033[0m\n", "updateVoxelMap", t4 - t3);
-  printf("\033[1;34m+-------------------------------------------------------------+\033[0m\n");
-  printf("\033[1;36m| %-29s | %-27f |\033[0m\n", "Current Total Time", t4 - t0);
-  printf("\033[1;36m| %-29s | %-27f |\033[0m\n", "Average Total Time", aver_time_consu);
-  printf("\033[1;34m+-------------------------------------------------------------+\033[0m\n");
+  if (log_lio_timing) {
+    printf("\033[1;34m+-------------------------------------------------------------+\033[0m\n");
+    printf("\033[1;34m|                         LIO Mapping Time                    |\033[0m\n");
+    printf("\033[1;34m+-------------------------------------------------------------+\033[0m\n");
+    printf("\033[1;34m| %-29s | %-27s |\033[0m\n", "Algorithm Stage", "Time (secs)");
+    printf("\033[1;34m+-------------------------------------------------------------+\033[0m\n");
+    printf("\033[1;36m| %-29s | %-27f |\033[0m\n", "DownSample", t_down - t0);
+    printf("\033[1;36m| %-29s | %-27f |\033[0m\n", "ICP", t2 - t1);
+    printf("\033[1;36m| %-29s | %-27f |\033[0m\n", "updateVoxelMap", t4 - t3);
+    printf("\033[1;34m+-------------------------------------------------------------+\033[0m\n");
+    printf("\033[1;36m| %-29s | %-27f |\033[0m\n", "Current Total Time", t4 - t0);
+    printf("\033[1;36m| %-29s | %-27f |\033[0m\n", "Average Total Time", aver_time_consu);
+    printf("\033[1;34m+-------------------------------------------------------------+\033[0m\n");
+  }
 
   euler_cur = RotMtoEuler(_state.rot_end);
   fout_out << std::setw(20) << LidarMeasures.last_lio_update_time - _first_lidar_time << " " << euler_cur.transpose() * 57.3 << " "
@@ -840,18 +880,24 @@ void LIVMapper::livox_pcl_cbk(const livox_ros_driver2::msg::CustomMsg::ConstShar
   if (abs(last_timestamp_imu - stamp2Sec(msg->header.stamp)) > 1.0 && !imu_buffer.empty())
   {
     double timediff_imu_wrt_lidar = last_timestamp_imu - stamp2Sec(msg->header.stamp);
-    RCLCPP_INFO(this->node->get_logger(), "\033[95mSelf sync IMU and LiDAR, HARD time lag is %.10lf \n\033[0m", timediff_imu_wrt_lidar - 0.100);
+    if (log_sensor_self_sync) {
+      RCLCPP_INFO(this->node->get_logger(), "\033[95mSelf sync IMU and LiDAR, HARD time lag is %.10lf \n\033[0m", timediff_imu_wrt_lidar - 0.100);
+    }
     // imu_time_offset = timediff_imu_wrt_lidar;
   }
 
   double cur_head_time = stamp2Sec(msg->header.stamp);
-  RCLCPP_INFO(this->node->get_logger(), "Get LiDAR, its header time: %.6f", cur_head_time);
+  if (log_sensor_lidar_timestamp) {
+    RCLCPP_INFO(this->node->get_logger(), "Get LiDAR, its header time: %.6f", cur_head_time);
+  }
   if (cur_head_time < last_timestamp_lidar)
   {
     RCLCPP_ERROR(this->node->get_logger(), "lidar loop back, clear buffer");
     lid_raw_data_buffer.clear();
   }
-  RCLCPP_INFO(this->node->get_logger(), "get point cloud at time: %.6f", stamp2Sec(msg->header.stamp));
+  if (log_sensor_lidar_timestamp) {
+    RCLCPP_INFO(this->node->get_logger(), "get point cloud at time: %.6f", stamp2Sec(msg->header.stamp));
+  }
   PointCloudXYZI::Ptr ptr(new PointCloudXYZI());
   p_pre->process(msg, ptr);
 
@@ -874,14 +920,18 @@ void LIVMapper::imu_cbk(const sensor_msgs::msg::Imu::ConstSharedPtr &msg_in)
   if (!imu_en) return;
 
   if (last_timestamp_lidar < 0.0) return;
-  RCLCPP_INFO(this->node->get_logger(), "get imu at time: %.6f", stamp2Sec(msg_in->header.stamp));
+  if (log_sensor_imu_timestamp) {
+    RCLCPP_INFO(this->node->get_logger(), "get imu at time: %.6f", stamp2Sec(msg_in->header.stamp));
+  }
   sensor_msgs::msg::Imu::SharedPtr msg(new sensor_msgs::msg::Imu(*msg_in));
   msg->header.stamp = sec2Stamp(stamp2Sec(msg->header.stamp) - imu_time_offset);
   double timestamp = stamp2Sec(msg->header.stamp);
 
   if (fabs(last_timestamp_lidar - timestamp) > 0.5 && (!ros_driver_fix_en))
   {
-    RCLCPP_WARN(this->node->get_logger(), "IMU and LiDAR not synced! delta time: %lf .\n", last_timestamp_lidar - timestamp);
+    if (log_sensor_imu_lidar_desync) {
+      RCLCPP_WARN(this->node->get_logger(), "IMU and LiDAR not synced! delta time: %lf .\n", last_timestamp_lidar - timestamp);
+    }
   }
 
   if (ros_driver_fix_en) timestamp += std::round(last_timestamp_lidar - timestamp);
@@ -908,7 +958,9 @@ void LIVMapper::imu_cbk(const sensor_msgs::msg::Imu::ConstSharedPtr &msg_in)
   last_timestamp_imu = timestamp;
 
   imu_buffer.push_back(msg);
-  cout<<"got imu: "<<timestamp<<" imu size "<<imu_buffer.size()<<endl;
+  if (log_sensor_imu_buffer_size) {
+    cout << "got imu: " << timestamp << " imu size " << imu_buffer.size() << endl;
+  }
   mtx_buffer.unlock();
   if (imu_prop_enable)
   {

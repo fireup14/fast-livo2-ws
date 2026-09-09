@@ -147,6 +147,9 @@ public:
   PointCloudXYZI pl_buff[128]; // maximum 128 line lidar
   vector<orgtype> typess[128]; // maximum 128 line lidar
   int lidar_type, point_filter_num, N_SCANS, SCAN_RATE;
+  // Runtime log switches, configured by config/log.yaml.
+  bool log_input_point_count = false;
+  bool log_output_point_count = false;
   
   double blind, blind_sqr;
   bool feature_enabled, given_offset_time;

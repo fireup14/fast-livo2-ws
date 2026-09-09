@@ -212,6 +212,11 @@ public:
 
   int feats_down_size_;
   int effct_feat_num_;
+  // Runtime log switches, configured by config/log.yaml.
+  bool log_feature_statistics = false;
+  bool log_map_sliding_below_threshold = false;
+  bool log_map_sliding_timing = false;
+  bool log_voxel_cleanup = false;
   std::vector<M3D> cross_mat_list_;
   std::vector<M3D> body_cov_list_;
   std::vector<pointWithVar> pv_list_;

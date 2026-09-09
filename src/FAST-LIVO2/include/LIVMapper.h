@@ -190,5 +190,18 @@ public:
   double aver_time_icp = 0;
   double aver_time_map_inre = 0;
   bool colmap_output_en = false;
+  // Runtime log switches, configured by config/log.yaml.
+  bool log_lio_no_points = true;
+  bool log_lio_voxel_map_update = false;
+  bool log_lio_timing = false;
+  bool log_sensor_lidar_timestamp = false;
+  bool log_sensor_imu_timestamp = false;
+  bool log_sensor_imu_buffer_size = false;
+  bool log_sensor_self_sync = false;
+  bool log_sensor_imu_lidar_desync = false;
+  bool log_voxel_feature_statistics = false;
+  bool log_voxel_map_sliding_below_threshold = false;
+  bool log_voxel_map_sliding_timing = false;
+  bool log_voxel_cleanup = false;
 };
 #endif

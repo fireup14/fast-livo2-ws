@@ -18,6 +18,7 @@ def generate_launch_description():
         os.path.join(package_share, "config", "livo.yaml"),
         os.path.join(package_share, "config", "mid360.yaml"),
         os.path.join(package_share, "config", "d405.yaml"),
+        os.path.join(package_share, "config", "log.yaml"),
     ]
     rviz_config = os.path.join(package_share, "rviz_cfg", "fast_livo2.rviz")
 
