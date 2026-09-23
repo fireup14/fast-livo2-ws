@@ -18,6 +18,8 @@ bringup:
   enable_lidar: true
 
   # 是否默认启动 Intel RealSense D405 彩色相机驱动 (true: 默认开启, false: 默认关闭)
+  # FAST-LIVO2 is currently configured with common.img_en: 0 (LIO-only), so
+  # do not start the D405 unnecessarily. Enable it only after enabling LIVO.
   enable_camera: true
 
   # 是否默认启动 RViz2 三维可视化界面 (true: 默认开启, false: 默认关闭)

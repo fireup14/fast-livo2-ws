@@ -249,37 +249,46 @@ void LIVMapper::initializeComponents(rclcpp::Node::SharedPtr &node)
   voxelmap_manager->extT_ << VEC_FROM_ARRAY(extrinT);
   voxelmap_manager->extR_ << MAT_FROM_ARRAY(extrinR);
 
-  if (!vk::camera_loader::loadFromRosNs(this->node, "camera", vio_manager->cam)) throw std::runtime_error("Camera model not correctly specified.");
-
-  vio_manager->grid_size = grid_size;
-  vio_manager->patch_size = patch_size;
-  vio_manager->outlier_threshold = outlier_threshold;
-  vio_manager->setImuToLidarExtrinsic(extT, extR);
-  if (!cameraextrinTcl.empty())
+  if (img_en)
   {
-    RCLCPP_INFO(this->node->get_logger(),
-                "Using extrin_calib.T_cl for the LiDAR-to-camera extrinsic.");
-    vio_manager->setLidarToCameraExtrinsic(cameraextrinTcl);
+    if (!vk::camera_loader::loadFromRosNs(this->node, "camera", vio_manager->cam)) {
+      throw std::runtime_error("Camera model not correctly specified.");
+    }
+
+    vio_manager->grid_size = grid_size;
+    vio_manager->patch_size = patch_size;
+    vio_manager->outlier_threshold = outlier_threshold;
+    vio_manager->setImuToLidarExtrinsic(extT, extR);
+    if (!cameraextrinTcl.empty())
+    {
+      RCLCPP_INFO(this->node->get_logger(),
+                  "Using extrin_calib.T_cl for the LiDAR-to-camera extrinsic.");
+      vio_manager->setLidarToCameraExtrinsic(cameraextrinTcl);
+    }
+    else
+    {
+      RCLCPP_WARN(this->node->get_logger(),
+                  "extrin_calib.T_cl is not set; falling back to legacy Rcl/Pcl parameters.");
+      vio_manager->setLidarToCameraExtrinsic(cameraextrinR, cameraextrinT);
+    }
+    vio_manager->state = &_state;
+    vio_manager->state_propagat = &state_propagat;
+    vio_manager->max_iterations = max_iterations;
+    vio_manager->img_point_cov = IMG_POINT_COV;
+    vio_manager->normal_en = normal_en;
+    vio_manager->inverse_composition_en = inverse_composition_en;
+    vio_manager->raycast_en = raycast_en;
+    vio_manager->grid_n_width = grid_n_width;
+    vio_manager->grid_n_height = grid_n_height;
+    vio_manager->patch_pyrimid_level = patch_pyrimid_level;
+    vio_manager->exposure_estimate_en = exposure_estimate_en;
+    vio_manager->colmap_output_en = colmap_output_en;
+    vio_manager->initializeVIO();
   }
   else
   {
-    RCLCPP_WARN(this->node->get_logger(),
-                "extrin_calib.T_cl is not set; falling back to legacy Rcl/Pcl parameters.");
-    vio_manager->setLidarToCameraExtrinsic(cameraextrinR, cameraextrinT);
+    RCLCPP_INFO(this->node->get_logger(), "Image fusion is disabled; starting in LiDAR-IMU-only mode.");
   }
-  vio_manager->state = &_state;
-  vio_manager->state_propagat = &state_propagat;
-  vio_manager->max_iterations = max_iterations;
-  vio_manager->img_point_cov = IMG_POINT_COV;
-  vio_manager->normal_en = normal_en;
-  vio_manager->inverse_composition_en = inverse_composition_en;
-  vio_manager->raycast_en = raycast_en;
-  vio_manager->grid_n_width = grid_n_width;
-  vio_manager->grid_n_height = grid_n_height;
-  vio_manager->patch_pyrimid_level = patch_pyrimid_level;
-  vio_manager->exposure_estimate_en = exposure_estimate_en;
-  vio_manager->colmap_output_en = colmap_output_en;
-  vio_manager->initializeVIO();
 
   p_imu->set_extrinsic(extT, extR);
   p_imu->set_gyr_cov_scale(V3D(gyr_cov, gyr_cov, gyr_cov));
@@ -325,7 +334,7 @@ void LIVMapper::initializeFiles()
   fout_out.open(DEBUG_FILE_DIR("mat_out.txt"), std::ios::out);
 }
 
-void LIVMapper::initializeSubscribersAndPublishers(rclcpp::Node::SharedPtr &node, image_transport::ImageTransport &it_)
+void LIVMapper::initializeSubscribersAndPublishers(rclcpp::Node::SharedPtr &node)
 {
   image_transport::ImageTransport it(this->node);
   if (p_pre->lidar_type == AVIA) {
@@ -334,15 +343,12 @@ void LIVMapper::initializeSubscribersAndPublishers(rclcpp::Node::SharedPtr &node
     sub_pcl = this->node->create_subscription<sensor_msgs::msg::PointCloud2>(lid_topic, 200000, std::bind(&LIVMapper::standard_pcl_cbk, this, std::placeholders::_1));
   }
   sub_imu = this->node->create_subscription<sensor_msgs::msg::Imu>(imu_topic, 200000, std::bind(&LIVMapper::imu_cbk, this, std::placeholders::_1));
-  sub_img = this->node->create_subscription<sensor_msgs::msg::Image>(
-    img_topic,
-    rclcpp::SensorDataQoS().keep_last(1),
-    std::bind(
-        &LIVMapper::img_cbk,
-        this,
-        std::placeholders::_1
-    )
-  );
+  if (img_en) {
+    sub_img = this->node->create_subscription<sensor_msgs::msg::Image>(
+      img_topic,
+      rclcpp::SensorDataQoS().keep_last(1),
+      std::bind(&LIVMapper::img_cbk, this, std::placeholders::_1));
+  }
   pubLaserCloudFullRes = this->node->create_publisher<sensor_msgs::msg::PointCloud2>("/cloud_registered", 100);
   pubNormal = this->node->create_publisher<visualization_msgs::msg::MarkerArray>("/visualization_marker", 100);
   pubSubVisualMap = this->node->create_publisher<sensor_msgs::msg::PointCloud2>("/cloud_visual_sub_map_before", 100);
