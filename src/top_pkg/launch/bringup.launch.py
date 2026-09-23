@@ -5,7 +5,7 @@ import yaml
 
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
+from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, LogInfo, TimerAction
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import LaunchConfiguration
 
@@ -27,6 +27,9 @@ def generate_launch_description():
     enable_rviz_arg = DeclareLaunchArgument(
         "enable_rviz", default_value=str(sensor_config["enable_rviz"]).lower(),
         description="Whether to start RViz on this host.")
+    mapping_delay_arg = DeclareLaunchArgument(
+        "mapping_delay", default_value="1.0",
+        description="Seconds to wait for sensor streams before starting FAST-LIVO2.")
 
     # 传感器启动文件统一管理三个模块开关及 RViz。
     sensor_bringup = IncludeLaunchDescription(
@@ -47,11 +50,21 @@ def generate_launch_description():
         ),
         launch_arguments={"enable_rviz": "false"}.items(),
     )
+    delayed_fast_livo_mapping = TimerAction(
+        period=LaunchConfiguration("mapping_delay"),
+        actions=[
+            LogInfo(
+                msg="Sensor initialization wait complete; starting FAST-LIVO2 mapping."
+            ),
+            fast_livo_mapping,
+        ],
+    )
 
     return LaunchDescription([
         enable_lidar_arg,
         enable_camera_arg,
         enable_rviz_arg,
+        mapping_delay_arg,
         sensor_bringup,
-        fast_livo_mapping,
+        delayed_fast_livo_mapping,
     ])
