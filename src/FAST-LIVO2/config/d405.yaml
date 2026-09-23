@@ -3,22 +3,22 @@
     # RealSense D405 针孔相机模型参数。
     # vikit_ros 通过 camera_loader::loadFromRosNs() 读取 camera 命名空间。
     camera:
-      cam_model: Pinhole                 # 相机投影模型；当前使用针孔模型。
-      cam_width: 1280                    # 标定图像原始宽度，单位：像素。
-      cam_height: 720                    # 标定图像原始高度，单位：像素。
+      # D405 的 640x360x30 profile；数值来自该 profile 的 color/camera_info。
+      cam_model: Pinhole
+      cam_width: 640
+      cam_height: 360
+      scale: 1.0
 
-      scale: 0.5                         # 图像处理缩放比例；内参和图像尺寸会同步缩放。
-      
-      cam_fx: 665.1898237482282          # 原始分辨率下 x 方向焦距，单位：像素。
-      cam_fy: 665.8415744550642          # 原始分辨率下 y 方向焦距，单位：像素。
-      cam_cx: 637.6588421587555          # 原始分辨率下主点 x 坐标，单位：像素。
-      cam_cy: 355.47059576089157         # 原始分辨率下主点 y 坐标，单位：像素。
+      cam_fx: 328.00845337
+      cam_fy: 327.17529297
+      cam_cx: 318.64349365
+      cam_cy: 178.65614319
 
-      cam_d0: -0.046950622434026715      # 径向畸变系数 k1。
-      cam_d1: 0.04769351060975733        # 径向畸变系数 k2。
-      cam_d2: 0.0                        # 切向畸变系数 p1。
-      cam_d3: 0.0                        # 切向畸变系数 p2。
-
+      # 畸变系数无量纲，不应随分辨率或 scale 成比例缩放。
+      cam_d0: -0.05356108397245407
+      cam_d1: 0.05783652886748314
+      cam_d2: 0.00034853132092393935
+      cam_d3: -0.00042196811409667134
 # 参数使用位置说明：
 # 1. src/FAST-LIVO2/launch/mapping.launch.py
 #    generate_launch_description() 将本文件作为参数文件传给 fastlivo_mapping 节点。

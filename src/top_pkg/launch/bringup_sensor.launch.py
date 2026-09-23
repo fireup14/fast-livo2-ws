@@ -77,9 +77,11 @@ def generate_launch_description():
             "pointcloud.enable": "false",
             "spatial_filter.enable": "false",
             "temporal_filter.enable": "false",
-            "rgb_camera.color_profile": "1280,720,20",
-            "depth_module.color_profile": "1280,720,20",
-            "depth_module.depth_profile": "1280,720,20",
+            # D405 的实际彩色流由 depth_module.color_profile 控制。
+            # 640x360x30 是本机驱动已确认支持的 profile。
+            "depth_module.color_profile": "640x360x30",
+            # 当前未启用深度流；保留一个合法值以避免驱动初始化时回退并报错。
+            "depth_module.depth_profile": "640x360x30",
             "log_level": "warn",
         }.items(),
     )
