@@ -77,9 +77,9 @@ def generate_launch_description():
             "pointcloud.enable": "false",
             "spatial_filter.enable": "false",
             "temporal_filter.enable": "false",
-            "rgb_camera.color_profile": "1280,720,30",
-            "depth_module.color_profile": "1280,720,30",
-            "depth_module.depth_profile": "1280,720,30",
+            "rgb_camera.color_profile": "1280,720,20",
+            "depth_module.color_profile": "1280,720,20",
+            "depth_module.depth_profile": "1280,720,20",
             "log_level": "warn",
         }.items(),
     )
