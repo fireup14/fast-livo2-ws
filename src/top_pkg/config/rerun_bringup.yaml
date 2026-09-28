@@ -1,0 +1,8 @@
+# 回放建图启动的默认参数。
+#
+# 本文件不负责发布传感器数据。外部回放工程应向当前 livo.yaml 中固定的
+# /livox/lidar、/livox/imu 和 /camera/camera/color/image_raw 发布保持原始
+# header.stamp 的消息；启动本 launch 后再启动回放。
+rerun:
+  # 是否在当前主机启动 RViz2。RDK 无图形桌面时保持 false。
+  enable_rviz: false
