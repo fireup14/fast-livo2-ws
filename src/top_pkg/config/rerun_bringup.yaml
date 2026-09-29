@@ -5,4 +5,4 @@
 # header.stamp 的消息；启动本 launch 后再启动回放。
 rerun:
   # 是否在当前主机启动 RViz2。RDK 无图形桌面时保持 false。
-  enable_rviz: false
+  enable_rviz: true
