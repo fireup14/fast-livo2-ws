@@ -1,5 +1,35 @@
 # FAST-LIVO2 ROS2 HUMBLE
 
+## Quick Start
+
+在本集成工作区中构建并启动 FAST-LIVO2：
+
+```bash
+cd ~/Desktop/fast-livo2-ws
+source /opt/ros/humble/setup.bash
+colcon build --packages-up-to fast_livo --symlink-install
+source install/setup.bash
+ros2 launch fast_livo mapping.launch.py enable_rviz:=true
+```
+
+该入口只启动建图节点与可选 RViz，不启动传感器驱动。运行前必须提供：
+
+```text
+/livox/lidar                         livox_ros_driver2/msg/CustomMsg
+/livox/imu                           sensor_msgs/msg/Imu
+/camera/camera/color/image_raw       sensor_msgs/msg/Image（img_en=1 时）
+```
+
+实时整机启动和外部数据回放建议使用顶层入口：
+
+```bash
+# MID360 + D405 + FAST-LIVO2
+ros2 launch top_pkg bringup.launch.py
+
+# 订阅外部工程已经发布的话题进行重新建图
+ros2 launch top_pkg rerun_bringup.launch.py
+```
+
 ## FAST-LIVO2: Fast, Direct LiDAR-Inertial-Visual Odometry
 
 Thanks to hku mars lab chunran zheng for the open source excellent work

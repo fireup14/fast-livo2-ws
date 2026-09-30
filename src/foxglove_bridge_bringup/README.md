@@ -3,6 +3,23 @@
 这个包独立启动 `foxglove_bridge`，供 PC 上的 Foxglove Studio 通过 WebSocket
 查看 RDK 上的 FAST-LIVO2 数据。它不启动或修改 FAST-LIVO2、Livox、RealSense。
 
+## Quick Start
+
+```bash
+cd ~/Desktop/fast-livo2-ws
+source /opt/ros/humble/setup.bash
+sudo apt install ros-humble-foxglove-bridge
+colcon build --packages-select foxglove_bridge_bringup --symlink-install
+source install/setup.bash
+ros2 launch foxglove_bridge_bringup foxglove_bridge.launch.py
+```
+
+PC 上的 Foxglove Studio 连接：
+
+```text
+ws://<RDK_IP>:8765
+```
+
 默认仅暴露以下显示所需话题，避免误订阅原始雷达和 IMU 数据：
 
 - `/aft_mapped_to_init`
@@ -18,22 +35,6 @@
 ```bash
 sudo apt update
 sudo apt install ros-humble-foxglove-bridge
-```
-
-## 构建与启动
-
-```bash
-cd ~/Desktop/fast-livo2-ws
-source /opt/ros/humble/setup.bash
-colcon build --packages-select foxglove_bridge_bringup --symlink-install
-source install/setup.bash
-ros2 launch foxglove_bridge_bringup foxglove_bridge.launch.py
-```
-
-在 PC 的 Foxglove Studio 中添加连接：
-
-```text
-ws://<RDK_IP>:8765
 ```
 
 如端口冲突，可改用其他端口：

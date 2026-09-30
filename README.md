@@ -4,15 +4,58 @@
 
 ---
 
+## Quick Start
+
+RDK S100P（ROS 2 Humble）上首次构建并启动实时建图：
+
+```bash
+cd ~/Desktop/fast-livo2-ws
+source /opt/ros/humble/setup.bash
+colcon build --symlink-install
+source install/setup.bash
+ros2 launch top_pkg bringup.launch.py
+```
+
+常用入口：
+
+```bash
+# 仅启动 MID360、D405 及可选 RViz，不启动建图
+ros2 launch top_pkg bringup_sensor.launch.py
+
+# 订阅外部工程回放的 LiDAR/IMU/图像话题并在本地重新建图
+ros2 launch top_pkg rerun_bringup.launch.py
+
+# 临时打开项目级 RViz（命令行优先于 YAML 默认值）
+ros2 launch top_pkg rerun_bringup.launch.py enable_rviz:=true
+
+# 将 Livox PointXYZRTLT PointCloud2 转为 FAST-LIVO2 使用的 CustomMsg
+ros2 launch top_pkg tf_lidar_data.launch.py
+
+# 独立启动 Foxglove WebSocket Bridge
+ros2 launch foxglove_bridge_bringup foxglove_bridge.launch.py
+```
+
+默认传感器输入：
+
+```text
+/livox/lidar                         livox_ros_driver2/msg/CustomMsg
+/livox/imu                           sensor_msgs/msg/Imu
+/camera/camera/color/image_raw       sensor_msgs/msg/Image
+```
+
+如果外部回放输出 Livox `PointCloud2`，请发布到 `/livox/lidar_points`，转换节点会在 `/livox/lidar` 输出 `CustomMsg`。不要让两种消息类型共用同一个话题名。
+
+---
+
 ## 目录指南
 
+- [Quick Start](#quick-start)
 - [1. 工作区架构](#1-工作区架构)
 - [2. 环境依赖](#2-环境依赖)
   - [2.1 操作系统与 ROS 2 平台](#21-操作系统与-ros-2-平台)
   - [2.2 ROS 2 系统依赖包 (APT 自适应安装)](#22-ros-2-系统依赖包-apt-自适应安装)
   - [2.3 第三方 C++ 基础与数学库](#23-第三方-c-基础与数学库)
   - [2.4 传感器底层硬件 SDK 驱动](#24-传感器底层硬件-sdk-驱动-sensor-sdks)
-- [3. 快速启动指令 (Quick Start Launch)](#3-快速启动指令-quick-start-launch)
 
 ---
 
@@ -27,7 +70,8 @@ fast-livo2-ws/
     ├── FAST-LIVO2/         # [算法核心] 直接法激光-惯性-视觉里程计功能包 (ROS 2 包名: fast_livo)
     ├── livox_ros_driver2/  # [传感器驱动] Livox MID-360 雷达 ROS 2 驱动
     ├── realsense-ros/      # [传感器驱动] Intel RealSense 相机 ROS 2 驱动
-    └── rpg_vikit/          # [依赖项] 视觉运动学工具包 (Visual Kinematics Toolkit)
+    ├── rpg_vikit/          # [依赖项] 视觉运动学工具包 (Visual Kinematics Toolkit)
+    └── foxglove_bridge_bringup/ # [远程显示] Foxglove WebSocket Bridge 启动包
 ```
 
 ---
@@ -37,8 +81,11 @@ fast-livo2-ws/
 为保证工作区成功编译与运行，系统需提前安装以下软件环境与依赖库：
 
 ### 2.1 操作系统与 ROS 2 平台
-- **操作系统**: Ubuntu 24.04 LTS (Noble Numbat)
-- **ROS 2 版本**: ROS 2 Jazzy (Jazzy Jalisco)
+
+- **RDK S100P 部署端**：ROS 2 Humble
+- **PC 开发端**：可使用 ROS 2 Jazzy；建议通过 Foxglove WebSocket 查看 RDK 数据
+
+Humble 与 Jazzy 不保证直接 DDS 互操作。实时建图、话题频率检查及 `CustomMsg` 诊断优先在 RDK Humble 本机执行。
 
 ### 2.2 ROS 2 系统依赖包 (APT 自适应安装)
 在编译工作区前，请先使用 APT 安装以下 ROS 2 扩展依赖包。以下命令会自动读取当前终端已加载的 `$ROS_DISTRO` 环境变量（自动适配 `jazzy`、`humble` 等不同 ROS 2 版本）：
@@ -147,34 +194,3 @@ sudo apt update && sudo apt install -y \
 - **librealsense2**: Intel RealSense 相机底层硬件 SDK 驱动库，参考 [librealsense 官方仓库](https://github.com/IntelRealSense/librealsense)（依赖 `diagnostic-updater` / `image-transport`）
 
 ---
-
-## 3. 快速启动指令 (Quick Start Launch)
-
-编译并设置环境变量后，即可直接调用统一 Launch 入口：
-
-```bash
-# 1. 进入工作区并加载环境变量
-cd ~/Desktop/fast-livo2-ws
-source install/setup.bash
-```
-
-### 1. 一键启动：传感器 + FAST-LIVO2 建图与定位 (推荐)
-同时启动 MID-360 雷达、D405 相机、FAST-LIVO2 实时建图定位算法节点及 RViz 可视化：
-```bash
-ros2 launch top_pkg bringup.launch.py
-```
-
-### 2. 调试启动：仅启动传感器驱动 (Sensors Only)
-仅启动 MID-360 雷达与 D405 相机驱动，适合传感器硬件检查、标定对准或数据采集：
-```bash
-ros2 launch top_pkg bringup_sensor.launch.py
-```
-
-### 3. 常用命令行参数重载
-```bash
-# 关闭建图或调试时的 RViz 窗口 (后台运行/节省算力)
-ros2 launch top_pkg bringup.launch.py enable_rviz:=false
-
-# 仅启动雷达，关闭相机
-ros2 launch top_pkg bringup_sensor.launch.py enable_camera:=false
-```
