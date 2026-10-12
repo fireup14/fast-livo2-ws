@@ -96,7 +96,7 @@ void Preprocess::avia_handler(const livox_ros_driver2::msg::CustomMsg::SharedPtr
   pl_corn.clear();
   pl_full.clear();
   double t1 = omp_get_wtime();
-  int plsize = msg->point_num;`
+  int plsize = msg->point_num;
   if (log_input_point_count) {
     printf("[ Preprocess ] Input point number: %d \n", plsize);
   }
