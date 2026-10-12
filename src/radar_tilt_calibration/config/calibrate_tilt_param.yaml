@@ -1,0 +1,27 @@
+# radar_tilt_calibration 的全部业务参数。
+# 该文件是普通 YAML，由节点使用 yaml-cpp 读取，不是 ROS 参数文件格式。
+
+# ============ 标定节点参数 ============
+calibrate:
+  input_topic: "/localization/pose"        # 订阅的定位结果话题
+  input_type: "PoseStamped"                # 支持 "PoseStamped" 或 "Odometry"
+  duration: 120.0                           # 采集时长，单位：秒（墙上时间）
+  output_file: "config/tilt_angle.yaml"    # 相对路径按包共享目录解析，也支持绝对路径
+  min_points: 10                            # 最少有效位置点数，不得小于 3
+  qos_depth: 100                            # 输入订阅队列深度
+  qos_reliability: "reliable"              # 支持 "reliable" 或 "best_effort"
+
+# ============ 转换节点参数 ============
+transform:
+  input_topic: "/localization/pose"        # 订阅的定位结果话题
+  input_type: "PoseStamped"                # 支持 "PoseStamped" 或 "Odometry"
+  output_topic: "/localization/pose_world" # 发布的世界坐标系结果话题
+  output_type: "PoseStamped"               # 支持 "PoseStamped" 或 "Odometry"
+  output_frame_id: "world"                 # 输出消息 header.frame_id
+  output_child_frame_id: ""                # Odometry 输出；空值时保留输入 child_frame_id
+  angle_file: "config/tilt_angle.yaml"     # 相对路径按包共享目录解析，也支持绝对路径
+  input_qos_depth: 100                      # 输入订阅队列深度
+  input_qos_reliability: "reliable"        # 支持 "reliable" 或 "best_effort"
+  output_qos_depth: 10                      # 输出发布队列深度
+  output_qos_reliability: "reliable"       # 支持 "reliable" 或 "best_effort"
+  preserve_odometry_twist: true             # Odom->Odom 时保留 twist；Pose->Odom 时 twist 为零
