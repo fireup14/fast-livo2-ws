@@ -924,16 +924,24 @@ void LIVMapper::standard_pcl_cbk(const sensor_msgs::msg::PointCloud2::ConstShare
 
 void LIVMapper::livox_pcl_cbk(const livox_ros_driver2::msg::CustomMsg::ConstSharedPtr &msg_in)
 {
+	// 1. LiDAR 未启用时，不缓存该帧点云。
 	if (!lidar_en)
 		return;
+
+	// 2. 保护 LiDAR/IMU/图像共享缓冲区；复制消息以获得独立的本地数据。
 	mtx_buffer.lock();
 	livox_ros_driver2::msg::CustomMsg::SharedPtr msg(new livox_ros_driver2::msg::CustomMsg(*msg_in));
+
+	// 已停用的旧时间戳跳变修正逻辑：当前仅保留注释，不会修改 LiDAR 时间。
 	// if ((abs(stamp2Sec(msg->header.stamp) - last_timestamp_lidar) > 0.2 && last_timestamp_lidar > 0) || sync_jump_flag)
 	// {
 	//   ROS_WARN("lidar jumps %.3f\n", stamp2Sec(msg->header.stamp) - last_timestamp_lidar);
 	//   sync_jump_flag = true;
 	//   msg->header.stamp = rclcpp::Time().fromSec(last_timestamp_lidar + 0.1);
 	// }
+
+
+	// 3. LiDAR 与最近 IMU 相差超过 1 s 时仅输出诊断日志，不自动校时。
 	if (abs(last_timestamp_imu - stamp2Sec(msg->header.stamp)) > 1.0 && !imu_buffer.empty())
 	{
 		double timediff_imu_wrt_lidar = last_timestamp_imu - stamp2Sec(msg->header.stamp);
@@ -944,11 +952,15 @@ void LIVMapper::livox_pcl_cbk(const livox_ros_driver2::msg::CustomMsg::ConstShar
 		// imu_time_offset = timediff_imu_wrt_lidar;
 	}
 
+
+	// 4. 使用点云头时间戳作为整帧 LiDAR 的绝对参考时间。
 	double cur_head_time = stamp2Sec(msg->header.stamp);
 	if (log_sensor_lidar_timestamp)
 	{
 		RCLCPP_INFO(this->node->get_logger(), "Get LiDAR, its header time: %.6f", cur_head_time);
-	}
+	} 
+	// 时间倒退通常表示 rosbag 循环或传感器时间异常；此处清空待处理点云。
+	// 注意：对应的 lid_header_time_buffer 未在这里清空，二者可能暂时失去一一对应。
 	if (cur_head_time < last_timestamp_lidar)
 	{
 		RCLCPP_ERROR(this->node->get_logger(), "lidar loop back, clear buffer");
@@ -958,9 +970,12 @@ void LIVMapper::livox_pcl_cbk(const livox_ros_driver2::msg::CustomMsg::ConstShar
 	{
 		RCLCPP_INFO(this->node->get_logger(), "get point cloud at time: %.6f", stamp2Sec(msg->header.stamp));
 	}
+
+
+	// 5. 将 Livox CustomMsg 转为内部点云，并执行扫描线、盲区和均匀抽点等前端处理。
 	PointCloudXYZI::Ptr ptr(new PointCloudXYZI());
 	p_pre->process(msg, ptr);
-
+	// 预处理后没有有效点时，不将空帧交给后续时间同步与 LIO。
 	if (!ptr || ptr->empty())
 	{
 		RCLCPP_ERROR(this->node->get_logger(), "Received an empty point cloud");
@@ -968,29 +983,35 @@ void LIVMapper::livox_pcl_cbk(const livox_ros_driver2::msg::CustomMsg::ConstShar
 		return;
 	}
 
+	// 6. 成对缓存预处理点云及其帧时间，供 sync_packages() 与 IMU/图像按时间对齐。
 	lid_raw_data_buffer.push_back(ptr);
 	lid_header_time_buffer.push_back(cur_head_time);
 	last_timestamp_lidar = cur_head_time;
 
+	// 7. 解锁并发出数据可用通知；当前主循环仍通过轮询 sync_packages() 检查缓冲区。
 	mtx_buffer.unlock();
 	sig_buffer.notify_all();
 }
 
 void LIVMapper::imu_cbk(const sensor_msgs::msg::Imu::ConstSharedPtr &msg_in)
 {
+	// 1. IMU 未启用时直接丢弃消息。
 	if (!imu_en)
 		return;
 
+	// 系统以第一帧 LiDAR 为融合时间轴起点；此前的 IMU 不进入缓冲区。
 	if (last_timestamp_lidar < 0.0)
 		return;
 	if (log_sensor_imu_timestamp)
 	{
 		RCLCPP_INFO(this->node->get_logger(), "get imu at time: %.6f", stamp2Sec(msg_in->header.stamp));
 	}
+	// 2. 复制消息并减去配置的 IMU 时间偏移，得到用于融合的时间戳。
 	sensor_msgs::msg::Imu::SharedPtr msg(new sensor_msgs::msg::Imu(*msg_in));
 	msg->header.stamp = sec2Stamp(stamp2Sec(msg->header.stamp) - imu_time_offset);
 	double timestamp = stamp2Sec(msg->header.stamp);
 
+	// 3. LiDAR 与 IMU 时间相差过大时默认仅报警，不自动修正。
 	if (fabs(last_timestamp_lidar - timestamp) > 0.5 && (!ros_driver_fix_en))
 	{
 		if (log_sensor_imu_lidar_desync)
@@ -999,12 +1020,15 @@ void LIVMapper::imu_cbk(const sensor_msgs::msg::Imu::ConstSharedPtr &msg_in)
 		}
 	}
 
+	// 可选驱动兼容模式：用整数秒平移 IMU 时间，使其靠近最近 LiDAR 时间。
 	if (ros_driver_fix_en)
 		timestamp += std::round(last_timestamp_lidar - timestamp);
 	msg->header.stamp = sec2Stamp(timestamp);
 
+	// 4. 保护主融合缓冲区 imu_buffer，并检查 IMU 时间是否单调递增。
 	mtx_buffer.lock();
 
+	// 时间倒退通常表示乱序或 rosbag 循环；当前消息直接丢弃。
 	if (last_timestamp_imu > 0.0 && timestamp < last_timestamp_imu)
 	{
 		mtx_buffer.unlock();
@@ -1013,6 +1037,7 @@ void LIVMapper::imu_cbk(const sensor_msgs::msg::Imu::ConstSharedPtr &msg_in)
 		return;
 	}
 
+	// 相邻 IMU 时间间隔超过 0.2 s 视为时间跳变；当前消息直接丢弃。
 	if (last_timestamp_imu > 0.0 && timestamp > last_timestamp_imu + 0.2)
 	{
 		RCLCPP_WARN(this->node->get_logger(), "imu time stamp Jumps %0.4lf seconds \n", timestamp - last_timestamp_imu);
@@ -1021,6 +1046,7 @@ void LIVMapper::imu_cbk(const sensor_msgs::msg::Imu::ConstSharedPtr &msg_in)
 		return;
 	}
 
+	// 5. 保存最新时间并写入主队列，供 sync_packages() 截取对应时间段的 IMU。
 	last_timestamp_imu = timestamp;
 
 	imu_buffer.push_back(msg);
@@ -1029,6 +1055,8 @@ void LIVMapper::imu_cbk(const sensor_msgs::msg::Imu::ConstSharedPtr &msg_in)
 		cout << "got imu: " << timestamp << " imu size " << imu_buffer.size() << endl;
 	}
 	mtx_buffer.unlock();
+
+	// 6. 可选的高频外推队列：仅在 IMU 初始化完成后缓存，用于发布 /LIVO2/imu_propagate。
 	if (imu_prop_enable)
 	{
 		mtx_buffer_imu_prop.lock();
@@ -1040,6 +1068,7 @@ void LIVMapper::imu_cbk(const sensor_msgs::msg::Imu::ConstSharedPtr &msg_in)
 		new_imu = true;
 		mtx_buffer_imu_prop.unlock();
 	}
+	// 7. 发出数据可用通知；主循环仍通过轮询 sync_packages() 检查缓冲区。
 	sig_buffer.notify_all();
 }
 

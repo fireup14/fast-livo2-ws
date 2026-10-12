@@ -30,31 +30,45 @@ which is included as part of this source code package.
 class LIVMapper
 {
 public:
+  // ###################### 1. 生命周期与初始化 ######################
   LIVMapper(rclcpp::Node::SharedPtr &node, std::string node_name, const rclcpp::NodeOptions & options = rclcpp::NodeOptions());
   ~LIVMapper();
   void initializeSubscribersAndPublishers(rclcpp::Node::SharedPtr &nh);
   void initializeComponents(rclcpp::Node::SharedPtr &node);
   void initializeFiles();
+  void readParameters(rclcpp::Node::SharedPtr &node);
+
+  // ###################### 2. 主处理流程与状态机 ######################
   void run(rclcpp::Node::SharedPtr &node);
-  void gravityAlignment();
   void handleFirstFrame();
+  bool sync_packages(LidarMeasureGroup &meas);
+  void processImu();
   void stateEstimationAndMapping();
   void handleVIO();
   void handleLIO();
+  void gravityAlignment();
   void savePCD();
-  void processImu();
-  
-  bool sync_packages(LidarMeasureGroup &meas);
-  void prop_imu_once(StatesGroup &imu_prop_state, const double dt, V3D acc_avr, V3D angvel_avr);
-  void imu_prop_callback();
-  void transformLidar(const Eigen::Matrix3d rot, const Eigen::Vector3d t, const PointCloudXYZI::Ptr &input_cloud, PointCloudXYZI::Ptr &trans_cloud);
-  void pointBodyToWorld(const PointType &pi, PointType &po);
- 
-  void RGBpointBodyToWorld(PointType const *const pi, PointType *const po);
+
+  // ###################### 3. 传感器数据接收回调 ######################
   void standard_pcl_cbk(const sensor_msgs::msg::PointCloud2::ConstSharedPtr &msg);
   void livox_pcl_cbk(const livox_ros_driver2::msg::CustomMsg::ConstSharedPtr &msg_in);
   void imu_cbk(const sensor_msgs::msg::Imu::ConstSharedPtr &msg_in);
   void img_cbk(const sensor_msgs::msg::Image::ConstSharedPtr &msg_in);
+
+  // ###################### 4. 高频 IMU 外推 ######################
+  void prop_imu_once(StatesGroup &imu_prop_state, const double dt, V3D acc_avr, V3D angvel_avr);
+  void imu_prop_callback();
+
+  // ###################### 5. 坐标变换与图像转换工具 ######################
+  void transformLidar(const Eigen::Matrix3d rot, const Eigen::Vector3d t, const PointCloudXYZI::Ptr &input_cloud, PointCloudXYZI::Ptr &trans_cloud);
+  void pointBodyToWorld(const PointType &pi, PointType &po);
+  void RGBpointBodyToWorld(PointType const *const pi, PointType *const po);
+  template <typename T> void set_posestamp(T &out);
+  template <typename T> void pointBodyToWorld(const Eigen::Matrix<T, 3, 1> &pi, Eigen::Matrix<T, 3, 1> &po);
+  template <typename T> Eigen::Matrix<T, 3, 1> pointBodyToWorld(const Eigen::Matrix<T, 3, 1> &pi);
+  cv::Mat getImageFromMsg(const sensor_msgs::msg::Image::ConstSharedPtr &img_msg);
+
+  // ###################### 6. ROS 输出发布 ######################
   void publish_img_rgb(const image_transport::Publisher &pubImage, VIOManagerPtr vio_manager);
   void publish_frame_world(const rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr &pubLaserCloudFullRes, VIOManagerPtr vio_manager);
   void publish_visual_sub_map(const rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr &pubSubVisualMap);
@@ -62,114 +76,14 @@ public:
   void publish_odometry(const rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPtr &pmavros_pose_publisherubOdomAftMapped);
   void publish_mavros(const rclcpp::Publisher<geometry_msgs::msg::PoseStamped>::SharedPtr &mavros_pose_publisher);
   void publish_path(const rclcpp::Publisher<nav_msgs::msg::Path>::SharedPtr &pubPath);
-  void readParameters(rclcpp::Node::SharedPtr &node);
-  template <typename T> void set_posestamp(T &out);
-  template <typename T> void pointBodyToWorld(const Eigen::Matrix<T, 3, 1> &pi, Eigen::Matrix<T, 3, 1> &po);
-  template <typename T> Eigen::Matrix<T, 3, 1> pointBodyToWorld(const Eigen::Matrix<T, 3, 1> &pi);
-  cv::Mat getImageFromMsg(const sensor_msgs::msg::Image::ConstSharedPtr &img_msg);
 
-  std::mutex mtx_buffer, mtx_buffer_imu_prop;
-  std::condition_variable sig_buffer;
-
-  SLAM_MODE slam_mode_;
-  std::unordered_map<VOXEL_LOCATION, VoxelOctoTree *> voxel_map;
-  
-  string root_dir;
-  string lid_topic, imu_topic, seq_name, img_topic;
-  V3D extT;
-  M3D extR;
-
-  int feats_down_size = 0, max_iterations = 0;
-
-  double res_mean_last = 0.05;
-  double gyr_cov = 0, acc_cov = 0, b_gyr_cov = 0, b_acc_cov = 0, inv_expo_cov = 0;
-  double blind_rgb_points = 0.0;
-  double last_timestamp_lidar = -1.0, last_timestamp_imu = -1.0, last_timestamp_img = -1.0;
-  double filter_size_surf_min = 0;
-  double filter_size_pcd = 0;
-  double _first_lidar_time = 0.0;
-  double match_time = 0, solve_time = 0, solve_const_H_time = 0;
-
-  bool lidar_map_inited = false, pcd_save_en = false, img_save_en = false, pub_effect_point_en = false, pose_output_en = false, ros_driver_fix_en = false;
-  int pcd_save_interval = -1, pcd_save_type = 0, pcd_index = 0, img_save_interval = 1;
-  int pub_scan_num = 1;
-
-  StatesGroup imu_propagate, latest_ekf_state;
-
-  bool new_imu = false, state_update_flg = false, imu_prop_enable = true, ekf_finish_once = false;
-  deque<sensor_msgs::msg::Imu> prop_imu_buffer;
-  sensor_msgs::msg::Imu newest_imu;
-  double latest_ekf_time;
-  nav_msgs::msg::Odometry imu_prop_odom;
-  rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPtr pubImuPropOdom;
-  double imu_time_offset = 0.0;
-
-  bool gravity_align_en = false, gravity_align_finished = false;
-
-  bool sync_jump_flag = false;
-
-  bool lidar_pushed = false, imu_en, gravity_est_en, flg_reset = false, ba_bg_est_en = true;
-  bool dense_map_en = false;
-  int img_en = 1, imu_int_frame = 3;
-  bool normal_en = true;
-  bool exposure_estimate_en = false;
-  double exposure_time_init = 0.0;
-  bool inverse_composition_en = false;
-  bool raycast_en = false;
-  int lidar_en = 1;
-  bool is_first_frame = false;
-  int grid_size, patch_size, grid_n_width, grid_n_height, patch_pyrimid_level;
-  double outlier_threshold;
-  double plot_time;
-  int frame_cnt;
-  double img_time_offset = 0.0;
-  deque<PointCloudXYZI::Ptr> lid_raw_data_buffer;
-  deque<double> lid_header_time_buffer;
-  deque<sensor_msgs::msg::Imu::ConstSharedPtr> imu_buffer;
-  deque<cv::Mat> img_buffer;
-  deque<double> img_time_buffer;
-  vector<pointWithVar> _pv_list;
-  vector<double> extrinT;
-  vector<double> extrinR;
-  vector<double> cameraextrinT;
-  vector<double> cameraextrinR;
-  vector<double> cameraextrinTcl;
-  double IMG_POINT_COV;
-
-  PointCloudXYZI::Ptr visual_sub_map;
-  PointCloudXYZI::Ptr feats_undistort;
-  PointCloudXYZI::Ptr feats_down_body;
-  PointCloudXYZI::Ptr feats_down_world;
-  PointCloudXYZI::Ptr pcl_w_wait_pub;
-  PointCloudXYZI::Ptr pcl_wait_pub;
-  PointCloudXYZRGB::Ptr pcl_wait_save;
-  PointCloudXYZI::Ptr pcl_wait_save_intensity;
-
-  ofstream fout_pre, fout_out, fout_pcd_pos, fout_points;
-
-  pcl::VoxelGrid<PointType> downSizeFilterSurf;
-
-  V3D euler_cur;
-
-  LidarMeasureGroup LidarMeasures;
-  StatesGroup _state;
-  StatesGroup  state_propagat;
-
-  nav_msgs::msg::Path path;
-  nav_msgs::msg::Odometry odomAftMapped;
-  geometry_msgs::msg::Quaternion geoQuat;
-  geometry_msgs::msg::PoseStamped msg_body_pose;
-
-  PreprocessPtr p_pre;
-  ImuProcessPtr p_imu;
-  VoxelMapManagerPtr voxelmap_manager;
-  VIOManagerPtr vio_manager;
-
-  rclcpp::Publisher<visualization_msgs::msg::Marker>::SharedPtr plane_pub;
-  rclcpp::Publisher<visualization_msgs::msg::MarkerArray>::SharedPtr voxel_pub;
+  // ###################### 7. ROS 节点、订阅者与发布者 ######################
+  rclcpp::Node::SharedPtr node;
+  // 传感器数据订阅者：LiDAR、IMU、图像。
   std::shared_ptr<rclcpp::SubscriptionBase> sub_pcl;
   rclcpp::Subscription<sensor_msgs::msg::Imu>::SharedPtr sub_imu;
   rclcpp::Subscription<sensor_msgs::msg::Image>::SharedPtr sub_img;
+  // 算法结果与可视化发布者。
   rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr pubLaserCloudFullRes;
   rclcpp::Publisher<visualization_msgs::msg::MarkerArray>::SharedPtr pubNormal;
   rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr pubSubVisualMap;
@@ -180,16 +94,107 @@ public:
   rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr pubLaserCloudDyn;
   rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr pubLaserCloudDynRmed;
   rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr pubLaserCloudDynDbg;
-  image_transport::Publisher pubImage;
+  rclcpp::Publisher<visualization_msgs::msg::Marker>::SharedPtr plane_pub;
+  rclcpp::Publisher<visualization_msgs::msg::MarkerArray>::SharedPtr voxel_pub;
   rclcpp::Publisher<geometry_msgs::msg::PoseStamped>::SharedPtr mavros_pose_publisher;
+  image_transport::Publisher pubImage;
+  rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPtr pubImuPropOdom;
   rclcpp::TimerBase::SharedPtr imu_prop_timer;
-  rclcpp::Node::SharedPtr node;
 
+  // ###################### 8. 并发控制与传感器原始数据缓冲 ######################
+  std::mutex mtx_buffer, mtx_buffer_imu_prop;
+  std::condition_variable sig_buffer;
+  deque<PointCloudXYZI::Ptr> lid_raw_data_buffer;
+  deque<double> lid_header_time_buffer;
+  deque<sensor_msgs::msg::Imu::ConstSharedPtr> imu_buffer;
+  deque<cv::Mat> img_buffer;
+  deque<double> img_time_buffer;
+  deque<sensor_msgs::msg::Imu> prop_imu_buffer;
+  sensor_msgs::msg::Imu newest_imu;
+
+  // ###################### 9. 核心算法模块与地图 ######################
+  PreprocessPtr p_pre;
+  ImuProcessPtr p_imu;
+  VoxelMapManagerPtr voxelmap_manager;
+  VIOManagerPtr vio_manager;
+  SLAM_MODE slam_mode_;
+  std::unordered_map<VOXEL_LOCATION, VoxelOctoTree *> voxel_map;
+
+  // ###################### 10. 融合状态、测量包与高频外推状态 ######################
+  LidarMeasureGroup LidarMeasures;
+  StatesGroup _state;
+  StatesGroup state_propagat;
+  StatesGroup imu_propagate, latest_ekf_state;
+  bool lidar_pushed = false;
+  bool new_imu = false, state_update_flg = false, imu_prop_enable = true, ekf_finish_once = false;
+  bool is_first_frame = false;
+  double _first_lidar_time = 0.0;
+  double latest_ekf_time;
+  nav_msgs::msg::Odometry imu_prop_odom;
+
+  // ###################### 11. 坐标外参、时间外参与传感器参数 ######################
+  V3D extT;
+  M3D extR;
+  vector<double> extrinT;
+  vector<double> extrinR;
+  vector<double> cameraextrinT;
+  vector<double> cameraextrinR;
+  vector<double> cameraextrinTcl;
+  double last_timestamp_lidar = -1.0, last_timestamp_imu = -1.0, last_timestamp_img = -1.0;
+  double imu_time_offset = 0.0;
+  double exposure_time_init = 0.0;
+  double img_time_offset = 0.0;
+
+  // ###################### 12. 参数开关与算法配置 ######################
+  string root_dir;
+  string lid_topic, imu_topic, seq_name, img_topic;
+  bool imu_en, gravity_est_en, flg_reset = false, ba_bg_est_en = true;
+  bool lidar_en = 1, img_en = 1;
+  bool lidar_map_inited = false, dense_map_en = false;
+  bool normal_en = true, exposure_estimate_en = false;
+  bool inverse_composition_en = false, raycast_en = false;
+  bool gravity_align_en = false, gravity_align_finished = false;
+  bool sync_jump_flag = false, ros_driver_fix_en = false;
+  bool pcd_save_en = false, img_save_en = false, colmap_output_en = false;
+  bool pub_effect_point_en = false, pose_output_en = false;
+  int max_iterations = 0, imu_int_frame = 3;
+  int grid_size, patch_size, grid_n_width, grid_n_height, patch_pyrimid_level;
+  int pcd_save_interval = -1, pcd_save_type = 0, pcd_index = 0, img_save_interval = 1;
+  int pub_scan_num = 1, frame_cnt;
+  double gyr_cov = 0, acc_cov = 0, b_gyr_cov = 0, b_acc_cov = 0, inv_expo_cov = 0;
+  double filter_size_surf_min = 0, filter_size_pcd = 0;
+  double blind_rgb_points = 0.0, IMG_POINT_COV, outlier_threshold;
+  double plot_time;
+
+  // ###################### 13. 点云、视觉子图与地图更新中间结果 ######################
+  PointCloudXYZI::Ptr visual_sub_map;
+  PointCloudXYZI::Ptr feats_undistort;
+  PointCloudXYZI::Ptr feats_down_body;
+  PointCloudXYZI::Ptr feats_down_world;
+  PointCloudXYZI::Ptr pcl_w_wait_pub;
+  PointCloudXYZI::Ptr pcl_wait_pub;
+  PointCloudXYZRGB::Ptr pcl_wait_save;
+  PointCloudXYZI::Ptr pcl_wait_save_intensity;
+  vector<pointWithVar> _pv_list;
+  pcl::VoxelGrid<PointType> downSizeFilterSurf;
+
+  // ###################### 14. 位姿、轨迹与文件输出 ######################
+  V3D euler_cur;
+  nav_msgs::msg::Path path;
+  nav_msgs::msg::Odometry odomAftMapped;
+  geometry_msgs::msg::Quaternion geoQuat;
+  geometry_msgs::msg::PoseStamped msg_body_pose;
+  ofstream fout_pre, fout_out, fout_pcd_pos, fout_points;
+
+  // ###################### 15. 性能统计与调试日志开关 ######################
   int frame_num = 0;
+  int feats_down_size = 0;
+  double res_mean_last = 0.05;
+  double match_time = 0, solve_time = 0, solve_const_H_time = 0;
   double aver_time_consu = 0;
   double aver_time_icp = 0;
   double aver_time_map_inre = 0;
-  bool colmap_output_en = false;
+  
   // Runtime log switches, configured by config/log.yaml.
   bool log_lio_no_points = true;
   bool log_lio_voxel_map_update = false;

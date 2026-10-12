@@ -91,20 +91,23 @@ void Preprocess::process(const sensor_msgs::msg::PointCloud2::ConstSharedPtr &ms
 
 void Preprocess::avia_handler(const livox_ros_driver2::msg::CustomMsg::SharedPtr &msg)
 {
+  // 1. 清空上一帧结果；pl_surf 是最终交给后续 LIO 的预处理点云。
   pl_surf.clear();
   pl_corn.clear();
   pl_full.clear();
   double t1 = omp_get_wtime();
-  int plsize = msg->point_num;
+  int plsize = msg->point_num;`
   if (log_input_point_count) {
     printf("[ Preprocess ] Input point number: %d \n", plsize);
   }
   // printf("point_filter_num: %d\n", point_filter_num);
 
+  // 2. 按原始点数预分配内存，减少回调中的动态内存分配。
   pl_corn.reserve(plsize);
   pl_surf.reserve(plsize);
   pl_full.resize(plsize);
 
+  // 3. 初始化按线号组织的缓存；仅 feature_enabled 分支会使用 pl_buff。
   for (int i = 0; i < N_SCANS; i++)
   {
     pl_buff[i].clear();
@@ -112,24 +115,29 @@ void Preprocess::avia_handler(const livox_ros_driver2::msg::CustomMsg::SharedPtr
   }
   uint valid_num = 0;
 
+  // 4. 可选的传统几何特征提取路径：按扫描线组织点，再由 give_feature() 分类。
   if (feature_enabled)
   {
     for (uint i = 1; i < plsize; i++)
     {
+      // 仅使用配置范围内的扫描线和满足 Livox tag 条件的点。
       if ((msg->points[i].line < N_SCANS) && ((msg->points[i].tag & 0x30) == 0x10))
       {
+        // Livox 点格式转为内部 PointType；curvature 字段复用为点相对扫描起始的时间（ms）。
         pl_full[i].x = msg->points[i].x;
         pl_full[i].y = msg->points[i].y;
         pl_full[i].z = msg->points[i].z;
         pl_full[i].intensity = msg->points[i].reflectivity;
         pl_full[i].curvature = msg->points[i].offset_time / float(1000000); // use curvature as time of each laser points
         double range = pl_full[i].x * pl_full[i].x + pl_full[i].y * pl_full[i].y + pl_full[i].z * pl_full[i].z;
+        // 丢弃近距离盲区内的点。
         if (range < blind_sqr) continue;
 
         bool is_new = false;
         if ((abs(pl_full[i].x - pl_full[i - 1].x) > 1e-7) || (abs(pl_full[i].y - pl_full[i - 1].y) > 1e-7) ||
             (abs(pl_full[i].z - pl_full[i - 1].z) > 1e-7))
         {
+          // 按扫描线保存，为平面/边缘特征分析准备。
           pl_buff[msg->points[i].line].push_back(pl_full[i]);
         }
       }
@@ -138,6 +146,7 @@ void Preprocess::avia_handler(const livox_ros_driver2::msg::CustomMsg::SharedPtr
     static double time = 0.0;
     count++;
     double t0 = omp_get_wtime();
+    // 对每条扫描线计算相邻点几何关系，并提取平面、边缘等特征。
     for (int j = 0; j < N_SCANS; j++)
     {
       if (pl_buff[j].size() <= 5) continue;
@@ -164,18 +173,22 @@ void Preprocess::avia_handler(const livox_ros_driver2::msg::CustomMsg::SharedPtr
   }
   else
   {
+    // 5. 默认直接点云路径：不显式提取边缘/平面特征，只做筛选与均匀抽点。
     for (uint i = 0; i < plsize; i++)
     {
+      // 仅保留配置范围内的扫描线；当前路径不按 tag 过滤。
       if ((msg->points[i].line < N_SCANS)) // && ((msg->points[i].tag & 0x30) == 0x10))
       {
         valid_num++;
 
+        // 坐标与反射率直接复制；点仍处于 LiDAR 坐标系。
         pl_full[i].x = msg->points[i].x;
         pl_full[i].y = msg->points[i].y;
         pl_full[i].z = msg->points[i].z;
         pl_full[i].intensity = msg->points[i].reflectivity;
         pl_full[i].curvature = msg->points[i].offset_time / float(1000000); // use curvature as time of each laser points
 
+        // 驱动逐点时间异常时，用连续时间替代，避免影响后续 IMU 去畸变。
         if (i == 0)
           pl_full[i].curvature = fabs(pl_full[i].curvature) < 1.0 ? pl_full[i].curvature : 0.0;
         else
@@ -184,12 +197,15 @@ void Preprocess::avia_handler(const livox_ros_driver2::msg::CustomMsg::SharedPtr
           pl_full[i].curvature = fabs(pl_full[i].curvature - pl_full[i - 1].curvature) < 1.0
                                      ? pl_full[i].curvature
                                      : pl_full[i - 1].curvature + 0.004166667f; // float(100/24000)
-        }
+        } 
 
+        // 每 point_filter_num 个有效点保留一个，实现均匀抽点。
         if (valid_num % point_filter_num == 0)
         {
+          // 仅保留盲区外的点；使用平方距离比较以避免开方。
           if (pl_full[i].x * pl_full[i].x + pl_full[i].y * pl_full[i].y + pl_full[i].z * pl_full[i].z >= blind_sqr)
           {
+            // pl_surf 是本函数的最终输出。
             pl_surf.push_back(pl_full[i]);
             // if (i % 100 == 0 || i == 0) printf("pl_full[i].curvature: %f \n",
             // pl_full[i].curvature);
@@ -198,6 +214,7 @@ void Preprocess::avia_handler(const livox_ros_driver2::msg::CustomMsg::SharedPtr
       }
     }
   }
+  // 6. 可选输出当前帧预处理后的点数。
   if (log_output_point_count) {
     printf("[ Preprocess ] Output point number: %zu \n", pl_surf.points.size());
   }
