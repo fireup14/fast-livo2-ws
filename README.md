@@ -30,9 +30,6 @@ ros2 launch top_pkg rerun_bringup.launch.py enable_rviz:=true
 
 # 将 Livox PointXYZRTLT PointCloud2 转为 FAST-LIVO2 使用的 CustomMsg
 ros2 launch top_pkg tf_lidar_data.launch.py
-
-# 独立启动 Foxglove WebSocket Bridge
-ros2 launch foxglove_bridge_bringup foxglove_bridge.launch.py
 ```
 
 默认传感器输入：
@@ -70,8 +67,7 @@ fast-livo2-ws/
     ├── FAST-LIVO2/         # [算法核心] 直接法激光-惯性-视觉里程计功能包 (ROS 2 包名: fast_livo)
     ├── livox_ros_driver2/  # [传感器驱动] Livox MID-360 雷达 ROS 2 驱动
     ├── realsense-ros/      # [传感器驱动] Intel RealSense 相机 ROS 2 驱动
-    ├── rpg_vikit/          # [依赖项] 视觉运动学工具包 (Visual Kinematics Toolkit)
-    └── foxglove_bridge_bringup/ # [远程显示] Foxglove WebSocket Bridge 启动包
+    └── rpg_vikit/          # [依赖项] 视觉运动学工具包 (Visual Kinematics Toolkit)
 ```
 
 ---
@@ -83,7 +79,7 @@ fast-livo2-ws/
 ### 2.1 操作系统与 ROS 2 平台
 
 - **RDK S100P 部署端**：ROS 2 Humble
-- **PC 开发端**：可使用 ROS 2 Jazzy；建议通过 Foxglove WebSocket 查看 RDK 数据
+- **PC 开发端**：可使用 ROS 2 Jazzy
 
 Humble 与 Jazzy 不保证直接 DDS 互操作。实时建图、话题频率检查及 `CustomMsg` 诊断优先在 RDK Humble 本机执行。
 

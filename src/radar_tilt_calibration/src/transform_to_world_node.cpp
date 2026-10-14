@@ -7,6 +7,9 @@
 #include <std_msgs/msg/header.hpp>
 #include <yaml-cpp/yaml.h>
 
+#include "radar_tilt_calibration/tilt_angle_io.hpp"
+#include "radar_tilt_calibration/tilt_angles.hpp"
+
 #include <Eigen/Dense>
 
 #include <array>
@@ -77,16 +80,6 @@ std::filesystem::path resolve_config_path(const std::string & value)
   }
   if (std::filesystem::exists(path)) {
     return std::filesystem::absolute(path);
-  }
-  return std::filesystem::path(
-    ament_index_cpp::get_package_share_directory(kPackageName)) / path;
-}
-
-std::filesystem::path resolve_package_file_path(const std::string & value)
-{
-  const std::filesystem::path path(value);
-  if (path.is_absolute()) {
-    return path;
   }
   return std::filesystem::path(
     ament_index_cpp::get_package_share_directory(kPackageName)) / path;
@@ -216,10 +209,13 @@ public:
 
     RCLCPP_INFO(
       get_logger(),
-      "Transform ready: %s '%s' -> %s '%s', output frame '%s', axis=%s, "
-      "angle=%.12f rad. Config: %s",
+      "Transform ready: %s '%s' -> %s '%s', output frame '%s'. "
+      "Loaded angles: x=%.9f deg, y=%.9f deg, z=%.9f deg; "
+      "selected axis=%s, angle=%.9f deg (%.12f rad). Config: %s",
       input_type_.c_str(), input_topic_.c_str(), output_type_.c_str(),
-      output_topic_.c_str(), output_frame_id_.c_str(), axis_.c_str(), angle_,
+      output_topic_.c_str(), output_frame_id_.c_str(), angles_deg_.x,
+      angles_deg_.y, angles_deg_.z, dominant_tilt_.axis.c_str(),
+      dominant_tilt_.angle_deg, dominant_tilt_.angle_rad,
       config_path_.c_str());
   }
 
@@ -249,33 +245,14 @@ private:
 
   void load_angle_file()
   {
-    const std::filesystem::path angle_path = resolve_package_file_path(angle_file_);
-    YAML::Node result;
-    try {
-      result = YAML::LoadFile(angle_path.string());
-      axis_ = require_yaml_value<std::string>(result, "angle_file", "axis");
-      angle_ = require_yaml_value<double>(result, "angle_file", "angle");
-    } catch (const YAML::Exception & exception) {
-      throw std::runtime_error(
-              "Failed to read angle file '" + angle_path.string() + "': " +
-              exception.what());
-    }
+    const std::filesystem::path angle_path = resolve_tilt_angle_path(angle_file_);
+    angles_deg_ = load_tilt_angles_deg(angle_path);
+    dominant_tilt_ = select_dominant_tilt(angles_deg_);
+    rotation_ = make_correction_rotation(dominant_tilt_);
 
-    if (axis_ != "x" && axis_ != "y") {
-      throw std::invalid_argument(
-              "Angle file axis must be 'x' or 'y', got '" + axis_ + "'");
-    }
-    if (!std::isfinite(angle_)) {
-      throw std::invalid_argument("Angle file contains a non-finite angle");
-    }
-
-    if (axis_ == "x") {
-      correction_quaternion_.setRPY(angle_, 0.0, 0.0);
-      rotation_ = Eigen::AngleAxisd(angle_, Eigen::Vector3d::UnitX()).toRotationMatrix();
-    } else {
-      correction_quaternion_.setRPY(0.0, angle_, 0.0);
-      rotation_ = Eigen::AngleAxisd(angle_, Eigen::Vector3d::UnitY()).toRotationMatrix();
-    }
+    const Eigen::Quaterniond correction(rotation_);
+    correction_quaternion_.setValue(
+      correction.x(), correction.y(), correction.z(), correction.w());
     correction_quaternion_.normalize();
   }
 
@@ -383,8 +360,8 @@ private:
   std::string output_frame_id_;
   std::string output_child_frame_id_;
   std::string angle_file_;
-  std::string axis_;
-  double angle_{0.0};
+  TiltAnglesDeg angles_deg_;
+  DominantTilt dominant_tilt_;
   bool preserve_odometry_twist_{true};
 
   Eigen::Matrix3d rotation_{Eigen::Matrix3d::Identity()};

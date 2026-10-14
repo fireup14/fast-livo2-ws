@@ -3,25 +3,42 @@
 
 # ============ 标定节点参数 ============
 calibrate:
-  input_topic: "/localization/pose"        # 订阅的定位结果话题
-  input_type: "PoseStamped"                # 支持 "PoseStamped" 或 "Odometry"
+  input_topic: "/aft_mapped_to_init"       # FAST-LIVO2 输出的定位结果话题
+  input_type: "Odometry"                   # /aft_mapped_to_init 的消息类型
+
+  # 120 秒采集期间的移动要求：
+  # 1. 机器人必须始终在同一个水平平面上运动，不要经过坡道、台阶或明显颠簸区域。
+  # 2. 轨迹必须在两个水平方向上都有位移，不能只沿一条直线前进或往返。
+  # 3. 推荐走矩形、圆形、S 形，或先纵向再横向移动，以形成具有二维跨度的轨迹点。
+  # 4. 收到第一条有效定位数据后才开始计时，因此应先确认建图节点已稳定发布该话题。
   duration: 120.0                           # 采集时长，单位：秒（墙上时间）
-  output_file: "config/tilt_angle.yaml"    # 相对路径按包共享目录解析，也支持绝对路径
+  output_file: "config/tilt_angle.yaml"    # 相对源码包根目录解析，结果写入源码 config 目录
   min_points: 10                            # 最少有效位置点数，不得小于 3
   qos_depth: 100                            # 输入订阅队列深度
   qos_reliability: "reliable"              # 支持 "reliable" 或 "best_effort"
 
 # ============ 转换节点参数 ============
 transform:
-  input_topic: "/localization/pose"        # 订阅的定位结果话题
-  input_type: "PoseStamped"                # 支持 "PoseStamped" 或 "Odometry"
-  output_topic: "/localization/pose_world" # 发布的世界坐标系结果话题
-  output_type: "PoseStamped"               # 支持 "PoseStamped" 或 "Odometry"
-  output_frame_id: "world"                 # 输出消息 header.frame_id
-  output_child_frame_id: ""                # Odometry 输出；空值时保留输入 child_frame_id
-  angle_file: "config/tilt_angle.yaml"     # 相对路径按包共享目录解析，也支持绝对路径
+  input_topic: "/aft_mapped_to_init"       # FAST-LIVO2 输出的定位结果话题
+  input_type: "Odometry"                   # /aft_mapped_to_init 的消息类型
+  output_topic: "/slam_result"             # 发布的世界坐标系定位结果话题
+  output_type: "Odometry"                  # 与输入保持 nav_msgs/msg/Odometry
+  output_frame_id: "camera_init_world"     # 校正后 Odometry 的父坐标系
+  output_child_frame_id: "aft_mapped_world" # 校正后 Odometry 的子坐标系
+  angle_file: "config/tilt_angle.yaml"     # 相对源码包根目录解析，也支持绝对路径
   input_qos_depth: 100                      # 输入订阅队列深度
   input_qos_reliability: "reliable"        # 支持 "reliable" 或 "best_effort"
   output_qos_depth: 10                      # 输出发布队列深度
   output_qos_reliability: "reliable"       # 支持 "reliable" 或 "best_effort"
   preserve_odometry_twist: true             # Odom->Odom 时保留 twist；Pose->Odom 时 twist 为零
+
+# ============ 新旧 TF 树桥接参数 ============
+tf_bridge:
+  enable: true                              # 是否发布静态校正 TF 与 /slam_result 动态 TF
+  original_root_frame: "camera_init"       # FAST-LIVO2 原始 TF 树根坐标系
+  corrected_root_frame: "camera_init_world" # 校正后 TF 树根坐标系
+  corrected_child_frame: "aft_mapped_world" # /slam_result 对应的移动坐标系
+  corrected_odom_topic: "/slam_result"     # 校正后 Odometry；用于生成动态 TF
+  angle_file: "config/tilt_angle.yaml"     # 必须与 transform.angle_file 指向同一源码标定文件
+  qos_depth: 10                             # /slam_result 订阅队列深度
+  qos_reliability: "reliable"              # 必须与 /slam_result 发布端兼容

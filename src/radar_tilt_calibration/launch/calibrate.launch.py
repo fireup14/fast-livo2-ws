@@ -1,6 +1,6 @@
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument
+from launch.actions import DeclareLaunchArgument, LogInfo
 from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
 import os
@@ -15,7 +15,7 @@ def generate_launch_description():
     config_argument = DeclareLaunchArgument(
         "config",
         default_value=default_config,
-        description="Path to calibrate_tilt_param.yaml",
+        description="标定与转换节点共用的配置文件路径",
     )
 
     calibrate_node = Node(
@@ -26,4 +26,11 @@ def generate_launch_description():
         parameters=[{"config_file": LaunchConfiguration("config")}],
     )
 
-    return LaunchDescription([config_argument, calibrate_node])
+    launch_message = LogInfo(
+        msg=[
+            "Starting tilt calibration; x/y/z angles will be written in degrees. Config: ",
+            LaunchConfiguration("config"),
+        ]
+    )
+
+    return LaunchDescription([config_argument, launch_message, calibrate_node])

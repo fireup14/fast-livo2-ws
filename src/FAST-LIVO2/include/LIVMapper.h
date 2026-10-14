@@ -149,7 +149,7 @@ public:
   string root_dir;
   string lid_topic, imu_topic, seq_name, img_topic;
   bool imu_en, gravity_est_en, flg_reset = false, ba_bg_est_en = true;
-  bool lidar_en = 1, img_en = 1;
+  int lidar_en = 1, img_en = 1;
   bool lidar_map_inited = false, dense_map_en = false;
   bool normal_en = true, exposure_estimate_en = false;
   bool inverse_composition_en = false, raycast_en = false;

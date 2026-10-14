@@ -4,12 +4,14 @@
 #include <rclcpp/rclcpp.hpp>
 #include <yaml-cpp/yaml.h>
 
+#include "radar_tilt_calibration/tilt_angle_io.hpp"
+#include "radar_tilt_calibration/tilt_angles.hpp"
+
 #include <Eigen/Dense>
 
 #include <chrono>
 #include <cmath>
 #include <filesystem>
-#include <fstream>
 #include <functional>
 #include <iostream>
 #include <memory>
@@ -77,18 +79,6 @@ std::filesystem::path resolve_config_path(const std::string & value)
   }
   if (std::filesystem::exists(path)) {
     return std::filesystem::absolute(path);
-  }
-  return std::filesystem::path(
-    ament_index_cpp::get_package_share_directory(kPackageName)) / path;
-}
-
-// Result files intentionally resolve relative to the installed package share directory,
-// as required by the package interface. An absolute path remains unchanged.
-std::filesystem::path resolve_package_output_path(const std::string & value)
-{
-  const std::filesystem::path path(value);
-  if (path.is_absolute()) {
-    return path;
   }
   return std::filesystem::path(
     ament_index_cpp::get_package_share_directory(kPackageName)) / path;
@@ -211,14 +201,10 @@ public:
               input_type_ + "'");
     }
 
-    const auto duration = std::chrono::duration_cast<std::chrono::nanoseconds>(
-      std::chrono::duration<double>(duration_seconds_));
-    completion_timer_ = create_wall_timer(
-      duration, std::bind(&CalibrateTiltNode::finish_calibration, this));
-
     RCLCPP_INFO(
       get_logger(),
-      "Collecting %s positions from '%s' for %.3f seconds. Config: %s",
+      "Waiting for the first valid %s position on '%s'. The %.3f-second "
+      "collection timer will start with that sample. Config: %s",
       input_type_.c_str(), input_topic_.c_str(), duration_seconds_,
       config_path_.c_str());
   }
@@ -237,6 +223,17 @@ private:
     if (!std::isfinite(x) || !std::isfinite(y) || !std::isfinite(z)) {
       RCLCPP_WARN(get_logger(), "Skipping a localization sample with non-finite position");
       return;
+    }
+
+    if (!completion_timer_) {
+      const auto duration = std::chrono::duration_cast<std::chrono::nanoseconds>(
+        std::chrono::duration<double>(duration_seconds_));
+      completion_timer_ = create_wall_timer(
+        duration, std::bind(&CalibrateTiltNode::finish_calibration, this));
+      RCLCPP_INFO(
+        get_logger(),
+        "First valid position received; starting %.3f seconds of calibration data collection",
+        duration_seconds_);
     }
     points_.emplace_back(x, y, z);
   }
@@ -287,51 +284,21 @@ private:
         normal = -normal;
       }
 
-      std::string axis;
-      double angle = 0.0;
-      if (std::abs(normal.x()) < std::abs(normal.y())) {
-        axis = "x";
-        angle = std::atan2(normal.y(), normal.z());
-      } else {
-        axis = "y";
-        angle = std::atan2(normal.x(), normal.z());
-      }
+      const TiltAnglesDeg angles = calculate_tilt_angles_deg(normal);
 
       const std::filesystem::path result_path =
-        resolve_package_output_path(output_file_);
-      if (!result_path.parent_path().empty()) {
-        std::filesystem::create_directories(result_path.parent_path());
-      }
-
-      YAML::Emitter emitter;
-      emitter.SetDoublePrecision(17);
-      emitter << YAML::BeginMap;
-      emitter << YAML::Key << "axis" << YAML::Value << YAML::DoubleQuoted << axis;
-      emitter << YAML::Key << "angle" << YAML::Value << angle;
-      emitter << YAML::EndMap;
-      if (!emitter.good()) {
-        throw std::runtime_error("yaml-cpp failed to serialize the calibration result");
-      }
-
-      std::ofstream output(result_path, std::ios::out | std::ios::trunc);
-      if (!output.is_open()) {
-        throw std::runtime_error(
-                "Unable to open result file for writing: " + result_path.string());
-      }
-      output << emitter.c_str() << '\n';
-      output.close();
-      if (!output) {
-        throw std::runtime_error(
-                "Failed while writing result file: " + result_path.string());
-      }
+        resolve_tilt_angle_path(output_file_);
+      write_tilt_angles_deg(result_path, angles);
 
       calibration_succeeded_ = true;
       RCLCPP_INFO(
         get_logger(), "Plane normal in radar frame: [%.9f, %.9f, %.9f]",
         normal.x(), normal.y(), normal.z());
       RCLCPP_INFO(
-        get_logger(), "Tilt calibration succeeded: axis=%s, angle=%.12f rad (%.6f deg)",
-        axis.c_str(), angle, angle * 180.0 / std::acos(-1.0));
+        get_logger(),
+        "Tilt calibration succeeded: x=%.9f deg, y=%.9f deg, z=%.9f deg. "
+        "Z-axis yaw is unobservable from a horizontal motion plane and is fixed at zero.",
+        angles.x, angles.y, angles.z);
       RCLCPP_INFO(get_logger(), "Calibration result written to: %s", result_path.c_str());
     } catch (const std::exception & exception) {
       RCLCPP_ERROR(get_logger(), "Tilt calibration failed: %s", exception.what());
