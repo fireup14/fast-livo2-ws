@@ -1036,13 +1036,11 @@ void LIVMapper::imu_cbk(const sensor_msgs::msg::Imu::ConstSharedPtr &msg_in)
 		return;
 	}
 
-	// 相邻 IMU 时间间隔超过 0.2 s 视为时间跳变；当前消息直接丢弃。
+	// 相邻 IMU 时间间隔超过 0.2 s 时报警，但继续接收并更新最新时间。
+	// 否则断流后 last_timestamp_imu 会停在旧值，导致后续所有消息持续被拒收。
 	if (last_timestamp_imu > 0.0 && cur_head_time > last_timestamp_imu + 0.2)
 	{
 		RCLCPP_WARN(this->node->get_logger(), "imu time stamp Jumps %0.4lf seconds \n", cur_head_time - last_timestamp_imu);
-		mtx_buffer.unlock();
-		sig_buffer.notify_all();
-		return;
 	}
 
 	// 5. 保存最新时间并写入主队列，供 sync_packages() 截取对应时间段的 IMU。
