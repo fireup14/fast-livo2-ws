@@ -12,6 +12,7 @@ which is included as part of this source code package.
 
 #include "LIVMapper.h"
 #include <vikit/camera_loader.h>
+#include <chrono>
 #include <filesystem>
 
 using namespace Sophus;
@@ -139,6 +140,7 @@ void LIVMapper::readParameters(rclcpp::Node::SharedPtr &node)
 	try_declare.template operator()<bool>("log.lio.no_points", true);
 	try_declare.template operator()<bool>("log.lio.voxel_map_update", false);
 	try_declare.template operator()<bool>("log.lio.timing", false);
+	try_declare.template operator()<bool>("log.publish.odometry_timing", false);
 	try_declare.template operator()<bool>("log.preprocess.input_point_count", false);
 	try_declare.template operator()<bool>("log.preprocess.output_point_count", false);
 	try_declare.template operator()<bool>("log.voxel.feature_statistics", false);
@@ -219,6 +221,7 @@ void LIVMapper::readParameters(rclcpp::Node::SharedPtr &node)
 	this->node->get_parameter("log.lio.no_points", log_lio_no_points);
 	this->node->get_parameter("log.lio.voxel_map_update", log_lio_voxel_map_update);
 	this->node->get_parameter("log.lio.timing", log_lio_timing);
+	this->node->get_parameter("log.publish.odometry_timing", log_publish_odometry_timing);
 	this->node->get_parameter("log.preprocess.input_point_count", p_pre->log_input_point_count);
 	this->node->get_parameter("log.preprocess.output_point_count", p_pre->log_output_point_count);
 	this->node->get_parameter("log.voxel.feature_statistics", log_voxel_feature_statistics);
@@ -966,10 +969,6 @@ void LIVMapper::livox_pcl_cbk(const livox_ros_driver2::msg::CustomMsg::ConstShar
 		RCLCPP_ERROR(this->node->get_logger(), "lidar loop back, clear buffer");
 		lid_raw_data_buffer.clear();
 	}
-	if (log_sensor_lidar_timestamp)
-	{
-		RCLCPP_INFO(this->node->get_logger(), "get point cloud at time: %.6f", stamp2Sec(msg->header.stamp));
-	}
 
 
 	// 5. 将 Livox CustomMsg 转为内部点云，并执行扫描线、盲区和均匀抽点等前端处理。
@@ -1009,50 +1008,50 @@ void LIVMapper::imu_cbk(const sensor_msgs::msg::Imu::ConstSharedPtr &msg_in)
 	// 2. 复制消息并减去配置的 IMU 时间偏移，得到用于融合的时间戳。
 	sensor_msgs::msg::Imu::SharedPtr msg(new sensor_msgs::msg::Imu(*msg_in));
 	msg->header.stamp = sec2Stamp(stamp2Sec(msg->header.stamp) - imu_time_offset);
-	double timestamp = stamp2Sec(msg->header.stamp);
+	double cur_head_time = stamp2Sec(msg->header.stamp);
 
 	// 3. LiDAR 与 IMU 时间相差过大时默认仅报警，不自动修正。
-	if (fabs(last_timestamp_lidar - timestamp) > 0.5 && (!ros_driver_fix_en))
+	if (fabs(last_timestamp_lidar - cur_head_time) > 0.5 && (!ros_driver_fix_en))
 	{
 		if (log_sensor_imu_lidar_desync)
 		{
-			RCLCPP_WARN(this->node->get_logger(), "IMU and LiDAR not synced! delta time: %lf .\n", last_timestamp_lidar - timestamp);
+			RCLCPP_WARN(this->node->get_logger(), "IMU and LiDAR not synced! delta time: %lf .\n", last_timestamp_lidar - cur_head_time);
 		}
 	}
 
 	// 可选驱动兼容模式：用整数秒平移 IMU 时间，使其靠近最近 LiDAR 时间。
 	if (ros_driver_fix_en)
-		timestamp += std::round(last_timestamp_lidar - timestamp);
-	msg->header.stamp = sec2Stamp(timestamp);
+		cur_head_time += std::round(last_timestamp_lidar - cur_head_time);
+	msg->header.stamp = sec2Stamp(cur_head_time);
 
 	// 4. 保护主融合缓冲区 imu_buffer，并检查 IMU 时间是否单调递增。
 	mtx_buffer.lock();
 
 	// 时间倒退通常表示乱序或 rosbag 循环；当前消息直接丢弃。
-	if (last_timestamp_imu > 0.0 && timestamp < last_timestamp_imu)
+	if (last_timestamp_imu > 0.0 && cur_head_time < last_timestamp_imu)
 	{
 		mtx_buffer.unlock();
 		sig_buffer.notify_all();
-		RCLCPP_ERROR(this->node->get_logger(), "imu loop back, offset: %lf \n", last_timestamp_imu - timestamp);
+		RCLCPP_ERROR(this->node->get_logger(), "imu loop back, offset: %lf \n", last_timestamp_imu - cur_head_time);
 		return;
 	}
 
 	// 相邻 IMU 时间间隔超过 0.2 s 视为时间跳变；当前消息直接丢弃。
-	if (last_timestamp_imu > 0.0 && timestamp > last_timestamp_imu + 0.2)
+	if (last_timestamp_imu > 0.0 && cur_head_time > last_timestamp_imu + 0.2)
 	{
-		RCLCPP_WARN(this->node->get_logger(), "imu time stamp Jumps %0.4lf seconds \n", timestamp - last_timestamp_imu);
+		RCLCPP_WARN(this->node->get_logger(), "imu time stamp Jumps %0.4lf seconds \n", cur_head_time - last_timestamp_imu);
 		mtx_buffer.unlock();
 		sig_buffer.notify_all();
 		return;
 	}
 
 	// 5. 保存最新时间并写入主队列，供 sync_packages() 截取对应时间段的 IMU。
-	last_timestamp_imu = timestamp;
+	last_timestamp_imu = cur_head_time;
 
 	imu_buffer.push_back(msg);
 	if (log_sensor_imu_buffer_size)
 	{
-		cout << "got imu: " << timestamp << " imu size " << imu_buffer.size() << endl;
+		cout << "got imu: " << cur_head_time << " imu size " << imu_buffer.size() << endl;
 	}
 	mtx_buffer.unlock();
 
@@ -1586,13 +1585,28 @@ void LIVMapper::set_posestamp(T &out)
 
 void LIVMapper::publish_odometry(const rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPtr &pubOdomAftMapped)
 {
+	// 用单调时钟测量分段耗时；关闭日志时不读取时钟。
+	using TimingClock = std::chrono::steady_clock;
+	const auto timing_now = [this]()
+	{
+		return log_publish_odometry_timing ? TimingClock::now() : TimingClock::time_point{};
+	};
+	const auto t_begin = timing_now();
+
 	odomAftMapped.header.frame_id = "camera_init";
 	odomAftMapped.child_frame_id = "aft_mapped";
 	odomAftMapped.header.stamp = this->node->get_clock()->now(); //.ros::Time()fromSec(last_timestamp_lidar);
 	set_posestamp(odomAftMapped.pose.pose);
+	const auto t_odom_ready = timing_now();
 
-	static std::shared_ptr<tf2_ros::TransformBroadcaster> br;
-	br = std::make_shared<tf2_ros::TransformBroadcaster>(this->node);
+	// 仅第一次调用创建广播器，避免每帧创建和释放 /tf 发布者。
+	const bool tf_created = !odom_tf_broadcaster;
+	if (tf_created)
+	{
+		odom_tf_broadcaster = std::make_shared<tf2_ros::TransformBroadcaster>(this->node);
+	}
+	const auto t_tf_ready = timing_now();
+
 	tf2::Transform transform;
 	tf2::Quaternion q;
 	transform.setOrigin(tf2::Vector3(_state.pos_end(0), _state.pos_end(1), _state.pos_end(2)));
@@ -1601,8 +1615,34 @@ void LIVMapper::publish_odometry(const rclcpp::Publisher<nav_msgs::msg::Odometry
 	q.setY(geoQuat.y);
 	q.setZ(geoQuat.z);
 	transform.setRotation(q);
-	br->sendTransform(geometry_msgs::msg::TransformStamped(createTransformStamped(transform, odomAftMapped.header.stamp, "camera_init", "aft_mapped")));
+	const geometry_msgs::msg::TransformStamped tf_message =
+		createTransformStamped(transform, odomAftMapped.header.stamp, "camera_init", "aft_mapped");
+	const auto t_tf_message_ready = timing_now();
+	odom_tf_broadcaster->sendTransform(tf_message);
+	const auto t_tf_sent = timing_now();
 	pubOdomAftMapped->publish(odomAftMapped);
+	const auto t_odom_sent = timing_now();
+
+	if (log_publish_odometry_timing)
+	{
+		const auto elapsed_ms = [](const auto &begin, const auto &end)
+		{
+			return std::chrono::duration<double, std::milli>(end - begin).count();
+		};
+		// frame 与 LIO 耗时表对应：handleLIO() 在本函数返回后才增加 frame_num。
+		// total_ms 不包含下面这条诊断日志自身的输出耗时。
+		RCLCPP_INFO(
+			this->node->get_logger(),
+			"[ ODOM timing ] frame=%d tf_created=%d odom_prepare_ms=%.3f tf_init_ms=%.3f "
+			"tf_prepare_ms=%.3f tf_send_ms=%.3f odom_publish_ms=%.3f total_ms=%.3f",
+			frame_num + 1, static_cast<int>(tf_created),
+			elapsed_ms(t_begin, t_odom_ready),
+			tf_created ? elapsed_ms(t_odom_ready, t_tf_ready) : 0.0,
+			elapsed_ms(t_tf_ready, t_tf_message_ready),
+			elapsed_ms(t_tf_message_ready, t_tf_sent),
+			elapsed_ms(t_tf_sent, t_odom_sent),
+			elapsed_ms(t_begin, t_odom_sent));
+	}
 }
 
 void LIVMapper::publish_mavros(const rclcpp::Publisher<geometry_msgs::msg::PoseStamped>::SharedPtr &mavros_pose_publisher)

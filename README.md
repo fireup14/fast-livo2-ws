@@ -6,14 +6,28 @@
 
 ## Quick Start
 
+https://github.com/hku-mars/FAST-LIVO2.git
+
 RDK S100P（ROS 2 Humble）上首次构建并启动实时建图：
 
 ```bash
 cd ~/Desktop/fast-livo2-ws
+
 source /opt/ros/humble/setup.bash
-colcon build --symlink-install
 source install/setup.bash
-ros2 launch top_pkg bringup.launch.py
+
+mkdir -p ~/Desktop/fast-livo2-ws/lio_logs
+
+log_file="$PWD/lio_logs/lio_$(date +%Y%m%d_%H%M%S).log"
+
+echo "日志保存位置：$log_file"
+echo "开始运行，100秒后自动停止……"
+
+timeout --signal=INT --kill-after=10s 100s \
+  ros2 launch top_pkg bringup.launch.py enable_rviz:=false \
+  > "$log_file" 2>&1
+
+echo "运行结束，日志已保存：$log_file"
 ```
 
 常用入口：

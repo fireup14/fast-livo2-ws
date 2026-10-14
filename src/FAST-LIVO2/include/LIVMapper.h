@@ -90,6 +90,8 @@ public:
   rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr pubLaserCloudEffect;
   rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr pubLaserCloudMap;
   rclcpp::Publisher<nav_msgs::msg::Odometry>::SharedPtr pubOdomAftMapped;
+  // 与当前 mapper 共同持有生命周期，首次发布时创建，之后逐帧复用。
+  std::shared_ptr<tf2_ros::TransformBroadcaster> odom_tf_broadcaster;
   rclcpp::Publisher<nav_msgs::msg::Path>::SharedPtr pubPath;
   rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr pubLaserCloudDyn;
   rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr pubLaserCloudDynRmed;
@@ -199,6 +201,7 @@ public:
   bool log_lio_no_points = true;
   bool log_lio_voxel_map_update = false;
   bool log_lio_timing = false;
+  bool log_publish_odometry_timing = false;
   bool log_sensor_lidar_timestamp = false;
   bool log_sensor_imu_timestamp = false;
   bool log_sensor_imu_buffer_size = false;

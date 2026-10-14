@@ -21,49 +21,58 @@
 
         # 输出 "[ LIO ] Update Voxel Map"：每帧体素地图更新完成后打印。
         # 高频状态日志，日常运行建议关闭。
-        voxel_map_update: false
+        voxel_map_update: true
 
         # 输出 "LIO Mapping Time" 时间表：下采样、ICP、地图更新、
         # 单帧总耗时和平均耗时。用于性能分析，日常运行建议关闭。
-        timing: false
+        timing: true
+      publish:
+        # 每次 publish_odometry() 输出一行分段耗时，单位：毫秒。
+        # frame 与 LIO 帧号对应；tf_created 仅首帧为 1，之后为 0。
+        # odom_prepare_ms：准备里程计；tf_init_ms：首次创建 TF 广播器。
+        # tf_prepare_ms：准备 TF 消息；tf_send_ms：发送 TF。
+        # odom_publish_ms：发布里程计；total_ms：上述步骤总耗时（不含日志输出）。
+        # 验证每 24 帧停顿时可同时开启 lio.timing；验证后关闭本开关。
+        # 启动时读取；修改配置后需重新启动建图节点。
+        odometry_timing: true
       preprocess:
         # 输出预处理前的原始 LiDAR 点数。用于检查雷达数据量是否异常。
-        input_point_count: false
+        input_point_count: true
 
         # 输出盲区过滤、无效点过滤及抽样后的点数。
         # 用于调整 preprocess.blind 与 preprocess.point_filter_num。
-        output_point_count: false
+        output_point_count: true
       voxel:
         # 输出原始点数、下采样点数、有效点面约束数与平均残差。
         # 用于评估 LIO 配准质量；平均残差持续增大通常意味着匹配变差。
-        feature_statistics: false
+        feature_statistics: true
 
         # 未达到局部地图滑窗触发距离时，输出当前累计位移。
         # 每帧都可能打印，日常运行建议关闭。
-        map_sliding_below_threshold: false
+        map_sliding_below_threshold: true
 
         # 输出局部地图滑窗和清理的耗时。地图滑动导致卡顿时开启。
-        map_sliding_timing: false
+        map_sliding_timing: true
 
         # 输出每次局部地图滑窗删除的根体素数。
         # 用于确认局部地图正在清理，避免内存持续增长。
-        cleanup: false
+        cleanup: true
       sensor:
         # 输出每帧 /livox/lidar 的 header.stamp。
         # 用于排查 LiDAR 时间戳来源或时间跳变。
-        lidar_timestamp: false
+        lidar_timestamp: true
 
         # 输出每条 /livox/imu 的 header.stamp。IMU 频率高，日志量很大。
-        imu_timestamp: false
+        imu_timestamp: true
 
         # 输出 "got imu ... imu size ..."，即当前 IMU 缓冲区长度。
         # 若该数值持续增大，说明 IMU 消费跟不上，存在算力或回调积压。
-        imu_buffer_size: false
+        imu_buffer_size: true
 
         # 当最新 IMU 与 LiDAR 相差超过 1 秒时输出估计偏差。
         # 这是诊断信息；当前代码不会据此自动修正时间。
-        self_sync: false
+        self_sync: true
 
         # 当当前 IMU 与最新 LiDAR 相差超过 0.5 秒时输出警告。
         # 用于排查设备时间基准不同或 ROS 回调处理积压。
-        imu_lidar_desync: false
+        imu_lidar_desync: true
