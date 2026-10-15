@@ -542,34 +542,50 @@ void ImuProcess::UndistortPcl(LidarMeasureGroup &lidar_meas, StatesGroup &state_
   // printf("[ IMU ] time forward: %lf, backward: %lf.\n", t1 - t0, omp_get_wtime() - t1);
 }
 
+// IMU 处理总入口：初始化期间建立惯性参考，初始化完成后执行状态预测与点云去畸变。
+// lidar_meas：sync_packages() 组装的测量包；stat：调用者的 _state，按引用更新。
+// cur_pcl_un_：调用者的 feats_undistort，处理结果写入该智能指针指向的点云对象。
 void ImuProcess::Process2(LidarMeasureGroup &lidar_meas, StatesGroup &stat, PointCloudXYZI::Ptr cur_pcl_un_)
 {
+  // 1. 保留计时起点，并检查输入点云指针；测量包非空由调用前的同步流程保证。
   double t1, t2, t3;
   t1 = omp_get_wtime();
   rcpputils::assert_true(lidar_meas.lidar != nullptr);
+
+  // 2. 未启用 IMU 时走无惯性测量的运动模型；正常 LIO 模式不会进入此分支。
   if (!imu_en)
   {
     Forward_without_imu(lidar_meas, stat, *cur_pcl_un_);
     return;
   }
 
+  // 3. 取最新一组同步测量；LIO 模式下包含本帧所用 IMU 序列及帧结束时间 lio_time。
   MeasureGroup meas = lidar_meas.measures.back();
 
+  // 4. 初始化阶段：累计 IMU 样本均值，建立重力方向和加速度尺度参考。
   if (imu_need_init)
   {
+    // LIO 的目标时刻为帧结束时间；当前 pcl_end_time 仅计算，下面的时间更新已停用。
     double pcl_end_time = lidar_meas.lio_vio_flg == LIO ? meas.lio_time : meas.vio_time;
     // lidar_meas.last_lio_update_time = pcl_end_time;
 
+    // 4.1 没有 IMU 样本就无法累计初始化数据，等待后续测量包。
     if (meas.imu.empty()) { return; };
-    /// The very first lidar frame
+
+    // 4.2 累计本组全部 IMU；init_iter_num 按 IMU 样本递增，而不是按 LiDAR 帧递增。
+    // IMU_init() 当前还将初始姿态设为单位矩阵、陀螺仪偏置设为零。
     IMU_init(meas, stat, init_iter_num);
 
+    // 默认继续初始化，直到累计计数满足下面的结束条件。
     imu_need_init = true;
 
+    // 4.3 保存本组最后一条 IMU，供后续积分连接相邻测量包。
     last_imu = meas.imu.back();
 
+    // 4.4 累计计数超过阈值后结束初始化；阈值由 imu.imu_int_frame 配置。
     if (init_iter_num > MAX_INI_COUNT)
     {
+      // 此处的噪声方差缩放原本就被注释；实际仅切换标志、打印参数并打开日志。
       // cov_acc *= pow(G_m_s2 / mean_acc.norm(), 2);
       imu_need_init = false;
       RCLCPP_INFO(rclcpp::get_logger(""), "IMU Initials: Gravity: %.4f %.4f %.4f %.4f; acc covarience: "
@@ -582,9 +598,12 @@ void ImuProcess::Process2(LidarMeasureGroup &lidar_meas, StatesGroup &stat, Poin
       fout_imu.open(DEBUG_FILE_DIR("imu.txt"), ios::out);
     }
 
+    // 4.5 初始化分支不生成去畸变点云；即使本次完成初始化，也要下一次调用才进入正常处理。
     return;
   }
 
+  // 5. 正常 LIO 阶段：积分 IMU，传播状态与协方差，并补偿逐点采样时刻的运动。
+  // stat 得到帧结束时刻的预测状态；点云统一到该时刻的 LiDAR 坐标系，写入 feats_undistort。
   UndistortPcl(lidar_meas, stat, *cur_pcl_un_);
   // cout << "[ IMU ] undistorted point num: " << cur_pcl_un_->size() << endl;
 }
